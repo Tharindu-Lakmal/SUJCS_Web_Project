@@ -28,6 +28,8 @@
 
     <!-- custom css link -->
     <link rel="stylesheet" href="./index.css">
+    <!-- custom navbar css link -->
+    <link rel="stylesheet" href="../reuseComponents/navBar.css">
 
 </head>
 <body>
