@@ -1,0 +1,79 @@
+@import 'color.scss';
+
+header{
+    position: fixed;
+}
+
+body.nav-active {
+    overflow: hidden;
+}
+.main-outer{
+    border: 1px solid red;
+    position: relative;
+}
+
+.imageMain-outer{
+    width: 100%;
+    height: 100vh;
+    background-image: url('../images/hero 2.png');
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+    background-position: top;
+    border: 1px solid red;
+    background-color: var(--bg-about);
+    margin-top: 150px;
+    
+    
+
+    h1{
+        color: var(--text-white);
+        font-size: var(--fontSize-2);
+        margin: 150px 0 0 75px;
+        font-family: "Roboto Serif", serif;
+        margin-bottom: 2px;
+
+    }
+    h3{
+        color: var(--text-white);
+        font-size: var( --fontSize-3);
+       
+        margin-left: 75px;
+        font-family: "Roboto Serif", serif;
+    }
+
+}
+
+
+.main-context{
+    border: 1px solid red;
+    margin: -200px 150px 0 150px;
+    background-color: var(--bg-about);
+    font-family: "roboto";
+    
+
+    h4{
+        font-size: var(--fontSize-5);
+        color: var(--text-majorelle-blue);
+        margin-bottom: 10px;
+
+    }
+    p{
+        text-align: justify;
+        font-size: var(--fontSize-6);
+        margin-bottom: 10px;
+        
+    }
+
+    button{
+        background-color: var(--bg-white);
+        border: 2px solid var(--border-readmore);
+        border-radius: 15px;
+        padding: 1px 30px;
+        font-size: var(--fontSize-5);
+    }
+    
+}
+
+.main-outer-secondContext{
+    width: 100%;
+}

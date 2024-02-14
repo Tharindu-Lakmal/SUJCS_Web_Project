@@ -1,3 +1,113 @@
+:root {
+  /* Colors */
+  /* Background color  */
+  --bg-white: hsl(0, 0%, 100%);
+  --bg-about: hsl(45, 22%, 96%);
+  --bg-lavender-blush: hsl(0, 100%, 98%);
+  --bg-majorelle-blue: hsla(243, 57%, 50%, 1);
+  --bg-ocean-blue:hsla(229, 83%, 60%, 1);
+  /* Text color */
+  --text-white: hsl(0, 0%, 100%);
+  --text-gunmetal: hsl(209, 40%, 14%);
+  --text-majorelle-blue: hsla(243, 57%, 50%, 1);
+  /* Border color */
+  --border-gunmetal: hsl(209, 40%, 14%);
+  --border-readmore: hsl(60, 1%, 71%);
+  --border-majorelle-blue: hsla(243, 57%, 50%, 1);
+  /* Typography */
+  /* font-family */
+  --ff-poppins: "Poppins", sans-serif;
+  /* font-size */
+  --fontSize-1: 6.8rem;
+  --fontSize-2: 6.4rem;
+  --fontSize-3: 4rem;
+  --fontSize-4: 3.6rem;
+  --fontSize-5: 2.4rem;
+  --fontSize-6: 2rem;
+  /* font-weight */
+  --weight-bold: 700;
+  --weight-medium: 500;
+  --weight-regular: 400;
+  /* Spacing */
+  --section-spacing: 80px;
+  /* Shadow */
+  --shadow-1: 0 2px 10px hsla(209, 40%, 14%, 10%);
+  --shadow-2: 0 5px 10px hsla(249, 95%, 63%, 25%);
+  /* Border Radius */
+  --radius-pill: 200px;
+  --radius-circle: 50%;
+  --radius-30: 30px;
+  --radius-20: 20px;
+  /* Transition */
+  --transition-1: 250ms ease;
+  --transition-2: 500ms ease;
+  --cubic-out: cubic-bezier(0.05, 0.83, 0.52, 0.97);
+}
 
+header {
+  position: fixed;
+}
+
+body.nav-active {
+  overflow: hidden;
+}
+
+.main-outer {
+  border: 1px solid red;
+  position: relative;
+}
+
+.imageMain-outer {
+  width: 100%;
+  height: 100vh;
+  background-image: url("../images/hero 2.png");
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+  background-position: top;
+  border: 1px solid red;
+  background-color: var(--bg-about);
+  margin-top: 150px;
+}
+.imageMain-outer h1 {
+  color: var(--text-white);
+  font-size: var(--fontSize-2);
+  margin: 150px 0 0 75px;
+  font-family: "Roboto Serif", serif;
+  margin-bottom: 2px;
+}
+.imageMain-outer h3 {
+  color: var(--text-white);
+  font-size: var(--fontSize-3);
+  margin-left: 75px;
+  font-family: "Roboto Serif", serif;
+}
+
+.main-context {
+  border: 1px solid red;
+  margin: -200px 150px 0 150px;
+  background-color: var(--bg-about);
+  font-family: "roboto";
+}
+.main-context h4 {
+  font-size: var(--fontSize-5);
+  color: var(--text-majorelle-blue);
+  margin-bottom: 10px;
+}
+.main-context p {
+  text-align: justify;
+  font-size: var(--fontSize-6);
+  margin-bottom: 10px;
+}
+.main-context button {
+  background-color: var(--bg-white);
+  border: 2px solid var(--border-readmore);
+  border-radius: 15px;
+  padding: 1px 30px;
+  font-size: var(--fontSize-5);
+}
+
+.main-outer-secondContext {
+  width: 100%;
+}
 
 /*# sourceMappingURL=about.css.map */
