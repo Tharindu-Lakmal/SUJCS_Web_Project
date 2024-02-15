@@ -1,3 +1,270 @@
+:root {
+  /* Colors */
+  /* Background color  */
+  --bg-white: hsl(0, 0%, 100%);
+  --bg-about: hsl(45, 22%, 96%);
+  --bg-lavender-blush: hsl(0, 100%, 98%);
+  --bg-majorelle-blue: hsla(243, 57%, 50%, 1);
+  --bg-ocean-blue:hsla(229, 83%, 60%, 1);
+  /* Text color */
+  --text-white: hsl(0, 0%, 100%);
+  --text-gunmetal: hsl(209, 40%, 14%);
+  --text-majorelle-blue: hsla(243, 57%, 50%, 1);
+  --text-scope: hsl(0, 0%, 30%);
+  /* Border color */
+  --border-gunmetal: hsl(209, 40%, 14%);
+  --border-readmore: hsl(60, 1%, 71%);
+  --border-majorelle-blue: hsla(243, 57%, 50%, 1);
+  /* Typography */
+  /* font-family */
+  --ff-poppins: "Poppins", sans-serif;
+  /* font-size */
+  --fontSize-1: 6.8rem;
+  --fontSize-2: 6.4rem;
+  --fontSize-3: 4rem;
+  --fontSize-4: 3.6rem;
+  --fontSize-5: 2.4rem;
+  --fontSize-6: 2rem;
+  --fontSize-7: 0.8rem;
+  /* font-weight */
+  --weight-bold: 700;
+  --weight-medium: 500;
+  --weight-regular: 400;
+  /* Spacing */
+  --section-spacing: 80px;
+  /* Shadow */
+  --shadow-1: 0 2px 10px hsla(209, 40%, 14%, 10%);
+  --shadow-2: 0 5px 10px hsla(249, 95%, 63%, 25%);
+  /* Border Radius */
+  --radius-pill: 200px;
+  --radius-circle: 50%;
+  --radius-30: 30px;
+  --radius-20: 20px;
+  /* Transition */
+  --transition-1: 250ms ease;
+  --transition-2: 500ms ease;
+  --cubic-out: cubic-bezier(0.05, 0.83, 0.52, 0.97);
+}
 
+header {
+  position: fixed;
+}
+
+.main-outer {
+  background-color: var(--bg-about);
+}
+
+.imageMain-outer {
+  width: 100%;
+  height: 100vh;
+  background-image: url("../images/hero 2.png");
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+  background-position: top;
+  background-color: var(--bg-about);
+  margin-top: 150px;
+  margin-left: -1px;
+  border: 1px solid transparent;
+}
+.imageMain-outer h1 {
+  color: var(--text-white);
+  font-size: var(--fontSize-2);
+  margin: 150px 0 0 76px;
+  font-family: "Roboto Serif", serif;
+  margin-bottom: 2px;
+}
+.imageMain-outer h3 {
+  color: var(--text-white);
+  font-size: var(--fontSize-3);
+  margin-left: 76px;
+  font-family: "Roboto Serif", serif;
+}
+
+.main-context {
+  margin: -200px 150px 0 150px;
+  background-color: var(--bg-about);
+  font-family: "roboto";
+  padding-bottom: 50px;
+}
+.main-context h4 {
+  font-size: var(--fontSize-4);
+  color: var(--text-majorelle-blue);
+  margin-bottom: 10px;
+}
+.main-context p {
+  text-align: justify;
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  margin-bottom: 20px;
+}
+.main-context button {
+  background-color: var(--bg-white);
+  border: 2px solid var(--border-readmore);
+  border-radius: 15px;
+  width: 11%;
+  font-size: 2rem;
+}
+.main-context button:hover {
+  background-color: var(--bg-about);
+  border-color: var(--text-majorelle-blue);
+}
+
+.main-outer-secondContext {
+  width: 100%;
+  background-color: var(--bg-white);
+  display: flex;
+  font-family: "roboto";
+}
+.main-outer-secondContext .secondContext {
+  display: flex;
+  padding: 0;
+  margin: 50px 150px 0 150px;
+  height: 400px;
+}
+.main-outer-secondContext .secondContext .inner-secondContext {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  justify-content: center;
+  text-align: left;
+}
+.main-outer-secondContext .secondContext .inner-secondContext h4 {
+  font-size: var(--fontSize-4);
+  color: var(--text-majorelle-blue);
+  margin-bottom: 10px;
+}
+.main-outer-secondContext .secondContext .inner-secondContext p {
+  text-align: justify;
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+}
+.main-outer-secondContext .secondContext .inner-secondContext button {
+  background-color: var(--bg-about);
+  border: 2px solid var(--border-readmore);
+  border-radius: 15px;
+  padding: 2px 10px;
+  font-size: var(--fontSize-6);
+  width: 20%;
+}
+.main-outer-secondContext .secondContext .inner-secondContext button:hover {
+  background-color: var(--bg-white);
+  border-color: var(--text-majorelle-blue);
+}
+.main-outer-secondContext .secondContext .inner-image-secondContext {
+  flex: 0.8;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: right;
+}
+.main-outer-secondContext .secondContext .inner-image-secondContext img {
+  width: 90%;
+}
+
+.thirdContext {
+  display: flex;
+  padding: 0;
+  margin: 50px 150px 0 150px;
+  height: 400px;
+}
+.thirdContext .inner-thirdContext {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  justify-content: center;
+  text-align: left;
+}
+.thirdContext .inner-thirdContext h4 {
+  font-size: var(--fontSize-4);
+  color: var(--text-majorelle-blue);
+  margin-bottom: 10px;
+}
+.thirdContext .inner-thirdContext p {
+  text-align: justify;
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+}
+.thirdContext .inner-thirdContext button {
+  background-color: var(--bg-white);
+  border: 2px solid var(--border-readmore);
+  border-radius: 15px;
+  padding: 2px 10px;
+  font-size: var(--fontSize-6);
+  width: 20%;
+}
+.thirdContext .inner-thirdContext button:hover {
+  background-color: var(--bg-about);
+  border-color: var(--text-majorelle-blue);
+}
+.thirdContext .inner-image-thirdContext {
+  flex: 0.8;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: left;
+}
+.thirdContext .inner-image-thirdContext img {
+  width: 90%;
+}
+
+.fifth-Context-outer {
+  display: flex;
+  padding: 0;
+  margin: 50px 150px 0 150px;
+  font-family: "Roboto Serif", serif;
+}
+.fifth-Context-outer .fifth-context h4 {
+  font-size: var(--fontSize-4);
+  color: var(--text-majorelle-blue);
+  margin-bottom: 10px;
+}
+.fifth-Context-outer .fifth-context p {
+  text-align: justify;
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  margin-bottom: 20px;
+}
+
+.scope {
+  margin: 0 150px;
+  font-family: "Roboto Serif", serif;
+}
+.scope h4 {
+  font-size: var(--fontSize-4);
+  color: var(--text-majorelle-blue);
+  margin-bottom: 20px;
+}
+.scope .scope-outer {
+  display: flex;
+  margin-bottom: 20px;
+}
+.scope .scope-outer .scope-box {
+  height: 500px;
+  width: 100%;
+  margin-right: 10px;
+  border: 2px solid var(--border-readmore);
+  border-radius: 20px;
+  background-color: var(--bg-white);
+  color: var(--text-scope);
+}
+.scope .scope-outer .scope-box h3 {
+  margin-left: 20px;
+}
+.scope .scope-outer .scope-box ul {
+  margin-top: 30px;
+  margin-left: 30px;
+  font-size: var(--fontSize-7);
+}
+.scope .scope-outer .scope-box .box1 {
+  width: 33.3%;
+}
+.scope .scope-outer .scope-box .box2 {
+  width: 33.3%;
+}
+.scope .scope-outer .scope-box:last-child {
+  margin-right: 0;
+}
 
 /*# sourceMappingURL=about.css.map */
