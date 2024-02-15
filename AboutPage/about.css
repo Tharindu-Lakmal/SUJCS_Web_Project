@@ -50,12 +50,7 @@ header {
   position: fixed;
 }
 
-body.nav-active {
-  overflow: hidden;
-}
-
 .main-outer {
-  position: relative;
   background-color: var(--bg-about);
 }
 
@@ -68,18 +63,20 @@ body.nav-active {
   background-position: top;
   background-color: var(--bg-about);
   margin-top: 150px;
+  margin-left: -1px;
+  border: 1px solid transparent;
 }
 .imageMain-outer h1 {
   color: var(--text-white);
   font-size: var(--fontSize-2);
-  margin: 150px 0 0 75px;
+  margin: 150px 0 0 76px;
   font-family: "Roboto Serif", serif;
   margin-bottom: 2px;
 }
 .imageMain-outer h3 {
   color: var(--text-white);
   font-size: var(--fontSize-3);
-  margin-left: 75px;
+  margin-left: 76px;
   font-family: "Roboto Serif", serif;
 }
 
@@ -106,6 +103,10 @@ body.nav-active {
   border-radius: 15px;
   width: 11%;
   font-size: 2rem;
+}
+.main-context button:hover {
+  background-color: var(--bg-about);
+  border-color: var(--text-majorelle-blue);
 }
 
 .main-outer-secondContext {
@@ -145,6 +146,10 @@ body.nav-active {
   padding: 2px 10px;
   font-size: var(--fontSize-6);
   width: 20%;
+}
+.main-outer-secondContext .secondContext .inner-secondContext button:hover {
+  background-color: var(--bg-white);
+  border-color: var(--text-majorelle-blue);
 }
 .main-outer-secondContext .secondContext .inner-image-secondContext {
   flex: 0.8;
@@ -188,6 +193,10 @@ body.nav-active {
   padding: 2px 10px;
   font-size: var(--fontSize-6);
   width: 20%;
+}
+.thirdContext .inner-thirdContext button:hover {
+  background-color: var(--bg-about);
+  border-color: var(--text-majorelle-blue);
 }
 .thirdContext .inner-image-thirdContext {
   flex: 0.8;

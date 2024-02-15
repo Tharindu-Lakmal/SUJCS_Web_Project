@@ -65,7 +65,7 @@
     <div class="main-context">
         <h4>Who are we?</h4>
         <p>The 9th Faculty of the Sabaragamuwa University of Sri Lanka (SUSL), known as the Faculty of Computing (FoC), was officially formed through an Order outlined in Gazette Extraordinary 2312/14 on December 27, 2022. Against the backdrop of computing's pivotal role in shaping humanity's future, SUSL is committed to cultivating graduates equipped with a balanced mix of theoretical and practical expertise to meet the evolving demands of the IT/BPM industry. The creation of the FoC enhances SUSL's endeavors in this direction.</p>
-        <button type="button"><h6>Read More</h6></button>
+        <button type="button"><h6><a href="https://www.sab.ac.lk/computing/">Read More</a></h6></button>
 
     </div>
     <!-- main-context -->
@@ -80,7 +80,7 @@
                <p>
                The Computing & Information Systems Degree Program aims to graduate individuals with a comprehensive understanding of fundamental computing principles and information systems. Special emphasis is placed on equipping students with the skills necessary for managing large and critical systems, addressing the specific needs of both government and non-government institutions and industries."
                </p>
-                <button type="button"><h6>Read More</h6></button>
+                <button type="button"><h6><a href="https://www.sab.ac.lk/computing/departments/dcis-about">Read More</a></h6></button>
 
             </div>
             <div class="inner-image-secondContext">
@@ -106,7 +106,7 @@
                <p>
                 In 2022, the Faculty of Computing at Sabaragamuwa University of Sri Lanka inaugurated the Department of Software Engineering (DSE), offering a BScHons Degree Programme in Software Engineering starting from the academic year 2019/2020. The primary goal of the DSE is to cultivate experts capable of producing advanced, top-notch, and affordable software systems.
                </p>
-                <button type="button"><h6>Read More</h6></button>
+                <button type="button"><h6><a href="https://www.sab.ac.lk/computing/undergraduate/bsc-se-about">Read More</a></h6></button>
 
             
             </div>
@@ -124,7 +124,7 @@
                <p>
                The objective is to foster the development of proficient Data Science graduates, ensuring they possess both theoretical and technical knowledge and skills. Additionally, the goal is to meet the growing demand for Data Science professionals in the industry. Currently, the Department is strengthened by a qualified academic staff, comprised of experts who have earned their degrees from reputable national and international universities, specializing in key areas of Data Science.
                </p>
-                <button type="button"><h6>Read More</h6></button>
+                <button type="button"><h6><a href="https://www.sab.ac.lk/computing/undergraduate/bsc-ds-about">Read More</a></h6></button>
 
             </div>
             <div class="inner-image-secondContext">
