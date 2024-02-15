@@ -65,6 +65,17 @@ function navBar() {
 }
 
 
+function search() {
+    echo "
+    <div class='search_container'>
+
+        <input class='input' type='text' placeholder='Search here'>
+        <button class='search_btn btn'><ion-icon name='search'></ion-icon></button>
+
+    </div>
+    ";
+}
+
 // Footer --------------------------------------------------------------------
 
 ?>
