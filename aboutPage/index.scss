@@ -1,0 +1,17 @@
+@import 'color.scss';
+
+.main-content{
+
+    h3{
+        color: var(--text-majorelle-blue);
+        margin-bottom: 10px;
+    }
+
+    button{
+        background-color: var(--bg-lavender-blush);
+        border-radius: 25px;
+        border: 1px solid var(--border-gunmetal);
+        padding: 2px 8px;
+        margin-top: 25px;
+    }
+}
