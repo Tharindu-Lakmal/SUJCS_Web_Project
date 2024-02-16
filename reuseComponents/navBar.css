@@ -372,12 +372,6 @@ body.nav-active {
         padding-block-start: 40px;
     }
 
-
-    /* Hero */
-
-
-    /* Footer */
-
 }
 
 
@@ -423,12 +417,6 @@ body.nav-active {
     :is(.desti, .gallery) :is(.section-subtitle, .section-title) {
         text-align: center;
     }
-
-
-    /* Hero */
-
-    /* Footer */
-
 
 }
 
@@ -484,6 +472,10 @@ body.nav-active {
         transform: translateX(-50%);
     }
 
+    .navbar-item a {
+        font-size: 16px;
+    }
+
     .header-action {
         border: none;
         padding-block-start: 0;
@@ -493,11 +485,6 @@ body.nav-active {
     .header .active {
         padding-block: 15px;
     }
-
-
-
-    /* Hero */
-    
 
 }
 
@@ -555,10 +542,6 @@ body.nav-active {
         opacity: 1;
     }
 
-    /* Hero */
-    
-    /* Footer */
-    
 
 }
 
@@ -599,9 +582,5 @@ body.nav-active {
     .navbar-link:is(:hover, :focus-visible, .active)::before {
         opacity: 1;
     }
-
-
-    /* Footer */
     
-
-}
+}}

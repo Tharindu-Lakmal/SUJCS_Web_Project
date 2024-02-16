@@ -38,6 +38,8 @@ include('../function/commonFunction.php');
     <link rel="stylesheet" href="../reuseComponents/navBar.css">
     <!-- custom search bar css link -->
     <link rel="stylesheet" href="../reuseComponents/search.css">
+    <!-- custom responsive css link -->
+    <link rel="stylesheet" href="./responsiveStyle.css">
 
 </head>
 
@@ -98,11 +100,11 @@ include('../function/commonFunction.php');
                 </h1>
                 <p class="sub-content">
                     SUJCS is a peer reviewed journal aiming to publish high quality
-                    articles on topical issues
+                    articles on topical issues in new theoretical results in all areas.
                 </p>
-                <p class="sub-content">
+                <!-- <p class="sub-content">
                     in new theoretical results in all areas.
-                </p>
+                </p> -->
             </div>
 
         </div>
@@ -233,7 +235,7 @@ include('../function/commonFunction.php');
         <div class="container-2">
 
             <div class="guid-heading">
-                <h3 class="h3 guid-heading">Why are we doing this?</h3>
+                <h3 class="h3 guid-heading">Guidance for Submission</h3>
             </div>
 
             <div class="guid-content">
@@ -253,7 +255,8 @@ include('../function/commonFunction.php');
 
                     <ul class="guid-list">
                         <li class="guid-items">
-                            <i class="fa-solid fa-arrow-right" style="color: #3f37c9;"></i> SUJCS considers research papers, case studies, practitioner papers, technical
+                            <i class="fa-solid fa-arrow-right" style="color: #3f37c9;"></i> SUJCS considers research papers, 
+                            case studies, practitioner papers, technical
                             papers, and book reviews for publication.
                         </li>
                         <li class="guid-items">
@@ -266,7 +269,8 @@ include('../function/commonFunction.php');
                         </li>
 
                         <li class="guid-items">
-                            <i class="fa-solid fa-arrow-right" style="color: #3f37c9;"></i> Please do not hesitate to contact the editorial office for more information.
+                            <i class="fa-solid fa-arrow-right" style="color: #3f37c9;"></i> Please do not hesitate to contact 
+                            the editorial office for more information.
                         </li>
                     </ul>
 

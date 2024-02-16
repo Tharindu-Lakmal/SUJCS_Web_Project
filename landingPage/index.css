@@ -215,6 +215,7 @@ body.nav-active {
     display: grid;
     justify-content: center;
     align-items: center;
+    text-align: center;
 }
 .main .section-title {
     font-size: 5.7rem;
@@ -383,3 +384,5 @@ body.nav-active {
 
 
 /* Media Queries //////////////////////////////////*/
+
+/* See in the responsiveStyle.css */
