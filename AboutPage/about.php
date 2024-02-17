@@ -18,7 +18,7 @@
     <meta name="description" content="Official website of faculty of computer science">
 
     <!-- favicon link -->
-    <link rel="shortcut icon" href="images/favicon.svg" type="image/svg+xml">
+    <link rel="icon" href="../images/tab_logo.png" type="image/x-icon">
 
     <!-- google fonts link-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -69,7 +69,7 @@
 
     </div>
     
-    
+
     
 
     <!-- main-image -->
@@ -92,7 +92,7 @@
                <p>
                The Computing & Information Systems Degree Program aims to graduate individuals with a comprehensive understanding of fundamental computing principles and information systems. Special emphasis is placed on equipping students with the skills necessary for managing large and critical systems, addressing the specific needs of both government and non-government institutions and industries."
                </p>
-                <button class="btn btn-primary btn-category" type="button"><h6><a href="https://www.sab.ac.lk/computing/departments/dcis-about">Read More</a></h6></button>
+                <button type="button"><h6><a href="https://www.sab.ac.lk/computing/departments/dcis-about">Read More</a></h6></button>
 
             </div>
             <div class="inner-image-secondContext">
