@@ -18,7 +18,7 @@
     <meta name="description" content="Official website of faculty of computer science">
 
     <!-- favicon link -->
-    <link rel="shortcut icon" href="images/favicon.svg" type="image/svg+xml">
+    <link rel="icon" href="../images/tab_logo.png" type="image/x-icon">
 
     <!-- google fonts link-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -34,6 +34,8 @@
     <link rel="stylesheet" href="./about.css">
     <!-- custom navbar css link -->
     <link rel="stylesheet" href="../reuseComponents/navBar.css">
+    <link rel="stylesheet" href="./search.css">
+    
 
 </head>
 <body>
@@ -47,17 +49,27 @@
     ?>
     </header>
 
+    <!-- Search Bar -->
+    <section class="search">
+
+        <!-- Search Bar ------------------------------- -->
+        <?php
+        search();
+        ?>
+
+    </section>
+
     
 
     <!-- main-image -->
     <div class="main-outer">
-    <div class="imageMain-outer">
+    <div class="image-outer" style="margin-top: 0;">
         <h1>Journal of Computer Science</h1>
         <h3>Faculty of Computing Sabaragamuwa <br> University of Sri Lanka</h3>
 
     </div>
     
-    
+
     
 
     <!-- main-image -->
@@ -149,14 +161,14 @@
     </div>`
     <!-- scope -->
     <div class="scope">
-    <h4>Scope</h4>
+    <h4 class="scp">Scope</h4>
         <div class="scope-outer">
             
             <div class="scope-box">
-                <h3>
+                <h4>
                     Communication Network & Information
                     Technologies
-                </h3>
+                </h4>
 
                 <ul>
                     <li>Ad hoc & Sensor Networks</li>
@@ -169,9 +181,9 @@
 
             </div>
             <div class="scope-box">
-            <h3>
+            <h4>
                 Data Mining and Knowledge Discovery
-            </h3>
+            </h4>
             <ul>
                 <li>Theory & Foundational Issues</li>
                 <li>Data Mining Methods</li>
@@ -182,9 +194,9 @@
 
             </div>
             <div class="scope-box" >
-            <h3 style="margin-top: 20px;">
+            <h4 style="margin-top: 20px;">
                 Software Engineering
-            </h3>
+            </h4>
 
             <ul>
                 <li>Software Process</li>
@@ -202,9 +214,9 @@
     <div class="scope-outer">
             
             <div class="scope-box">
-                <h3>
+                <h4>
                 Database Management & Information Retrieval
-                </h3>
+                </h4>
 
                 <ul>
                     <li>Data & Information Integration & Modelling</li>
@@ -218,9 +230,9 @@
 
             </div>
             <div class="scope-box">
-            <h3 style="margin-top: 20px;">
+            <h4 style="margin-top: 20px;">
             Mobile Computing
-            </h3>
+            </h4>
             <ul>
                 <li>Mobility Management</li>
                 <li>Distributed Real Time Systems</li>
@@ -231,9 +243,9 @@
 
             </div>
             <div class="scope-box" >
-            <h3>
+            <h4>
             Information System Application & Security
-            </h3>
+            </h4>
 
             <ul>
                 <li>Humana Resource Management & Computing</li>
@@ -254,9 +266,9 @@
     <div class="scope-outer">
             
             <div class="scope-box" style="width: 33%;">
-                <h3 style="margin-top: 20px;">
+                <h4 style="margin-top: 20px;">
                 Human Computer Interaction
-                </h3>
+                </h4>
 
                 <ul>
                     <li>Innovative Interaction Techniques</li>
@@ -270,9 +282,9 @@
 
             </div>
             <div class="scope-box" style="width: 33%;">
-            <h3>
+            <h4>
             Parallel & Distributed Technologies
-            </h3>
+            </h4>
             <ul>
                 <li>Parallel & Distributed Algorithms</li>
                 <li>Applications of Parallel & Distributed Computing</li>
@@ -293,10 +305,14 @@
     
    
 
-    <!-- Footer ------------------------------- -->
+    <!-- Footer -->
+    
+    <!-- Footer -->
 
     <!-- custom js link-->
     <script src="./about.js"></script>
+    
+
 
     <!-- ionicon link -->
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>

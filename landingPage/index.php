@@ -53,6 +53,7 @@ include('../function/commonFunction.php');
         navBar();
         ?>
 
+<<<<<<< Updated upstream
     </header>
 
     <!-- Search Bar -->

@@ -65,6 +65,8 @@ function navBar() {
 }
 
 
+// search-------------------------------
+
 function search() {
     echo "
     <div class='search_container'>
@@ -75,6 +77,7 @@ function search() {
     </div>
     ";
 }
+
 
 // Footer --------------------------------------------------------------------
 
