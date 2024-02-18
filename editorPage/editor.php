@@ -1,3 +1,9 @@
+<?php
+
+include '../function/commonFunction.php';
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -27,12 +33,126 @@
     <link rel="stylesheet" href="./editor.css">
     <!-- custom navbar css link -->
     <link rel="stylesheet" href="../reuseComponents/navBar.css">
+    <!-- custom search bar css link -->
+    <link rel="stylesheet" href="../aboutPage/search.css">
 
 </head>
 
 
 </head>
 <body>
+
+<!-- Header -->
+<header class="header " data-header>
+
+<!-- Navigation Bar ------------------------------- -->
+<?php 
+    navBar();
+?>
+</header>
+
+<!-- Search Bar -->
+<section class="search">
+
+    <!-- Search Bar ------------------------------- -->
+    <?php
+    search();
+    ?>
+
+</section>
+
+
+<!-- chief-editor -->
+
+<div class="chief-outer">
+    <div class="innersq">
+        <div class="square-content">
+            <div class="editor-image">
+
+            </div>
+            <div class="editor-info">
+                <h4>Editor in chief</h4>
+
+                <h5>Dr.KPN Jayasena</h5>
+                <h5>Department of Computing & Information Systems Sabaragamuwa</h5>
+                <h5>University Of Sri Lanka</h5><br>
+                <h5>pubudu@appsc.sab.ac.lk</h5>
+            </div>
+        </div>
+    </div>
+    <div class="circle">
+
+    </div>
+
+</div>
+
+<!-- chief-editor -->
+
+
+<!-- other-editors -->
+
+<div class="other-editor-outer">
+
+
+<!-- first-editor -->
+<div class="square-content">
+            <div class="editor-image">
+
+            </div>
+            <div class="editor-info">
+                <h4>Editor in chief</h4>
+
+                <h5>Dr.KPN Jayasena</h5>
+                <h5>Department of Computing & Information Systems Sabaragamuwa</h5>
+                <h5>University Of Sri Lanka</h5><br>
+                <h5>pubudu@appsc.sab.ac.lk</h5>
+            </div>
+        </div>
+
+<!-- first-editor -->
+
+<!-- second-editor -->
+        <div class="square-content">
+            <div class="editor-image">
+
+            </div>
+            <div class="editor-info">
+                <h4>Editor in chief</h4>
+
+                <h5>Dr.KPN Jayasena</h5>
+                <h5>Department of Computing & Information Systems Sabaragamuwa</h5>
+                <h5>University Of Sri Lanka</h5><br>
+                <h5>pubudu@appsc.sab.ac.lk</h5>
+            </div>
+        </div>
+        <!-- second-editor -->
+
+        <!-- third-editor -->
+        <div class="square-content">
+            <div class="editor-image">
+
+            </div>
+            <div class="editor-info">
+                <h4>Editor in chief</h4>
+
+                <h5>Dr.KPN Jayasena</h5>
+                <h5>Department of Computing & Information Systems Sabaragamuwa</h5>
+                <h5>University Of Sri Lanka</h5><br>
+                <h5>pubudu@appsc.sab.ac.lk</h5>
+            </div>
+        </div>
+        <!-- third-editor -->
+        
+</div>
+<!-- other-editor -->
     
+
+
+<script src="editor.js"></script>
+
+ <!-- ionicon link -->
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
 </body>
 </html>

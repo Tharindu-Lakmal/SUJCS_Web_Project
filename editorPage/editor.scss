@@ -1,0 +1,117 @@
+@import 'color.scss';
+
+.chief-outer {
+    display: flex;
+    
+  
+    
+    .innersq{
+      width: 45%;
+      height: 400px;
+      background-color: #0073CE;
+      margin-bottom: 50px;
+  
+      //main editor
+      .square-content{
+        width: 200%;
+        height: inherit ;
+        display: flex;
+        /* justify-content: center; */
+        align-items: center;
+  
+  
+  
+        .editor-image{
+          width: 250px;
+          height: 250px;
+          background-color: black;
+          margin-left: 150px;
+        }
+  
+        .editor-info{
+
+          border: 1px solid yellow;
+          height: 200px;
+          font-family: "roboto";
+          margin-top: -20px;
+          margin-left: 50px;
+
+          h4{
+            font-size: var(--fontSize-4 );
+            color: var(--text-majorelle-blue);
+            margin-bottom: 20px;
+            text-align: left;
+            
+            
+
+    
+        }
+
+        h5{
+             color: var(--text-white);  
+             font-size: var(--fontSize-6); 
+        }
+        }
+  
+      }
+  
+    }
+  
+    .circle{
+      z-index: -1;
+      width: 400px;
+      height: 400px;
+      border-radius: 0 100% 100% 0;
+      background-color: #0073CE;
+  
+    }
+  }
+
+//other editors
+  .other-editor-outer{
+    margin-top: 50px;
+
+    .square-content{
+        width: 200%;
+        height: inherit ;
+        display: flex;
+        /* justify-content: center; */
+        align-items: center;
+        margin-left: 250px;
+        margin-bottom: 50px;
+  
+  
+  
+        .editor-image{
+          width: 250px;
+          height: 250px;
+          background-color: black;
+          margin-left: 150px;
+        }
+  
+        .editor-info{
+
+          height: 200px;
+          font-family: "roboto";
+          margin-top: -20px;
+          margin-left: 50px;
+
+          h4{
+            font-size: var(--fontSize-4 );
+            color: var(--text-majorelle-blue);
+            margin-bottom: 20px;
+            text-align: left;
+            
+            
+
+    
+        }
+
+        h5{
+             color: var(--text-scope);  
+             font-size: var(--fontSize-6); 
+        }
+        }
+  
+      }
+  }
