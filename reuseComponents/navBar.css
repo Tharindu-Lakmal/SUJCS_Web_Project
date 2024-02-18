@@ -6,7 +6,7 @@
     /* Background color  */
 
     --bg-white: hsl(0, 0%, 100%);
-    --bg-lavender-blush: hsl(0, 100%, 98%);
+    --bg-lavender-blush: hsla(45, 22%, 96%, 1);
     --bg-majorelle-blue: hsla(243, 57%, 50%, 1);
     --bg-ocean-blue:hsla(229, 83%, 60%, 1);
 
@@ -24,6 +24,7 @@
 
     /* font-family */
     --ff-poppins: 'Poppins', sans-serif;
+    --ff-poppins-serif: 'Poppins Serif', serif;
 
     /* font-size */
     --fontSize-1: 6.8rem;
@@ -37,6 +38,7 @@
     --weight-bold: 700;
     --weight-medium: 500;
     --weight-regular: 400;
+    --weight-light: 300;
 
     /* Spacing */
     --section-spacing: 80px;
@@ -114,8 +116,6 @@ body {
     background-color: var(--bg-lavender-blush);
     color: var(--text-granite-gray);
     font-size: var(--fontSize-6);
-    line-height: 1.8;
-}
 
 body.nav-active {
     overflow: hidden;
@@ -127,9 +127,9 @@ body.nav-active {
 }
 
 .btn {
-    height: 50px;
+    height: 40px;
     color: var(--text-white);
-    padding-inline: 30px;
+    padding: 10px 24px;
     border-radius: var(--radius-pill);
     display: flex;
     justify-content: center;
@@ -153,10 +153,6 @@ body.nav-active {
 
 .btn-secondary:is(:hover, :focus-visible) {
     background-color: var(--bg-english-vermillion);
-}
-
-.section {
-    padding-block-end: var(--section-spacing);
 }
 
 .has-bg-image {
@@ -293,7 +289,7 @@ body.nav-active {
 .navbar-link {
     position: relative;
     color: var(--text-gunmetal);
-    font-size: var(--fontSize-7);
+    font-size: var(--fontSize-6);
     font-weight: var(--weight-medium);
     padding-block: 8px;
     transition: var(--transition-1);
@@ -328,7 +324,7 @@ body.nav-active {
 
 .login-btn {
     color: var(--text-gunmetal);
-    font-size: var(--fontSize-7);
+    font-size: var(--fontSize-6);
     font-weight: var(--weight-medium);
     transition: var(--transition-1);
 }
@@ -376,12 +372,6 @@ body.nav-active {
         padding-block-start: 40px;
     }
 
-
-    /* Hero */
-
-
-    /* Footer */
-
 }
 
 
@@ -420,19 +410,13 @@ body.nav-active {
 
     .btn {
         height: 60px;
-        padding-inline: 40px;
+        padding: 10px 24px;
     }
 
 
     :is(.desti, .gallery) :is(.section-subtitle, .section-title) {
         text-align: center;
     }
-
-
-    /* Hero */
-
-    /* Footer */
-
 
 }
 
@@ -488,6 +472,10 @@ body.nav-active {
         transform: translateX(-50%);
     }
 
+    .navbar-item a {
+        font-size: 16px;
+    }
+
     .header-action {
         border: none;
         padding-block-start: 0;
@@ -497,11 +485,6 @@ body.nav-active {
     .header .active {
         padding-block: 15px;
     }
-
-
-
-    /* Hero */
-    
 
 }
 
@@ -559,10 +542,6 @@ body.nav-active {
         opacity: 1;
     }
 
-    /* Hero */
-    
-    /* Footer */
-    
 
 }
 
@@ -603,19 +582,5 @@ body.nav-active {
     .navbar-link:is(:hover, :focus-visible, .active)::before {
         opacity: 1;
     }
-
-
-    /* Footer */
     
-<<<<<<< Updated upstream
-
-}
-=======
-<<<<<<< Updated upstream
 }}
-=======
-
-    }
-}
->>>>>>> Stashed change
->>>>>>> Stashed changes
