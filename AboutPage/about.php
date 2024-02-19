@@ -10,7 +10,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 
     <title>SUJCS | About</title>
 
@@ -19,6 +19,10 @@
 
     <!-- favicon link -->
     <link rel="icon" href="../images/tab_logo.png" type="image/x-icon">
+
+    <!-- fontawesome link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==
+    " crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <!-- google fonts link-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -35,6 +39,7 @@
     <!-- custom navbar css link -->
     <link rel="stylesheet" href="../reuseComponents/navBar.css">
     <link rel="stylesheet" href="./search.css">
+    <link rel="stylesheet" href="./responsiveAbout.css">
     
 
 </head>
@@ -171,12 +176,12 @@
                 </h4>
 
                 <ul>
-                    <li>Ad hoc & Sensor Networks</li>
-                    <li>Adaptive Applications</li>
-                    <li>Admission/Congestion/Flow Control</li>
-                    <li>Authentication, Authorization & Accounting</li>
-                    <li>Broadband Communications</li>
-                    <li>Broadband Networks</li>
+                    <li style="margin-bottom:5px;"><i class="fa-solid fa-arrow-right" style="color: #3f37c9; margin-right: 5px;"></i>Ad hoc & Sensor Networks</li>
+                    <li style="margin-bottom:5px;"><i class="fa-solid fa-arrow-right" style="color: #3f37c9; margin-right: 5px;"></i>Adaptive Applications</li>
+                    <li style="margin-bottom:5px;"><i class="fa-solid fa-arrow-right" style="color: #3f37c9; margin-right: 5px;"></i>Admission/Congestion/Flow Control</li>
+                    <li style="margin-bottom:5px;"><i class="fa-solid fa-arrow-right" style="color: #3f37c9; margin-right: 5px;"></i>Authentication, Authorization & Accounting</li>
+                    <li style="margin-bottom:5px;"><i class="fa-solid fa-arrow-right" style="color: #3f37c9; margin-right: 5px;"></i>Broadband Communications</li>
+                    <li style="margin-bottom:5px;"><i class="fa-solid fa-arrow-right" style="color: #3f37c9; margin-right: 5px;"></i>Broadband Networks</li>
                 </ul>
 
             </div>
@@ -185,11 +190,11 @@
                 Data Mining and Knowledge Discovery
             </h4>
             <ul>
-                <li>Theory & Foundational Issues</li>
-                <li>Data Mining Methods</li>
-                <li>Algorithms for Data Mining</li>
-                <li>Knowledge Discovery Process</li>
-                <li>Application Issues</li>
+                <li style="margin-bottom:5px;"><i class="fa-solid fa-arrow-right" style="color: #3f37c9;  margin-right: 5px;"></i>Theory & Foundational Issues</li>
+                <li style="margin-bottom:5px;"><i class="fa-solid fa-arrow-right" style="color: #3f37c9;  margin-right: 5px;"></i>Data Mining Methods</li>
+                <li style="margin-bottom:5px;"><i class="fa-solid fa-arrow-right" style="color: #3f37c9;  margin-right: 5px;"></i>Algorithms for Data Mining</li>
+                <li style="margin-bottom:5px;"><i class="fa-solid fa-arrow-right" style="color: #3f37c9;  margin-right: 5px;"></i>Knowledge Discovery Process</li>
+                <li style="margin-bottom:5px;"><i class="fa-solid fa-arrow-right" style="color: #3f37c9;  margin-right: 5px;"></i>Application Issues</li>
             </ul>
 
             </div>
@@ -199,12 +204,12 @@
             </h4>
 
             <ul>
-                <li>Software Process</li>
-                <li>Software Engineering Practice</li>
-                <li>Web Engineering</li>
-                <li>Quality Management</li>
-                <li>Managing Software Projects</li>
-                <li>Advanced Topics in Software Engineering</li>
+                <li style="margin-bottom:5px;"><i class="fa-solid fa-arrow-right" style="color: #3f37c9;  margin-right: 5px;"></i>Software Process</li>
+                <li style="margin-bottom:5px;"><i class="fa-solid fa-arrow-right" style="color: #3f37c9;  margin-right: 5px;"></i>Software Engineering Practice</li>
+                <li style="margin-bottom:5px;"><i class="fa-solid fa-arrow-right" style="color: #3f37c9;  margin-right: 5px;"></i>Web Engineering</li>
+                <li style="margin-bottom:5px;"><i class="fa-solid fa-arrow-right" style="color: #3f37c9;  margin-right: 5px;"></i>Quality Management</li>
+                <li style="margin-bottom:5px;"><i class="fa-solid fa-arrow-right" style="color: #3f37c9;  margin-right: 5px;"></i>Managing Software Projects</li>
+                <li style="margin-bottom:5px;"><i class="fa-solid fa-arrow-right" style="color: #3f37c9;  margin-right: 5px;"></i>Advanced Topics in Software Engineering</li>
             </ul>
      
             </div>
@@ -219,13 +224,13 @@
                 </h4>
 
                 <ul>
-                    <li>Data & Information Integration & Modelling</li>
-                    <li>Data & Information Networks</li>
-                    <li>Data & Information Privacy & Security</li>
-                    <li>Data & Information Quality</li>
-                    <li>Data & Information Semantics</li>
-                    <li>Data & Information Streams</li>
-                    <li>Data Management in Grid & P2P Systems</li>
+                    <li style="margin-bottom:5px;"><i class="fa-solid fa-arrow-right" style="color: #3f37c9;  margin-right: 5px;"></i>Data & Information Integration & Modelling</li>
+                    <li style="margin-bottom:5px;"><i class="fa-solid fa-arrow-right" style="color: #3f37c9;  margin-right: 5px;"></i>Data & Information Networks</li>
+                    <li style="margin-bottom:5px;"><i class="fa-solid fa-arrow-right" style="color: #3f37c9;  margin-right: 5px;"></i>Data & Information Privacy & Security</li>
+                    <li style="margin-bottom:5px;"><i class="fa-solid fa-arrow-right" style="color: #3f37c9;  margin-right: 5px;"></i>Data & Information Quality</li>
+                    <li style="margin-bottom:5px;"><i class="fa-solid fa-arrow-right" style="color: #3f37c9;  margin-right: 5px;"></i>Data & Information Semantics</li>
+                    <li style="margin-bottom:5px;"><i class="fa-solid fa-arrow-right" style="color: #3f37c9;  margin-right: 5px;"></i>Data & Information Streams</li>
+                    <li style="margin-bottom:5px;"><i class="fa-solid fa-arrow-right" style="color: #3f37c9;  margin-right: 5px;"></i>Data Management in Grid & P2P Systems</li>
                 </ul>
 
             </div>
@@ -234,10 +239,10 @@
             Mobile Computing
             </h4>
             <ul>
-                <li>Mobility Management</li>
-                <li>Distributed Real Time Systems</li>
-                <li>E-commerce</li>
-                <li>Education Technology & Training</li>
+                <li style="margin-bottom:5px;"><i class="fa-solid fa-arrow-right" style="color: #3f37c9;  margin-right: 5px;"></i>Mobility Management</li>
+                <li style="margin-bottom:5px;"><i class="fa-solid fa-arrow-right" style="color: #3f37c9;  margin-right: 5px;"></i>Distributed Real Time Systems</li>
+                <li style="margin-bottom:5px;"><i class="fa-solid fa-arrow-right" style="color: #3f37c9;  margin-right: 5px;"></i>E-commerce</li>
+                <li style="margin-bottom:5px;"><i class="fa-solid fa-arrow-right" style="color: #3f37c9;  margin-right: 5px;"></i>Education Technology & Training</li>
             
             </ul>
 
@@ -248,14 +253,14 @@
             </h4>
 
             <ul>
-                <li>Humana Resource Management & Computing</li>
-                <li>Architectures/Infrastructures, Agent/Intelligent/Knowledge-based Systems</li>
-                <li>[Bio]Medical Informatics, Social Informatics</li>
-                <li>Collaborative Work Systems/Management, Human Factors</li>
-                <li>Data Mining, Knowledge Discovery, Data Warehouse, OLAP, Ontologies</li>
-                <li>Database architectures/applications, decision support systems</li>
-                <li>Enterprise/Executive Information Systems</li>
-                <li>Ethics in Information System</li>
+                <li style="margin-bottom:5px;"><i class="fa-solid fa-arrow-right" style="color: #3f37c9;  margin-right: 5px;"></i>Humana Resource Management & Computing</li>
+                <li style="margin-bottom:5px;"><i class="fa-solid fa-arrow-right" style="color: #3f37c9;  margin-right: 5px;"></i>Architectures/Infrastructures, Agent/Intelligent/Knowledge-based Systems</li>
+                <li style="margin-bottom:5px;"><i class="fa-solid fa-arrow-right" style="color: #3f37c9;  margin-right: 5px;"></i>[Bio]Medical Informatics, Social Informatics</li>
+                <li style="margin-bottom:5px;"><i class="fa-solid fa-arrow-right" style="color: #3f37c9;  margin-right: 5px;"></i>Collaborative Work Systems/Management, Human Factors</li>
+                <li style="margin-bottom:5px;"><i class="fa-solid fa-arrow-right" style="color: #3f37c9;  margin-right: 5px;"></i>Data Mining, Knowledge Discovery, Data Warehouse, OLAP, Ontologies</li>
+                <li style="margin-bottom:5px;"><i class="fa-solid fa-arrow-right" style="color: #3f37c9;  margin-right: 5px;"></i>Database architectures/applications, decision support systems</li>
+                <li style="margin-bottom:5px;"><i class="fa-solid fa-arrow-right" style="color: #3f37c9;  margin-right: 5px;"></i>Enterprise/Executive Information Systems</li>
+                <li style="margin-bottom:5px;"><i class="fa-solid fa-arrow-right" style="color: #3f37c9;  margin-right: 5px;"></i>Ethics in Information System</li>
                
             </ul>
      
@@ -265,32 +270,32 @@
 
     <div class="scope-outer">
             
-            <div class="scope-box" style="width: 33%;">
+            <div class="box" >
                 <h4 style="margin-top: 20px;">
                 Human Computer Interaction
                 </h4>
 
                 <ul>
-                    <li>Innovative Interaction Techniques</li>
-                    <li>Multimodal Interaction</li>
-                    <li>Speech Interaction</li>
-                    <li>Graphic Interaction</li>
-                    <li>Natural Language Interaction</li>
-                    <li>Interaction in Mobile & Embedded Systems</li>
-                    <li>Interface Design & Evaluation Methodologies</li>
+                    <li style="margin-bottom:5px;"><i class="fa-solid fa-arrow-right" style="color: #3f37c9;  margin-right: 5px;"></i>Innovative Interaction Techniques</li>
+                    <li style="margin-bottom:5px;"><i class="fa-solid fa-arrow-right" style="color: #3f37c9;  margin-right: 5px;"></i>Multimodal Interaction</li>
+                    <li style="margin-bottom:5px;"><i class="fa-solid fa-arrow-right" style="color: #3f37c9;  margin-right: 5px;"></i>Speech Interaction</li>
+                    <li style="margin-bottom:5px;"><i class="fa-solid fa-arrow-right" style="color: #3f37c9;  margin-right: 5px;"></i>Graphic Interaction</li>
+                    <li style="margin-bottom:5px;"><i class="fa-solid fa-arrow-right" style="color: #3f37c9;  margin-right: 5px;"></i>Natural Language Interaction</li>
+                    <li style="margin-bottom:5px;"><i class="fa-solid fa-arrow-right" style="color: #3f37c9;  margin-right: 5px;"></i>Interaction in Mobile & Embedded Systems</li>
+                    <li style="margin-bottom:5px;"><i class="fa-solid fa-arrow-right" style="color: #3f37c9;  margin-right: 5px;"></i>Interface Design & Evaluation Methodologies</li>
                 </ul>
 
             </div>
-            <div class="scope-box" style="width: 33%;">
+            <div class="box" >
             <h4>
             Parallel & Distributed Technologies
             </h4>
             <ul>
-                <li>Parallel & Distributed Algorithms</li>
-                <li>Applications of Parallel & Distributed Computing</li>
-                <li>Parallel & Distributed Architectures</li>
-                <li>Parallel & Distributed Software</li>
-                <li>Cloud, Edge & Fog Computing</li>
+                <li style="margin-bottom:5px;"><i class="fa-solid fa-arrow-right" style="color: #3f37c9;  margin-right: 5px;"></i>Parallel & Distributed Algorithms</li>
+                <li style="margin-bottom:5px;"><i class="fa-solid fa-arrow-right" style="color: #3f37c9;  margin-right: 5px;"></i>Applications of Parallel & Distributed Computing</li>
+                <li style="margin-bottom:5px;"><i class="fa-solid fa-arrow-right" style="color: #3f37c9;  margin-right: 5px;"></i>Parallel & Distributed Architectures</li>
+                <li style="margin-bottom:5px;"><i class="fa-solid fa-arrow-right" style="color: #3f37c9;  margin-right: 5px;"></i>Parallel & Distributed Software</li>
+                <li style="margin-bottom:5px;"><i class="fa-solid fa-arrow-right" style="color: #3f37c9;  margin-right: 5px;"></i>Cloud, Edge & Fog Computing</li>
             </ul>
 
             </div>
