@@ -33,7 +33,7 @@ include('../function/commonFunction.php');
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
 
     <!-- custom css link -->
-    <link rel="stylesheet" href="./article.css">
+    <link rel="stylesheet" href="./journal.css">
     <!-- custom navbar css link -->
     <link rel="stylesheet" href="../reuseComponents/navBar.css">
     <!-- custom search bar css link -->
@@ -105,7 +105,7 @@ include('../function/commonFunction.php');
                 <!-- Artical area -->
                 <div class="article-area">
 
-                    <h3 class="h3 search-heading">Here are the all Articles</h3>
+                    <h3 class="h3 search-heading">Here are the all Journals</h3>
 
                     <p class="p filter-search">
                         Filter by journal or book title
