@@ -15,7 +15,7 @@ header{
 .image-outer{
     width: 100%;
     height: 100vh;
-    background-image: url('../images/hero 2.png');
+    background-image: url('../images/hero.png');
     background-size: 100% auto;
     background-repeat: no-repeat;
     margin-left: -1px;
@@ -102,7 +102,7 @@ header{
 
         display: flex;
         padding: 0; 
-        margin: 50px 150px 0 150px;
+        margin-top: 50px;
         height: 400px;
 
        .inner-secondContext{
@@ -241,7 +241,7 @@ header{
 .fifth-Context-outer{
     display: flex;
         padding: 0; 
-        margin: 50px 150px 0 150px;
+        margin-top: 50px;
         font-family: "Roboto Serif", serif; 
         
 
@@ -276,7 +276,7 @@ header{
 
 // scope
 .scope{
-    margin: 0 150px;
+    margin-top: 0;
     font-family: "Roboto Serif", serif;
 
     h4{
@@ -290,6 +290,7 @@ header{
    
         display: flex;
         margin-bottom: 20px;
+        
     
         
         .scope-box {
@@ -312,21 +313,66 @@ header{
             // margin-top: 30px;
             margin-left: 30px;
             font-size: var(--fontSize-6);
+
+
            }
 
-           .box1{
-            width: 33.3%;
-           }
+           @media only screen and (min-width: 375px) and (max-width: 767px) {
+            width: 100%;
+        }
 
-           .box2{
-            width: 33.3%;
-           }
+          
 
+        //    .fa-arrow-right{
+        //     margin-right: 10px;
+        //    }
+
+        
+
+           
            
             &:last-child {
                 margin-right: 0; 
             }
         }
+
+        .box {
+            width: 33%;
+            height: auto;
+            margin-right: 10px; 
+            border: 2px solid var(--border-readmore);
+            border-radius: 20px;
+            background-color: var(--bg-white);
+            color: var(--text-scope);
+            padding-bottom: 25px;
+
+           h4{
+            margin-left: 20px;
+            color: var(--text-scope);
+            font-size: var(--fontSize-5 );
+           }
+
+           ul{
+            // margin-top: 30px;
+            margin-left: 30px;
+            font-size: var(--fontSize-6);
+
+
+           }    
+
+            
+            
+            @media only screen and (min-width: 375px) and (max-width: 767px) {
+                width: 100%;
+            }
+        }
+
+        @media only screen and (min-width: 375px) and (max-width: 767px) {
+            
+            display: flex;
+            flex-direction: column;
+        }
+        
     }
 }
 
