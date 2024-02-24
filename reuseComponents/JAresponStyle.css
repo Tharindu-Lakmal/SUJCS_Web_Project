@@ -180,22 +180,6 @@
         display: inline-block;
     }
 
-    .overlay {
-        position: fixed;
-        top: 0;
-        left: 0;
-        bottom: 0;
-        width: 100%;
-        background-color: var(--bg-white);
-        opacity: 0;
-        visibility: hidden;
-        transition: var(--transition-1);
-    }
-    
-    .overlay.active {
-        visibility: visible;
-        opacity: 0.7;
-    }
 
 
 
@@ -381,22 +365,6 @@
         display: inline-block;
     }
 
-    .overlay {
-        position: fixed;
-        top: 0;
-        left: 0;
-        bottom: 0;
-        width: 100%;
-        background-color: var(--bg-white);
-        opacity: 0;
-        visibility: hidden;
-        transition: var(--transition-1);
-    }
-    
-    .overlay.active {
-        visibility: visible;
-        opacity: 0.7;
-    }
 
     /* Footer */
 
@@ -556,23 +524,6 @@
     .side-nav-btn.active {
         /* visibility: visible; */
         display: inline-block;
-    }
-
-    .overlay {
-        position: fixed;
-        top: 0;
-        left: 0;
-        bottom: 0;
-        width: 100%;
-        background-color: var(--bg-white);
-        opacity: 0;
-        visibility: hidden;
-        transition: var(--transition-1);
-    }
-    
-    .overlay.active {
-        visibility: visible;
-        opacity: 0.7;
     }
 
     /* Footer */
