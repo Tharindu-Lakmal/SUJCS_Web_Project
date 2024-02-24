@@ -1,3 +1,195 @@
+/* responsive for less than 375px screen */
+
+@media only screen and (min-width: 260px) and (max-width: 370px) {
+
+    /* Custom Property */
+
+    :root{
+
+        /* Typograpy */
+
+        /* Font size */
+        --fontSize-1: 4.8rem;
+        --fontSize-2: 4rem;
+        --fontSize-3: 2.8rem;
+        --fontSize-4: 2.6rem;
+        --fontSize-5: 2.2rem;
+        --fontSize-6: 1.8rem;
+        --fontSize-7: 1.6rem;
+
+        /* Spacing */
+        --section-spacing: 40px;
+
+    }
+    
+    
+    /* Reused Style */
+
+    /* .section {
+        padding-block-end: var(--section-spacing);
+    } */
+
+    .hero .container {
+        padding-block: 2rem;
+    }
+
+    .section-sub-title {
+        font-size: var(--fontSize-7) !important;
+    }
+
+    h1 {
+        font-size: var(--fontSize-4) !important;
+    }
+
+    h3 {
+        font-size: var(--fontSize-6) !important;
+    }
+
+    p {
+        font-size: 14px !important;
+    }
+
+    ul li {
+        font-size: 14px !important;
+    }
+
+    .search_container {
+        width: 90%;
+    }
+
+    .input {
+        padding: 0.6rem 1.2rem;
+        margin-right: 1rem;
+    }
+
+    .btn {
+        height: 40px;
+        padding: 10px 14px !important;
+    }
+
+    .container {
+        max-width: 250px;
+        width: 100%;
+        margin-inline: auto;
+    }
+
+    .container-2 {
+        max-width: 250px;
+        width: 100%;
+        margin-inline: auto;
+    }
+
+    .btn {
+        height: 40px;
+        padding: 10px 16px;
+    }
+
+
+    :is(.desti, .gallery) :is(.section-subtitle, .section-title) {
+        text-align: center;
+    }
+
+    /* categories */
+    .category{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .card {
+        max-width: 25rem;
+        margin-block-end: 3rem;
+    }
+
+    .card p {
+        font-size: var(--fontSize-7);
+    }
+
+    .category img {
+        width: 70px;
+    }
+
+    /* For publisher/researcher content */
+    .pr-content-2 {
+        padding-block-start: 5rem;
+        padding-block-end: 0 !important;
+        width: 100%;
+        padding-right: 0 !important;
+        order: 2;
+    }
+
+    .pr-content{
+        padding-block-start: 3rem;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .pr-img {
+        width: 100%;
+        padding: 0;
+    }
+
+    .pr-img img {
+        width: 100%;
+    }
+
+    .pcontent {
+        padding-right: 0;
+    }
+
+    /* Purpose content */
+    .pur-content{
+        padding-block: 0;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .pur-content-2 {
+        padding-block: 3rem;
+        width: 100%;
+        order: 2;
+        padding-right: 0;
+    }
+
+    .pr-img img {
+        width: 100%;
+    }
+
+    /* guidance content */
+
+    .guid-content{
+        padding-block: 0;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .guid-content-2 {
+        width: 100%;
+        order: 2;
+    }
+
+    .guid-list {
+        padding-left: 0; 
+    }
+
+    .guid-img {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        padding-right: 0;
+        padding-block-start: 5rem;
+    }
+
+    .guid-img img {
+        width: 50%;
+    }
+
+
+
+    /* Footer */
+
+}
 
 /* responsive for larger than 375px screen */
 

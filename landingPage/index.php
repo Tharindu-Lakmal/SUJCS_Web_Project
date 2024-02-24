@@ -127,7 +127,7 @@ include('../function/commonFunction.php');
                     <p class="category-text">
                         Explore the latest advancements in Information Technology
                     </p>
-                    <a href="#" class="btn btn-category btn-primary">Articles</a>
+                    <a href="../articlePage/article.php" class="btn btn-category btn-primary">Articles</a>
                 </div>
 
                 <!-- Journals -->
@@ -287,7 +287,7 @@ include('../function/commonFunction.php');
     <!-- Footer ------------------------------- -->
 
     <!-- custom js link-->
-    <script src="./index.js"></script>
+    <script src="../reuseComponents/navBar.js"></script>
 
     <!-- ionicon link -->
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
