@@ -31,9 +31,7 @@ function navBar() {
                         <li class='navbar-item'>
                             <a href='#' class='navbar-link'>About</a>
                         </li>
-                        <li class='navbar-item'>
-                            <a href='#' class='navbar-link'>Call for Papers</a>
-                        </li>
+                        
                         <li class='navbar-item'>
                             <a href='#' class='navbar-link'>Reviews</a>
                         </li>
@@ -64,6 +62,9 @@ function navBar() {
 
 }
 
+// <li class='navbar-item'>
+//     <a href='#' class='navbar-link'>Call for Papers</a>
+// </li>
 
 function search() {
     echo "
