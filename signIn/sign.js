@@ -4,6 +4,9 @@ const main = document.querySelector("main");
 const bullets = document.querySelectorAll(".bullets span");
 const images = document.querySelectorAll(".image");
 
+
+
+
 inputs.forEach((inp) => {
   inp.addEventListener("focus", () => {
     inp.classList.add("active");
@@ -40,3 +43,23 @@ function moveSlider() {
   bullets.forEach((bullet) => {
     bullet.addEventListener("click", moveSlider);
   });
+
+
+////////////////////////////////////////////////////
+// const mainSection = document.querySelectorAll('main');
+const displayBtn = document.querySelector("[data-sign]");
+const closeBtn = document.querySelector("[data-close]");
+const sign_main = document.querySelector("[data-sign-main]");
+
+
+displayBtn.addEventListener("click", () =>
+
+  sign_main.classList.add("avtive")
+
+);
+
+closeBtn.addEventListener("click", () =>
+
+  sign_main.classList.remove("avtive")
+  
+);

@@ -40,11 +40,11 @@ include('../function/commonFunction.php');
 <body>
 
     <!-- Main content -->
-    <main>
+    <main class="active">
         <div class="box">
 
             <div class="close-btn">
-                <i class="fa-solid fa-xmark" style="color: #fff;"></i>   <!-- 3e37c8 -->
+                <i class="fa-solid fa-xmark" style="color: #3e37c8;"></i>   <!-- 3e37c8 -->
             </div>
 
             <div class="inner-box">
@@ -77,7 +77,7 @@ include('../function/commonFunction.php');
                                 <a href="#">Forgotte password?</a>
                             </p>
 
-                            <input type="submit" value="Sign In" class="btn-s btn-s-primary sign-btn" />
+                            <input type="submit" value="Sign In" class="sign-btn" />
 
                             <p class="text">
                                 Sign in will gives you power to be the BatMan.
@@ -112,7 +112,7 @@ include('../function/commonFunction.php');
                                 <label>Password</label>
                             </div>
 
-                            <input type="submit" value="Sign Up" class=" btn-s btn-s-primary sign-btn" />
+                            <input type="submit" value="Sign Up" class="sign-btn" />
 
                             <p class="text">
                                 By signing up, I agree to the
