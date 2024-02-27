@@ -32,6 +32,7 @@ include('../function/commonFunction.php');
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
 
+
     <!-- custom css link -->
     <link rel="stylesheet" href="./index.css">
     <!-- custom navbar css link -->
@@ -40,6 +41,9 @@ include('../function/commonFunction.php');
     <link rel="stylesheet" href="../reuseComponents/search.css">
     <!-- custom responsive css link -->
     <link rel="stylesheet" href="./responsiveStyle.css">
+    <!-- custom signin css link -->
+    <link rel="stylesheet" href="../Signin/sign.css">
+
 
 </head>
 
@@ -53,8 +57,8 @@ include('../function/commonFunction.php');
         navBar();
         ?>
 
-<<<<<<< Updated upstream
     </header>
+
 
     <!-- Search Bar -->
     <section class="search">
@@ -288,6 +292,7 @@ include('../function/commonFunction.php');
 
     <!-- custom js link-->
     <script src="../reuseComponents/navBar.js"></script>
+    <script src="../Signin/sign.js"></script>
 
     <!-- ionicon link -->
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>

@@ -1,3 +1,4 @@
+
 /* custom properties */
 
 :root {
@@ -584,3 +585,31 @@ body.nav-active {
     }
     
 }}
+
+
+
+/* //////////////////////////////////////////////////////////signing page styles */
+
+
+/* main {
+    width: 100%;
+    min-height: 100vh;
+    overflow: hidden;
+    background-color: transparent;
+    padding: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    z-index: 1000;
+  }
+  
+  .box {
+    position: relative;
+    width: 100%;
+    max-width: 1020px;
+    height: 640px;
+    background-color: #fff;
+    border-radius: var(--radius-30);
+    box-shadow: var(--shadow-1);
+  } */
