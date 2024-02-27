@@ -292,7 +292,7 @@ include('../function/commonFunction.php');
 
     <!-- custom js link-->
     <script src="../reuseComponents/navBar.js"></script>
-    <script src="../Signin/sign.js"></script>
+    <script src="../signIn/sign.js"></script>
 
     <!-- ionicon link -->
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>

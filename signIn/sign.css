@@ -62,7 +62,7 @@ a {
 /********************** Reuse styles **********************/
 
 
-.btn-s {
+/* .btn-s {
     height: 40px;
     color: var(--text-white);
     padding: 10px 24px;
@@ -80,7 +80,7 @@ a {
 
 .btn-s-primary:is(:hover, :focus-visible) {
     background-color: var(--bg-ocean-blue);
-}
+} */
 
 /* --------------------------------------------------- */
 
@@ -97,17 +97,24 @@ input {
   font-family: var(--ff-poppins);
 }
 
-main {
+.sign-main {
   position: absolute;
   width: 100%;
   min-height: 100vh;
   overflow: hidden;
-  background-color: rgba(255, 255, 255, 0.704);
+  /* background-color: rgba(255, 255, 255, 0.704); */
   padding: 2rem;
   display: flex;
   align-items: center;
   justify-content: center;
-  z-index: 1000;
+  visibility: visible;
+  z-index: 100;
+}
+
+.sign-main.active {
+  visibility: visible;
+  background-color: rgba(255, 255, 255, 0.704);
+  transition: all 800ms ease-in-out;
 }
 
 .box {
@@ -125,7 +132,6 @@ main {
   position: absolute;
   padding: 0.3rem 0.5rem;
   border-radius: 100%;
-  background-color: var(--bg-majorelle-blue);
   right: 0.8rem;
   top: 0.8rem;
   z-index: 1;
@@ -134,7 +140,7 @@ main {
 }
 
 .close-btn i {
-    font-size: 1.2rem;
+    font-size: 2.2rem;
 }
 
 
@@ -162,7 +168,7 @@ main {
 form {
   max-width: 360px;
   width: 100%;
-  margin: 0 auto;
+  margin: 0 10px 0 10px;
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -183,7 +189,7 @@ form.sign-up-form {
 }
 
 .logo-s img {
-  width: 100px !important;
+  width: 120px !important;
   margin-right: 0.3rem;
 }
 
@@ -254,7 +260,7 @@ label {
   top: -2px;
 }
 
-.sign-btn {
+/* .sign-btn {
   display: inline-block !important;
   width: 100% !important;
   height: 43px;
@@ -262,6 +268,28 @@ label {
   cursor: pointer;
   margin-bottom: 2rem;
   transition: 0.3s;
+} */
+
+.sign-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--text-white);
+  width: 100%;
+  height: 40px;
+  padding: 1rem;
+  font-size: 1.7rem;
+  border: none;
+  cursor: pointer;
+  margin-bottom: 2rem;
+  border-radius: var(--radius-pill);
+  background-color: var(--bg-majorelle-blue);
+  transition: 0.3s;
+}
+
+
+.sign-btn:is(:hover, :focus-visible) {
+  background-color: var(--bg-ocean-blue);
 }
 
 .text {
@@ -272,11 +300,12 @@ label {
 .text a {
   display: initial;
   color: #151111ca;
+  font-weight: 500;
   transition: 0.3s;
 }
 
 .text a:is(:hover, :focus-visible) {
-    color: #151111;
+    color: var(--text-majorelle-blue);
   }
 
 main.sign-up-mode form.sign-in-form {
