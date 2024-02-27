@@ -1,0 +1,489 @@
+/* @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap"); */
+
+/* custom properties */
+
+:root {
+    /* Colors */
+
+    /* Background color  */
+
+    --bg-white: hsl(0, 0%, 100%);
+    --bg-lavender-blush: hsla(45, 22%, 96%, 1);
+    --bg-majorelle-blue: #3e37c8;
+    --bg-ocean-blue:hsla(229, 83%, 60%, 1);
+
+    /* Text color */
+
+    --text-white: hsl(0, 0%, 100%);
+    --text-gunmetal: hsl(209, 40%, 10%);
+    --text-majorelle-blue: hsla(243, 57%, 50%, 1);
+
+    /* Border color */
+    --border-gunmetal: hsl(209, 40%, 10%);
+    --border-majorelle-blue: hsla(243, 57%, 50%, 1);
+
+    /* Typography */
+
+    /* font-family */
+    --ff-poppins: 'Poppins', sans-serif;
+    --ff-poppins-serif: 'Poppins Serif', serif;
+
+    /* font-size */
+    --fontSize-1: 6.8rem;
+    --fontSize-2: 6.4rem;
+    --fontSize-3: 4rem;
+    --fontSize-4: 3.6rem;
+    --fontSize-5: 2.4rem;
+    --fontSize-6: 2rem;
+
+    /* font-weight */
+    --weight-bold: 700;
+    --weight-medium: 500;
+    --weight-regular: 400;
+    --weight-light: 300;
+
+    /* Spacing */
+    --section-spacing: 100px;
+
+    /* Shadow */
+    --shadow-1: 0 2px 10px hsla(209, 40%, 14%, 10%);
+    --shadow-2: 0 5px 10px hsla(243, 57%, 50%, 0.1);
+
+    /* Border Radius */
+    --radius-pill: 200px;
+    --radius-circle: 50%;
+    --radius-30: 30px;
+    --radius-20: 20px;
+}
+
+a {
+    text-decoration: none;
+}
+/********************** Reuse styles **********************/
+
+
+.btn-s {
+    height: 40px;
+    color: var(--text-white);
+    padding: 10px 24px;
+    border-radius: var(--radius-pill);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    transition: var(--transition-1);
+}
+
+.btn-s-primary {
+    background-color: var(--bg-majorelle-blue);
+}
+
+.btn-s-primary:is(:hover, :focus-visible) {
+    background-color: var(--bg-ocean-blue);
+}
+
+/* --------------------------------------------------- */
+
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body,
+input {
+  font-family: var(--ff-poppins);
+}
+
+main {
+  position: absolute;
+  width: 100%;
+  min-height: 100vh;
+  overflow: hidden;
+  background-color: rgba(255, 255, 255, 0.704);
+  padding: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.box {
+  position: relative;
+  width: 100%;
+  max-width: 920px;
+  height: 540px;
+  background-color: #fff;
+  border-radius: var(--radius-30);
+  box-shadow: var(--shadow-1);
+  top: -50px;
+}
+
+.close-btn {
+  position: absolute;
+  padding: 0.3rem 0.5rem;
+  border-radius: 100%;
+  background-color: var(--bg-majorelle-blue);
+  right: 0.8rem;
+  top: 0.8rem;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.close-btn i {
+    font-size: 1.2rem;
+}
+
+
+.inner-box {
+  position: absolute;
+  width: calc(100% - 4.1rem);
+  height: calc(100% - 4.1rem);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.forms-wrap {
+  position: absolute;
+  height: 100%;
+  width: 50%;
+  top: 0;
+  left: 0;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  transition: 0.8s ease-in-out;
+}
+
+form {
+  max-width: 360px;
+  width: 100%;
+  margin: 0 auto;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
+  transition: opacity 0.02s 0.4s;
+}
+
+form.sign-up-form {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.logo-s {
+  display: flex;
+  align-items: center;
+}
+
+.logo-s img {
+  width: 100px !important;
+  margin-right: 0.3rem;
+}
+
+
+.heading h2 {
+  font-size: var(--fontSize-4);
+  font-weight: 600;
+  color: var(--text-gunmetal);
+}
+
+.heading h6 {
+  color: #151111ca;
+  font-weight: 400;
+  font-size: 1.5rem;
+  display: inline-block;
+}
+
+.toggle {
+  display: inline-block;
+  color: #151111;
+  text-decoration: none;
+  font-size: 1.5rem;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.toggle:is(:hover, :focus-visible) {
+  color: #151111aa;
+}
+
+.input-wrap {
+  position: relative;
+  height: 37px;
+  margin-bottom: 1.5rem;
+}
+
+.input-field {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: none;
+  border: none;
+  outline: none;
+  border-bottom: 1px solid #bbb;
+  padding: 0;
+  font-size: 1.5rem;
+  color: #151111;
+  transition: 0.4s;
+}
+
+label {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 1.4rem;
+  color: #bbb;
+  pointer-events: none;
+  transition: 0.4s;
+}
+
+.input-field.active {
+  border-bottom-color: #151111;
+}
+
+.input-field.active + label {
+  font-size: 1.2rem;
+  top: -2px;
+}
+
+.sign-btn {
+  display: inline-block !important;
+  width: 100% !important;
+  height: 43px;
+  border: none;
+  cursor: pointer;
+  margin-bottom: 2rem;
+  transition: 0.3s;
+}
+
+.text {
+  color: #151111ca;
+  font-size: 1.5rem;
+}
+
+.text a {
+  display: initial;
+  color: #151111ca;
+  transition: 0.3s;
+}
+
+.text a:is(:hover, :focus-visible) {
+    color: #151111;
+  }
+
+main.sign-up-mode form.sign-in-form {
+  opacity: 0;
+  pointer-events: none;
+}
+
+main.sign-up-mode form.sign-up-form {
+  opacity: 1;
+  pointer-events: all;
+}
+
+main.sign-up-mode .forms-wrap {
+  left: 55%;
+}
+
+main.sign-up-mode .carousel {
+  left: 0%;
+}
+
+.carousel {
+  position: absolute;
+  height: 96%;
+  width: 50%;
+  left: 49%;
+  top: 2%;
+  background-color: var(--bg-majorelle-blue);
+  border-radius: 1.3rem;
+  display: grid;
+  grid-template-rows: auto 1fr;
+  /* padding-bottom: 2rem; */
+  overflow: hidden;
+  transition: 0.8s ease-in-out;
+}
+
+
+
+
+
+.images-wrapper {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+  }
+  
+  .image {
+    width: 100%;
+    grid-column: 1/2;
+    grid-row: 1/2;
+    opacity: 0;
+    transition: opacity 0.3s, transform 0.5s;
+  }
+  
+  .img-1 {
+    transform: translate(0, -50px);
+  }
+  
+  .img-2 {
+    transform: scale(0, -50px);
+  }
+  
+  .image.show {
+    opacity: 1;
+    transform: none;
+  }
+  
+  .text-slider {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+  
+  .text-wrap {
+    max-height: 2.2rem;
+    overflow: hidden;
+    margin-bottom: 2.5rem;
+  }
+  
+  .text-group {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    transform: translateY(0);
+    transition: 0.5s;
+  }
+  
+  .text-group h2 {
+    color: var(--text-white);
+    line-height: 2.2rem;
+    font-weight: 600;
+    font-size: 1.6rem;
+  }
+  
+  .bullets {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .bullets span {
+    display: block;
+    width: 0.5rem;
+    height: 0.5rem;
+    background-color: var(--bg-white);
+    margin: 0 0.25rem;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  
+  .bullets span.active {
+    width: 1.1rem;
+    background-color: var(--bg-white);
+    border-radius: 1rem;
+  }
+  
+
+/* --------------------------------responsive styles----------------------------- */
+
+/* responsive for less than 850px screen */
+
+@media (max-width: 850px) {
+  .box {
+    height: auto;
+    max-width: 550px;
+    overflow: hidden;
+  }
+
+  .inner-box {
+    position: static;
+    transform: none;
+    width: revert;
+    height: revert;
+    padding: 2rem;
+  }
+
+  .forms-wrap {
+    position: revert;
+    width: 100%;
+    height: auto;
+  }
+
+  form {
+    max-width: revert;
+    padding: 1.5rem 2.5rem 2rem;
+    transition: transform 0.8s ease-in-out, opacity 0.45s linear;
+  }
+
+  .heading {
+    margin: 2rem 0;
+  }
+
+  form.sign-up-form {
+    transform: translateX(100%);
+  }
+
+  main.sign-up-mode form.sign-in-form {
+    transform: translateX(-100%);
+  }
+
+  main.sign-up-mode form.sign-up-form {
+    transform: translateX(0%);
+  }
+
+  .carousel {
+    display: none;
+  }
+
+  .images-wrapper {
+    display: none;
+  }
+
+  .text-slider {
+    width: 100%;
+  }
+}
+
+
+/* responsive for less than 530px screen */
+
+@media (max-width: 530px) {
+  main {
+    padding: 1rem;
+  }
+
+  .box {
+    border-radius: 2rem;
+  }
+
+  .inner-box {
+    padding: 1rem;
+  }
+
+  .carousel {
+    display: none;
+  }
+
+  .text-wrap {
+    margin-bottom: 1rem;
+  }
+
+  .text-group h2 {
+    font-size: 1.2rem;
+  }
+
+  form {
+    padding: 1rem 2rem 1.5rem;
+  }
+}
