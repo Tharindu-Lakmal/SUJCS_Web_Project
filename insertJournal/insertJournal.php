@@ -12,6 +12,7 @@
         $journalKeyword = $_POST['journal_keyword'];
         $journalDate = $_POST['journal_publish_date'];
         $journalcategory = $_POST['journal_category'];
+        $journaltype = $_POST['journal_type'];
         $journalSubject = $_POST['journal_subject'];
         $authorName = $_POST['author_name'];
         $authorAffliation = $_POST['author_affliation'];
@@ -28,7 +29,7 @@
        
         //checking empty condition
         if($journalTitle=='' or $journalDescription=='' or $journalKeyword=='' or
-        $journalDate=='' or $journalcategory=='' or $journalSubject=='' or $authorName=='' or  $authorAffliation=='' or
+        $journalDate=='' or $journalcategory=='' or $journaltype=='' or $journalSubject=='' or $authorName=='' or  $authorAffliation=='' or
         $authorEmail=='' or $authorDesignation=='' or  $journalPdf=='') {
             echo "<script>alert('Please fill all the fields')</script>";
             exit();
@@ -38,9 +39,9 @@
             
 
             //upload journal
-            $uploadJournal = "INSERT INTO `journals` (journal_title, journal_description, journal_keyword, Category
-            ,jsubject, author_name, author_affliation, author_email, author_designation, journal_pdf, journal_publish_date, date) VALUES 
-            ('$journalTitle', '$journalDescription', '$journalKeyword', '$journalcategory', '$journalSubject', '$authorName', 
+            $uploadJournal = "INSERT INTO `journals` (journal_title, journal_description, journal_keyword, Category_id
+            ,journal_type_id,subject_id, author_name, author_affliation, author_email, author_designation, journal_pdf, journal_publish_date, date) VALUES 
+            ('$journalTitle', '$journalDescription', '$journalKeyword', '$journalcategory', '$journaltype', '$journalSubject', '$authorName', 
             '$authorAffliation', '$authorEmail','$authorDesignation', '$journalPdf', '$journalDate', NOW())";
 
             $result_query = mysqli_query($con, $uploadJournal);
@@ -162,7 +163,7 @@
                     placeholder="Enter journel publish date" autocomplete="off" required="required">
                 </div>
  <!-- insert category -->
- <div class="form-outline">
+             <div class="form-outline">
                     <label for="journal_category" class="form-label">
                     Select category
                     </label>
@@ -186,56 +187,78 @@
 
 
 
-                <!-- insert category -->
- <div class="form-outline">
-                    <label for="journal_subject" class="form-label">
+                <!-- insert type -->
+            <div class="form-outline">
+                    <label for="journal_type" class="form-label">
                     Select category
                     </label>
-                    <select name="journal_subject" id="journal_subject" class="form-select">
+                    <select name="journal_type" id="journal_type" class="form-select">
                         <option value="">Select category</option>
 
                        <?php
-$cat_query = "SELECT * FROM `category`";
-$cat_result = mysqli_query($con, $cat_query);
+                            $cat_query = "SELECT * FROM `category`";
+                            $cat_result = mysqli_query($con, $cat_query);
 
-while ($row = mysqli_fetch_assoc($cat_result)) {
-    $categoryId = $row['category_id'];
+                            while ($row = mysqli_fetch_assoc($cat_result)) {
+                                $categoryId = $row['category_id'];
 
-    // Use switch statement for better readability
-    switch ($categoryId) {
-        case 1:
-            $table = 'journal_subjects';
-            break;
-        case 2:
-            $table = 'article_subjects';
-            break;
-        case 3:
-            $table = 'book_subjects';
-            break;
-        default:
-            $table = ''; // Handle the case for unknown category
-            break;
-    }
+                                // Use switch statement for better readability
+                                switch ($categoryId) {
+                                    case 1:
+                                        $table = 'journal_types';
+                                        break;
+                                    case 2:
+                                        $table = 'article_types';
+                                        break;
+                                    
+                                    default:
+                                        $table = ''; // Handle the case for unknown category
+                                        break;
+                                }
 
-    // Check if the table name is set
-    if ($table !== '') {
-        $select_query = "SELECT * FROM `$table`";
-        $result_query = mysqli_query($con, $select_query);
+                                // Check if the table name is set
+                                if ($table !== '') {
+                                    $select_query = "SELECT * FROM `$table`";
+                                    $result_query = mysqli_query($con, $select_query);
 
-        while ($subjectRow = mysqli_fetch_assoc($result_query)) {
-            $subjectName = $subjectRow['subject_name'];
-            $subjectId = $subjectRow['subject_id'];
-            echo "<option value='$subjectId'>$subjectName</option>";
-        }
-    }
-}
-?>
+                                    while ($subjectRow = mysqli_fetch_assoc($result_query)) {
+                                        $subjectName = $subjectRow['type_name'];
+                                        $subjectId = $subjectRow['type_id'];
+                                        echo "<option value='$subjectId'>$subjectName</option>";
+                                    }
+                                }
+                            }
+                            ?>
 
 
                         
                     </select>
                 </div>
 
+
+                                <!-- insert subject for each type -->
+            <div class="form-outline">
+                    <label for="journal_subject" class="form-label">
+                    Select subject
+                    </label>
+                    <select name="journal_subject" id="journal_subject" class="form-select">
+                        <option value="">Select subject</option>
+
+                       <?php
+                            $select_query = "SELECT * FROM `all_subjects`";
+                            $result_query = mysqli_query($con, $select_query);
+
+                            while($row = mysqli_fetch_assoc($result_query)) {
+                                $categoryName = $row['subject_name']; // Corrected variable name
+                                $categoryId = $row['subject_id'];
+                                echo "<option value='$categoryId'>$categoryName</option>";
+                            }
+                        ?>
+
+
+                        
+                    </select>
+                </div>
                
                 <!-- j pdf -->
                 <div class="form-outline">

@@ -99,19 +99,17 @@ include('../function/features.php');
                 <!-- adding -->
 
                     <div class="filter-1">
+                        
                         <div class="filter-content-1">
                             
-                        <?php subjects(); ?>
-                        <!-- <button class="dropdown-btn">Dropdown
-                            <i class="fa fa-caret-down"></i>
-                        </button>
-                        <div class="dropdown-container">
-                            <a href="#" class="active">Link 1</a>
-                            <a href="#">Link 2</a>
-                            <a href="#">Link 3</a>
-                        </div> -->
+                        <?php journalSubjects(); ?>
+                        
+                        <!-- <div class="dropdown-container">
+                            
+                        </div>  -->
                                                     
                         </div>
+                        
                     </div>
 
                 </div>

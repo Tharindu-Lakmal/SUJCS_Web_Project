@@ -84,32 +84,32 @@ function search() {
 
 // select_subject
 
-function subjects() {
+function journalSubjects() {
     global $con;
 
-    $select_query = "SELECT * FROM `category`";
+    $select_query = "SELECT * FROM `journal_types`";
     $result_query = mysqli_query($con, $select_query);
 
     while ($row = mysqli_fetch_assoc($result_query)) {
-        $categoryName = $row['category_name'];
+        $categoryName = $row['type_name'];
+        $categoryId = $row['type_id'];
 
         echo "
-        <button class='dropdown-btn'>$categoryName
-            <i class='fa fa-caret-down'></i>
-        </button>";
+        <a class='p-heading' href='journal.php?category=$categoryId'><p class='p-heading'>$categoryName</p></a>
+        ";
 
-        $categoryId = $row['category_id'];
+        $typeId = $row['type_id'];
         $subjectTable = "";
 
         switch ($categoryId) {
-            case 1:
-                $subjectTable = 'journal_subjects';
+            case 'TJ01':
+                $subjectTable = 'software_engineering';
                 break;
-            case 2:
-                $subjectTable = 'article_subjects';
+            case 'TJ02':
+                $subjectTable = 'computer_security';
                 break;
-            case 3:
-                $subjectTable = 'book_subjects';
+            case 'TJ03':
+                $subjectTable = 'cloud_computing';
                 break;
         }
 
@@ -117,22 +117,97 @@ function subjects() {
             $sqlSubject = "SELECT * FROM `$subjectTable`";
             $resultSubject = mysqli_query($con, $sqlSubject);
 
-            echo "<div class='dropdown-container'>";
+            echo "<div class='subject-container'>";
 
             while ($subjectRow = mysqli_fetch_assoc($resultSubject)) {
                 $subjectName = $subjectRow['subject_name'];
-                echo "<a href='' class='active'>$subjectName</a>";
+                echo "<a href=''>$subjectName</a>";
             }
 
-            echo "</div>";
+           
         }
+        echo "</div><hr>";
+    }
+}
+
+
+
+function articleSubjects() {
+    global $con;
+
+    $select_query = "SELECT * FROM `article_types`";
+    $result_query = mysqli_query($con, $select_query);
+
+    while ($row = mysqli_fetch_assoc($result_query)) {
+        $categoryName = $row['type_name'];
+        $categoryId = $row['type_id'];
+
+        echo "
+        <a class='p-heading' href='journal.php?category=$categoryId'><p class='p-heading'>$categoryName</p></a>
+        ";
+
+        $typeId = $row['type_id'];
+        $subjectTable = "";
+
+        switch ($typeId) {
+            case 'TA01':
+                $subjectTable = 'software_article';
+                break;
+            case 'TA02':
+                $subjectTable = 'security_article';
+                break;
+            
+        }
+
+        if (!empty($subjectTable)) {
+            $sqlSubject = "SELECT * FROM `$subjectTable`";
+            $resultSubject = mysqli_query($con, $sqlSubject);
+
+            echo "<div class='subject-container'>";
+
+            while ($subjectRow = mysqli_fetch_assoc($resultSubject)) {
+                $subjectName = $subjectRow['subject_name'];
+                echo "<a href=''>$subjectName</a>";
+            }
+
+            echo "</div><hr>";
+        }
+        
     }
 }
 
 
     
 
-    
+function selectCategories(){
+
+    global $con;
+
+    if(isset($_GET['category'])){
+
+        $categoryId = $_GET['category'];
+
+        $sql = "SELECT * FROM `journals` WHERE category_id = $categoryId";
+        $result = mysqli_query($con, $sql);
+
+        $num_of_rows = mysqli_num_rows($result);
+        if($num_of_rows == 0) {
+            echo "<h3 class='text-center'>No related documents for this category</h3>";
+        }
+
+        while($row = mysqli_fetch_assoc($result)){
+
+                $title = $row['journal_title'];
+                $subject = $row['jsubject'];
+                $publishDate = $row['journal_publish_date'];
+                $pdf = $row['journal_pdf'];
+                
+
+                
+        }
+    }
+
+}
 
 
 ?>
