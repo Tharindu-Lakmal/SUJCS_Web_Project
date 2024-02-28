@@ -2,9 +2,9 @@
 
 <?php
     // include('../connection.php');
-    include('../function/commonFunction.php');
+    // include('../function/commonFunction.php');
     include('../connection.php'); //connection variable
-    include('../function/importantFunction.php');
+    include('../function/features.php');
 
     if(isset($_POST['submit_journal'])) {
         $journalTitle = $_POST['journal_title'];
@@ -39,7 +39,7 @@
 
             //upload journal
             $uploadJournal = "INSERT INTO `journals` (journal_title, journal_description, journal_keyword, Category
-            subject, author_name, author_affliation, author_email, author_designation, journal_pdf, journal_publish_date, date) VALUES 
+            ,jsubject, author_name, author_affliation, author_email, author_designation, journal_pdf, journal_publish_date, date) VALUES 
             ('$journalTitle', '$journalDescription', '$journalKeyword', '$journalcategory', '$journalSubject', '$authorName', 
             '$authorAffliation', '$authorEmail','$authorDesignation', '$journalPdf', '$journalDate', NOW())";
 

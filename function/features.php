@@ -3,26 +3,137 @@
 include '../connection.php';
 
 
+// replacement navbar
+
+function navBar() {
+
+    echo "
+        <div class='container'>
+            <a href='#' class='logo'>
+                <img src='../images/logo.png' width='64px' height='27px' alt='logo'>
+            </a>
+
+            <nav class='navbar' data-navbar>
+
+                <div class='navbar-top'>
+                    <a href='#' class='logo'>
+                        <img src='../images/logo.png' width='64px' height='27px' alt='logo'>
+                    </a>
+
+                    <!-- close icon 'X' -->
+                    <button class='nav-toggle-btn' aria-label='close menu' data-nav-toggler>
+                        <ion-icon name='close-outline' aria-hidden='true'></ion-icon>
+                    </button>
+                </div>
+
+                <ul class='navbar-list'>
+                    <li class='navbar-item'>
+                        <a href='#' class='navbar-link '>Home</a>
+                    </li>
+                    <li class='navbar-item'>
+                        <a href='#' class='navbar-link'>About</a>
+                    </li>
+                    <li class='navbar-item'>
+                        <a href='#' class='navbar-link'>Call for Papers</a>
+                    </li>
+                    <li class='navbar-item'>
+                        <a href='#' class='navbar-link'>Reviews</a>
+                    </li>
+                    <li class='navbar-item'>
+                        <a href='#' class='navbar-link'>Guidelines</a>
+                    </li>
+                    <li class='navbar-item'>
+                        <a href='#' class='navbar-link'>Contact Us</a>
+                    </li>
+                </ul>
+
+                <div class='header-action'>
+                    <a href='#' class='login-btn'>Login</a>
+                    <a href='#' class='btn btn-primary'>Sign Up</a>
+                </div>
+
+            </nav>
+
+            <!-- hambager menu icon -->
+            <button class='nav-toggle-btn' aria-label='open menu' data-nav-toggler>
+                <ion-icon name='menu-outline' aria-hidden='true'></ion-icon>
+            </button>
+
+            <div class='overlay' data-overlay data-nav-toggler></div>
+        </div>
+    ";
+
+}
+
+
+
+// replacement search bar
+
+function search() {
+    echo "
+    <div class='search_container'>
+
+        <input class='input' type='text' placeholder='Search here'>
+        <button class='search_btn btn'><ion-icon name='search'></ion-icon></button>
+
+    </div>
+    ";
+}
+
+
+
 // select_subject
 
-function subjects(){
+function subjects() {
     global $con;
 
-    $sql = "SELECT * FROM `journal_subjects`";
-    $result = mysqli_query($con, $sql);
+    $select_query = "SELECT * FROM `category`";
+    $result_query = mysqli_query($con, $select_query);
 
-    while($row = mysqli_fetch_assoc($result)){
-
-        $subjectName = $row['subject_name'];
+    while ($row = mysqli_fetch_assoc($result_query)) {
+        $categoryName = $row['category_name'];
 
         echo "
-        <h3>$subjectName</h3>
-        ";
-        
+        <button class='dropdown-btn'>$categoryName
+            <i class='fa fa-caret-down'></i>
+        </button>";
+
+        $categoryId = $row['category_id'];
+        $subjectTable = "";
+
+        switch ($categoryId) {
+            case 1:
+                $subjectTable = 'journal_subjects';
+                break;
+            case 2:
+                $subjectTable = 'article_subjects';
+                break;
+            case 3:
+                $subjectTable = 'book_subjects';
+                break;
+        }
+
+        if (!empty($subjectTable)) {
+            $sqlSubject = "SELECT * FROM `$subjectTable`";
+            $resultSubject = mysqli_query($con, $sqlSubject);
+
+            echo "<div class='dropdown-container'>";
+
+            while ($subjectRow = mysqli_fetch_assoc($resultSubject)) {
+                $subjectName = $subjectRow['subject_name'];
+                echo "<a href='' class='active'>$subjectName</a>";
+            }
+
+            echo "</div>";
+        }
     }
+}
+
 
     
-}
+
+    
+
 
 ?>
 

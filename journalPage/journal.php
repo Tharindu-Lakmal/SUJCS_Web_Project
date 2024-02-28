@@ -1,8 +1,8 @@
 <!-- database connection -->
 
 <?php
-// include('../connection.php');
-include('../function/commonFunction.php');
+include('../connection.php');
+// include('../function/commonFunction.php');
 include('../function/features.php');
 ?>
 
@@ -41,6 +41,8 @@ include('../function/features.php');
     <link rel="stylesheet" href="../reuseComponents/search.css">
     <!-- custom responsive css link -->
     <link rel="stylesheet" href="../reuseComponents/JAresponStyle.css">
+    <!-- custom dropdown menu css -->
+    <link rel="stylesheet" href="./journalsecondary.css">
 
 </head>
 
@@ -92,15 +94,32 @@ include('../function/features.php');
                         </p>
                     </div>
 
+
+
+                <!-- adding -->
+
                     <div class="filter-1">
                         <div class="filter-content-1">
                             
                         <?php subjects(); ?>
-                            
+                        <!-- <button class="dropdown-btn">Dropdown
+                            <i class="fa fa-caret-down"></i>
+                        </button>
+                        <div class="dropdown-container">
+                            <a href="#" class="active">Link 1</a>
+                            <a href="#">Link 2</a>
+                            <a href="#">Link 3</a>
+                        </div> -->
+                                                    
                         </div>
                     </div>
 
                 </div>
+
+
+
+
+
 
                 <!-- Artical area -->
                 <div class="article-area">
@@ -343,6 +362,7 @@ include('../function/features.php');
     <!-- custom js link-->
     <script src="../reuseComponents/navBar.js"></script>
     <script src="../reuseComponents/journal_article.js"></script>
+    <script src="./journal.js"></script>
 
     <!-- ionicon link -->
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
