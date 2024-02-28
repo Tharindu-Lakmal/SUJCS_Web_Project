@@ -1,5 +1,7 @@
 <?php
 
+include '../connection.php';
+
 
 // Navigation Bar --------------------------------------------------------------------
 
@@ -191,6 +193,8 @@ function search() {
     </div>
     ";
 }
+
+
 
 
 

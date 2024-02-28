@@ -3,6 +3,7 @@
 <?php
 // include('../connection.php');
 include('../function/commonFunction.php');
+include('../function/features.php');
 ?>
 
 
@@ -93,10 +94,9 @@ include('../function/commonFunction.php');
 
                     <div class="filter-1">
                         <div class="filter-content-1">
-                            <h3>awrefef</h3><br><br><br>
-                            <h3>awrefef</h3><br><br><br>
-                            <h3>awrefef</h3><br><br><br>
-                            <h3>awrefef</h3><br><br><br>
+                            
+                        <?php subjects(); ?>
+                            
                         </div>
                     </div>
 
