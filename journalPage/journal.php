@@ -1,8 +1,9 @@
 <!-- database connection -->
 
 <?php
-// include('../connection.php');
-include('../function/commonFunction.php');
+include('../connection.php');
+// include('../function/commonFunction.php');
+include('../function/features.php');
 ?>
 
 
@@ -40,6 +41,8 @@ include('../function/commonFunction.php');
     <link rel="stylesheet" href="../reuseComponents/search.css">
     <!-- custom responsive css link -->
     <link rel="stylesheet" href="../reuseComponents/JAresponStyle.css">
+    <!-- custom dropdown menu css -->
+    <link rel="stylesheet" href="./journalsecondary.css">
 
 </head>
 
@@ -91,16 +94,30 @@ include('../function/commonFunction.php');
                         </p>
                     </div>
 
+
+
+                <!-- adding -->
+
                     <div class="filter-1">
+                        
                         <div class="filter-content-1">
-                            <h3>awrefef</h3><br><br><br>
-                            <h3>awrefef</h3><br><br><br>
-                            <h3>awrefef</h3><br><br><br>
-                            <h3>awrefef</h3><br><br><br>
+                            
+                        <?php journalSubjects(); ?>
+                        
+                        <!-- <div class="dropdown-container">
+                            
+                        </div>  -->
+                                                    
                         </div>
+                        
                     </div>
 
                 </div>
+
+
+
+
+
 
                 <!-- Artical area -->
                 <div class="article-area">
@@ -343,6 +360,7 @@ include('../function/commonFunction.php');
     <!-- custom js link-->
     <script src="../reuseComponents/navBar.js"></script>
     <script src="../reuseComponents/journal_article.js"></script>
+    <script src="./journal.js"></script>
 
     <script src="../signIn/sign.js"></script>
 
