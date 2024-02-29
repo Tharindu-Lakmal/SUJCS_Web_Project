@@ -82,7 +82,7 @@ function search() {
 
 
 
-// select_subject
+// function for show journal type and that subjects
 
 function journalSubjects() {
     global $con;
@@ -91,17 +91,17 @@ function journalSubjects() {
     $result_query = mysqli_query($con, $select_query);
 
     while ($row = mysqli_fetch_assoc($result_query)) {
-        $categoryName = $row['type_name'];
-        $categoryId = $row['type_id'];
+        $journalName = $row['type_name'];
+        $journalId = $row['type_id'];
 
         echo "
-        <a class='p-heading' href='journal.php?category=$categoryId'><p class='p-heading'>$categoryName</p></a>
+        <a class='p-heading' href='journal.php?journalId=$journalId'><p class='p-heading'>$journalName</p></a>
         ";
 
-        $typeId = $row['type_id'];
+        
         $subjectTable = "";
 
-        switch ($categoryId) {
+        switch ($journalId) {
             case 'TJ01':
                 $subjectTable = 'software_engineering';
                 break;
@@ -121,7 +121,8 @@ function journalSubjects() {
 
             while ($subjectRow = mysqli_fetch_assoc($resultSubject)) {
                 $subjectName = $subjectRow['subject_name'];
-                echo "<a href=''>$subjectName</a>";
+                $subjectId = $subjectRow['subject_id'];
+                echo "<a href='journal.php?subjectId=$subjectId'>$subjectName</a>";
             }
 
            
@@ -130,7 +131,7 @@ function journalSubjects() {
     }
 }
 
-
+//function for show article type and subjects
 
 function articleSubjects() {
     global $con;
@@ -139,17 +140,17 @@ function articleSubjects() {
     $result_query = mysqli_query($con, $select_query);
 
     while ($row = mysqli_fetch_assoc($result_query)) {
-        $categoryName = $row['type_name'];
-        $categoryId = $row['type_id'];
+        $articleName = $row['type_name'];
+        $articleId = $row['type_id'];
 
         echo "
-        <a class='p-heading' href='journal.php?category=$categoryId'><p class='p-heading'>$categoryName</p></a>
+        <a class='p-heading' href='article.php?articleId=$articleId'><p class='p-heading'>$articleName</p></a>
         ";
 
-        $typeId = $row['type_id'];
+        
         $subjectTable = "";
 
-        switch ($typeId) {
+        switch ($articleId) {
             case 'TA01':
                 $subjectTable = 'software_article';
                 break;
@@ -167,7 +168,8 @@ function articleSubjects() {
 
             while ($subjectRow = mysqli_fetch_assoc($resultSubject)) {
                 $subjectName = $subjectRow['subject_name'];
-                echo "<a href=''>$subjectName</a>";
+                $subjectId = $subjectRow['subject_id'];
+                echo "<a href='article.php?subjectId=$subjectId'>$subjectName</a>";
             }
 
             echo "</div><hr>";
@@ -177,38 +179,235 @@ function articleSubjects() {
 }
 
 
+    //function for categories
+
+    function selectCategories(){
+
+        global $con;
+    
+        if(isset($_GET['category_id'])){
+    
+            $categoryId = $_GET['category_id'];
+    
+            $sql = "SELECT * FROM `journals` WHERE category_id = $categoryId";
+            $result = mysqli_query($con, $sql);
+    
+            $num_of_rows = mysqli_num_rows($result);
+            if($num_of_rows == 0) {
+                echo "<h3 class='text-center'>No related documents for this category</h3>";
+            }
+    
+            while($row = mysqli_fetch_assoc($result)){
+                $title = $row['journal_title'];
+                $publishDate = $row['journal_publish_date'];
+                $pdf = $row['journal_pdf'];
+                $journalTypeId = $row['journal_type_id'];
+    
+                // Fetch type_name from journal_types table
+                $sqlType = "SELECT * FROM `journal_types` WHERE type_id ='$journalTypeId'";
+                $resultType = mysqli_query($con, $sqlType);
+                $rowType = mysqli_fetch_assoc($resultType);
+                $typeName = ($rowType) ? $rowType['type_name'] : '';
+            
+                echo "
+                <div class='article-card'>
+                    <!-- article image -->
+                    <div class='card-img'>
+                        <img src='../images/about1.png' alt=''>
+                    </div>
+                    <!-- article title -->
+                    <div class='a-title'>
+                        <p class='p title'>$title</p>
+                        <p class='p sub-title'>$typeName, $publishDate</p>
+                    </div>
+                    <!-- user action -->
+                    <div class='btn-access'>
+                        <div class='book-mark'>
+                            <button class='b-mark'><i class='fa-solid fa-bookmark' style='color: #ababab;'></i></button>
+                        </div>
+                        <div class='download'>
+                            <button class='download-icon'><i class='fa-solid fa-download' style='color: #ababab;'></i></button>
+                        </div>
+                    </div>
+                </div>";
+            }
+        }
+    }
     
 
-function selectCategories(){
+
+
+//function for selected journal type
+
+function selectedJournalType(){
 
     global $con;
 
-    if(isset($_GET['category'])){
+    if(isset($_GET['journalId'])){
 
-        $categoryId = $_GET['category'];
+        $journalId = $_GET['journalId'];
 
-        $sql = "SELECT * FROM `journals` WHERE category_id = $categoryId";
+        $sql = "SELECT * FROM `journals` WHERE journal_type_id = '$journalId'";
         $result = mysqli_query($con, $sql);
 
         $num_of_rows = mysqli_num_rows($result);
         if($num_of_rows == 0) {
-            echo "<h3 class='text-center'>No related documents for this category</h3>";
+            echo "<h3 class='text-center'>No related journals for this category</h3>";
         }
 
         while($row = mysqli_fetch_assoc($result)){
+            $title = $row['journal_title'];
+            $publishDate = $row['journal_publish_date'];
+            $pdf = $row['journal_pdf'];
+            $journalTypeId = $row['journal_type_id'];
 
-                $title = $row['journal_title'];
-                $subject = $row['jsubject'];
-                $publishDate = $row['journal_publish_date'];
-                $pdf = $row['journal_pdf'];
-                
+            // Fetch type_name from journal_types table
+            $sqlType = "SELECT * FROM `journal_types` WHERE type_id = '$journalTypeId'";
+            $resultType = mysqli_query($con, $sqlType);
+            $rowType = mysqli_fetch_assoc($resultType);
+            $typeName = ($rowType) ? $rowType['type_name'] : '';
 
-                
+            echo "
+            <div class='article-card'>
+                <!-- article image -->
+                <div class='card-img'>
+                    <img src='../images/about1.png' alt=''>
+                </div>
+                <!-- article title -->
+                <div class='a-title'>
+                    <p class='p title'>$title</p>
+                    <p class='p sub-title'>$typeName, $publishDate</p>
+                </div>
+                <!-- user action -->
+                <div class='btn-access'>
+                    <div class='book-mark'>
+                        <button class='b-mark'><i class='fa-solid fa-bookmark' style='color: #ababab;'></i></button>
+                    </div>
+                    <div class='download'>
+                        <button class='download-icon'><i class='fa-solid fa-download' style='color: #ababab;'></i></button>
+                    </div>
+                </div>
+            </div>";
         }
     }
-
 }
 
+
+
+
+//function for selected article type
+
+function selectedArticleType(){
+
+    global $con;
+
+    if(isset($_GET['articleId'])){
+
+        $articleId = $_GET['articleId'];
+
+        $sql = "SELECT * FROM `journals` WHERE journal_type_id = '$articleId'";
+        $result = mysqli_query($con, $sql);
+
+        $num_of_rows = mysqli_num_rows($result);
+        if($num_of_rows == 0) {
+            echo "<h3 class='text-center'>No related articles for this Type</h3>";
+        }
+
+        
+
+        while($row = mysqli_fetch_assoc($result)){
+            $title = $row['journal_title'];
+            $publishDate = $row['journal_publish_date'];
+            $pdf = $row['journal_pdf'];
+            $journalTypeId = $row['journal_type_id'];
+
+            // Fetch type_name from journal_types table
+            $sqlType = "SELECT * FROM `article_types` WHERE type_id = '$journalTypeId'";
+            $resultType = mysqli_query($con, $sqlType);
+            $rowType = mysqli_fetch_assoc($resultType);
+            $typeName = ($rowType) ? $rowType['type_name'] : '';
+
+            echo "
+            <div class='article-card'>
+                <!-- article image -->
+                <div class='card-img'>
+                    <img src='../images/about1.png' alt=''>
+                </div>
+                <!-- article title -->
+                <div class='a-title'>
+                    <p class='p title'>$title</p>
+                    <p class='p sub-title'>$typeName, $publishDate</p>
+                </div>
+                <!-- user action -->
+                <div class='btn-access'>
+                    <div class='book-mark'>
+                        <button class='b-mark'><i class='fa-solid fa-bookmark' style='color: #ababab;'></i></button>
+                    </div>
+                    <div class='download'>
+                        <button class='download-icon'><i class='fa-solid fa-download' style='color: #ababab;'></i></button>
+                    </div>
+                </div>
+            </div>";
+        }
+    }
+}
+   
+
+
+//functio for selected subjects
+
+function selectedsubject(){
+
+    global $con;
+
+    if(isset($_GET['subjectId'])){
+
+        $subjectId = $_GET['subjectId'];
+
+        $sql = "SELECT * FROM `journals` WHERE subject_id = $subjectId";
+        $result = mysqli_query($con, $sql);
+
+        $num_of_rows = mysqli_num_rows($result);
+        if($num_of_rows == 0) {
+            echo "<h3 class='text-center'>No related document for this subject</h3>";
+        }
+
+        while($row = mysqli_fetch_assoc($result)){
+            $title = $row['journal_title'];
+            $publishDate = $row['journal_publish_date'];
+            $pdf = $row['journal_pdf'];
+            $journalTypeId = $row['journal_type_id'];
+
+            // Fetch type_name from journal_types table
+            $sqlType = "SELECT * FROM `journal_types` WHERE type_id = '$journalTypeId'";
+            $resultType = mysqli_query($con, $sqlType);
+            $rowType = mysqli_fetch_assoc($resultType);
+            $typeName = ($rowType) ? $rowType['type_name'] : '';
+
+            echo "
+            <div class='article-card'>
+                <!-- article image -->
+                <div class='card-img'>
+                    <img src='../images/about1.png' alt=''>
+                </div>
+                <!-- article title -->
+                <div class='a-title'>
+                    <p class='p title'>$title</p>
+                    <p class='p sub-title'>$typeName, $publishDate</p>
+                </div>
+                <!-- user action -->
+                <div class='btn-access'>
+                    <div class='book-mark'>
+                        <button class='b-mark'><i class='fa-solid fa-bookmark' style='color: #ababab;'></i></button>
+                    </div>
+                    <div class='download'>
+                        <button class='download-icon'><i class='fa-solid fa-download' style='color: #ababab;'></i></button>
+                    </div>
+                </div>
+            </div>";
+        }
+    }
+}
 
 ?>
 
