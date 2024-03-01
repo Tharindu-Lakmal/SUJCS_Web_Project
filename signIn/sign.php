@@ -3,6 +3,10 @@
 <?php
 // include('../connection.php');
 include('../function/commonFunction.php');
+include('../function/userFunction.php');
+
+signUp();
+signIn();
 ?>
 
 
@@ -51,7 +55,7 @@ include('../function/commonFunction.php');
 
                 <div class="forms-wrap">
 
-                    <form action="index.html" autocomplete="off" class="sign-in-form">
+                    <form action="index.html" method="post" autocomplete="off" class="sign-in-form">
                         <div class="logo-s">
                             <img src="../images/logo.png" alt="SUJCS" />
                         </div>
@@ -62,14 +66,32 @@ include('../function/commonFunction.php');
                             <a href="#" class="toggle">Sign up</a>
                         </div>
 
+                        <!--            if have some errors of username or password-->
+            <?php 
+            
+                if (isset($errors) && !empty($errors)){
+                    echo '<p class="error">Invalid Username / Password</p>';
+                } 
+            
+            ?>
+
+                        <!--            after successfully logout -->
+            <?php
+
+                if (isset($_GET['logout'])) {
+                    echo '<p class="info">You have successfully logged out from the system</p>';
+                }
+                
+            ?>
+
                         <div class="actual-form">
                             <div class="input-wrap">
-                                <input type="text" minlength="4" class="input-field" autocomplete="off" required />
+                                <input type="text" name="user_name" minlength="4" class="input-field" autocomplete="off" required />
                                 <label>Name</label>
                             </div>
 
                             <div class="input-wrap">
-                                <input type="password" minlength="4" class="input-field" autocomplete="off" required />
+                                <input type="password" name="user_password" minlength="4" class="input-field" autocomplete="off" required />
                                 <label>Password</label>
                             </div>
 
@@ -77,7 +99,7 @@ include('../function/commonFunction.php');
                                 <a href="#">Forgotte password?</a>
                             </p>
 
-                            <input type="submit" value="Sign In" class="btn-s btn-s-primary sign-btn" />
+                            <input type="submit" name="submit" value="Sign In" class="btn-s btn-s-primary sign-btn" />
 
                             <p class="text">
                                 Sign in will gives you power to be the BatMan.
@@ -85,7 +107,17 @@ include('../function/commonFunction.php');
                         </div>
                     </form>
 
-                    <form action="index.html" autocomplete="off" class="sign-up-form">
+
+                            <?php
+                                if (!empty($errors)){
+
+                                errorDisplay($errors);
+
+                                }
+
+                            ?>
+
+                    <form action="index.html" method="post" autocomplete="off" class="sign-up-form">
                         <div class="logo">
                             <img src="../images/logo.png" alt="SUJCS" />
                         </div>
@@ -98,21 +130,21 @@ include('../function/commonFunction.php');
 
                         <div class="actual-form">
                             <div class="input-wrap">
-                                <input type="text" minlength="4" class="input-field" autocomplete="off" required />
+                                <input type="text" name="user_name" minlength="4" class="input-field" autocomplete="off" required />
                                 <label>Name</label>
                             </div>
 
                             <div class="input-wrap">
-                                <input type="email" class="input-field" autocomplete="off" required />
+                                <input type="email" name="user_email" class="input-field" autocomplete="off" required />
                                 <label>Email</label>
                             </div>
 
                             <div class="input-wrap">
-                                <input type="password" minlength="4" class="input-field" autocomplete="off" required />
+                                <input type="password" name="user_password" minlength="4" class="input-field" autocomplete="off" required />
                                 <label>Password</label>
                             </div>
 
-                            <input type="submit" value="Sign Up" class=" btn-s btn-s-primary sign-btn" />
+                            <input type="submit" name="submit" value="Sign Up" class=" btn-s btn-s-primary sign-btn" />
 
                             <p class="text">
                                 By signing up, I agree to the

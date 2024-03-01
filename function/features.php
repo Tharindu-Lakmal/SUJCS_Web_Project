@@ -364,7 +364,7 @@ function selectedsubject(){
 
         $subjectId = $_GET['subjectId'];
 
-        $sql = "SELECT * FROM `journals` WHERE subject_id = $subjectId";
+        $sql = "SELECT * FROM `journals` WHERE subject_id = '$subjectId'";
         $result = mysqli_query($con, $sql);
 
         $num_of_rows = mysqli_num_rows($result);

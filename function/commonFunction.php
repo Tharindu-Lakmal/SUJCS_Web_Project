@@ -73,7 +73,7 @@ function navBar() {
         
                         <div class='forms-wrap'>
         
-                            <form action='index.html' autocomplete='off' class='sign-in-form'>
+                            <form action='../landingPage/index.php' method='post' autocomplete='off' class='sign-in-form'>
                                 <div class='logo'>
                                     <img src='../images/logo.png' alt='SUJCS' />
                                 </div>
@@ -86,12 +86,12 @@ function navBar() {
         
                                 <div class='actual-form'>
                                     <div class='input-wrap'>
-                                        <input type='text' minlength='4' class='input-field' autocomplete='off' required />
-                                        <label>Name</label>
+                                        <input type='text' name='user_email' minlength='4' class='input-field' autocomplete='off' required />
+                                        <label>Email</label>
                                     </div>
         
                                     <div class='input-wrap'>
-                                        <input type='password' minlength='4' class='input-field' autocomplete='off' required />
+                                        <input type='password' name='user_password' minlength='4' class='input-field' autocomplete='off' required />
                                         <label>Password</label>
                                     </div>
         
@@ -99,7 +99,7 @@ function navBar() {
                                         <a href='#'>Forgotte password?</a>
                                     </p>
         
-                                    <input type='submit' value='Sign In' class='btn btn-primary sign-btn' />
+                                    <input type='submit' name='submit' value='Sign In' class='btn btn-primary sign-btn' />
         
                                     <p class='text'>
                                         Sign in will gives you power to be the BatMan.
@@ -107,7 +107,7 @@ function navBar() {
                                 </div>
                             </form>
         
-                            <form action='index.html' autocomplete='off' class='sign-up-form'>
+                            <form action='../landingPage/index.php' method='post' autocomplete='off' class='sign-up-form'>
                                 <div class='logo'>
                                     <img src='../images/logo.png' alt='SUJCS' />
                                 </div>
@@ -120,21 +120,21 @@ function navBar() {
         
                                 <div class='actual-form'>
                                     <div class='input-wrap'>
-                                        <input type='text' minlength='4' class='input-field' autocomplete='off' required />
+                                        <input type='text' name='user_name' minlength='4' class='input-field' autocomplete='off' required />
                                         <label>Name</label>
                                     </div>
         
                                     <div class='input-wrap'>
-                                        <input type='email' class='input-field' autocomplete='off' required />
+                                        <input type='email' name='user_email' class='input-field' autocomplete='off' required />
                                         <label>Email</label>
                                     </div>
         
                                     <div class='input-wrap'>
-                                        <input type='password' minlength='4' class='input-field' autocomplete='off' required />
+                                        <input type='password' name='user_password' minlength='4' class='input-field' autocomplete='off' required />
                                         <label>Password</label>
                                     </div>
         
-                                    <input type='submit' value='Sign Up' class=' btn btn-primary sign-btn' />
+                                    <input type='submit' name='submit' value='Sign Up' class=' btn btn-primary sign-btn' />
         
                                     <p class='text'>
                                         By signing up, I agree to the

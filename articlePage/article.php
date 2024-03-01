@@ -99,8 +99,7 @@ include('../function/features.php');
                         <?php   
 
                         articleSubjects();
-                        selectedArticleType();
-                        selectedsubject();
+                        
                         
                         ?>
                         
@@ -133,7 +132,11 @@ include('../function/features.php');
 
                     <section class="articles">
 
-                    <?php selectCategories(); ?>
+                    <?php selectCategories(); 
+                            selectedArticleType();
+                            selectedsubject();   
+                    
+                    ?>
 
                     </section>
 

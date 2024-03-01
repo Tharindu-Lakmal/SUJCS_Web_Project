@@ -136,7 +136,7 @@ include('../function/features.php');
 
                     </section>
 
-                    <section class="articles" style="border: 1px solid red;">
+                    <section class="articles">
 
                        
                     <?php
