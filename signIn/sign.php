@@ -44,11 +44,11 @@ signIn();
 <body>
 
     <!-- Main content -->
-    <main>
+    <main class="active">
         <div class="box">
 
             <div class="close-btn">
-                <i class="fa-solid fa-xmark" style="color: #fff;"></i>   <!-- 3e37c8 -->
+                <i class="fa-solid fa-xmark" style="color: #3e37c8;"></i>   <!-- 3e37c8 -->
             </div>
 
             <div class="inner-box">
@@ -99,7 +99,8 @@ signIn();
                                 <a href="#">Forgotte password?</a>
                             </p>
 
-                            <input type="submit" name="submit" value="Sign In" class="btn-s btn-s-primary sign-btn" />
+
+                            <input type="submit" name="submit" value="Sign In" class="sign-btn" />
 
                             <p class="text">
                                 Sign in will gives you power to be the BatMan.
@@ -144,7 +145,7 @@ signIn();
                                 <label>Password</label>
                             </div>
 
-                            <input type="submit" name="submit" value="Sign Up" class=" btn-s btn-s-primary sign-btn" />
+                            <input type="submit" name="submit" value="Sign Up" class="sign-btn" />
 
                             <p class="text">
                                 By signing up, I agree to the

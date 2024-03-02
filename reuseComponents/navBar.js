@@ -1,11 +1,3 @@
-// Preloader remover
-const preloader = document.querySelector("[data-preloader]");
-
-window.addEventListener("load", () => {
-    preloader.classList.add("remove");
-});
-
-
 /** add event on multiple elements */
 
 const addEventOnElements = function(elements, eventType, callback) {
