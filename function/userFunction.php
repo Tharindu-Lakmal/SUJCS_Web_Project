@@ -165,10 +165,13 @@ function signUp(){
         $select_query = "SELECT * FROM `user` WHERE user_name='$user_username' AND user_password = '$hashPassword'";
         $result = mysqli_query($con, $select_query);
         $row_count = mysqli_num_rows($result);
+        $row = mysqli_fetch_assoc($result);
 
         // CHECKING that have more than rows related to that user name
         if ($row_count > 0) {
-            $_SESSION['user_name'] = $user_username;
+            $_SESSION['user_id'] = $row['user_id'];
+            $_SESSION['user_name'] = $row['user_name'];
+
             // No need for password_verify if using sha1 hashing
             // if (password_verify($user_password, $row_data['user_password'])) {
             echo "<script>alert('Login successful')</script>";

@@ -202,6 +202,7 @@ function articleSubjects() {
                 $publishDate = $row['journal_publish_date'];
                 $pdf = $row['journal_pdf'];
                 $journalTypeId = $row['journal_type_id'];
+                $cat = $row['category_id'];
     
                 // Fetch type_name from journal_types table
                 $sqlType = "SELECT * FROM `journal_types` WHERE type_id ='$journalTypeId'";
@@ -223,7 +224,7 @@ function articleSubjects() {
                     <!-- user action -->
                     <div class='btn-access'>
                         <div class='book-mark'>
-                            <button class='b-mark'><i class='fa-solid fa-bookmark' style='color: #ababab;'></i></button>
+                            <button class='b-mark'><a href='../function/bookmark.php?bookmark=$cat'><i class='fa-solid fa-bookmark' style='color: #ababab;'></i></a></button>
                         </div>
                         <div class='download'>
                             <button class='download-icon'><a href='../insertJournal/download.php?file=$pdf'><i class='fa-solid fa-download' style='color: #ababab;'></i></a></button>
@@ -260,6 +261,7 @@ function selectedJournalType(){
             $publishDate = $row['journal_publish_date'];
             $pdf = $row['journal_pdf'];
             $journalTypeId = $row['journal_type_id'];
+            $cat = $row['category_id'];
 
             // Fetch type_name from journal_types table
             $sqlType = "SELECT * FROM `journal_types` WHERE type_id = '$journalTypeId'";
@@ -280,9 +282,9 @@ function selectedJournalType(){
                 </div>
                 <!-- user action -->
                 <div class='btn-access'>
-                    <div class='book-mark'>
-                        <button class='b-mark'><i class='fa-solid fa-bookmark' style='color: #ababab;'></i></button>
-                    </div>
+                <div class='book-mark'>
+                <button class='b-mark'><a href='../function/bookmark.php?bookmark=$cat'><i class='fa-solid fa-bookmark' style='color: #ababab;'></i></a></button>
+            </div>
                     <div class='download'>
                         <button class='download-icon'><a href='../insertJournal/download.php?file=$pdf'><i class='fa-solid fa-download' style='color: #ababab;'></i></a></button>
                     </div>
@@ -320,6 +322,7 @@ function selectedArticleType(){
             $publishDate = $row['journal_publish_date'];
             $pdf = $row['journal_pdf'];
             $journalTypeId = $row['journal_type_id'];
+            $cat = $row['category_id'];
 
             // Fetch type_name from journal_types table
             $sqlType = "SELECT * FROM `article_types` WHERE type_id = '$journalTypeId'";
@@ -340,9 +343,9 @@ function selectedArticleType(){
                 </div>
                 <!-- user action -->
                 <div class='btn-access'>
-                    <div class='book-mark'>
-                        <button class='b-mark'><i class='fa-solid fa-bookmark' style='color: #ababab;'></i></button>
-                    </div>
+                <div class='book-mark'>
+                <button class='b-mark'><a href='../function/bookmark.php?bookmark=$cat'><i class='fa-solid fa-bookmark' style='color: #ababab;'></i></a></button>
+            </div>
                     <div class='download'>
                         <button class='download-icon'><a href='../insertJournal/download.php?file=$pdf'><i class='fa-solid fa-download' style='color: #ababab;'></i></a></button>
                     </div>
@@ -377,6 +380,7 @@ function selectedsubject(){
             $publishDate = $row['journal_publish_date'];
             $pdf = $row['journal_pdf'];
             $journalTypeId = $row['journal_type_id'];
+            $cat = $row['category_id'];
 
             // Fetch type_name from journal_types table
             $sqlType = "SELECT * FROM `journal_types` WHERE type_id = '$journalTypeId'";
@@ -397,9 +401,9 @@ function selectedsubject(){
                 </div>
                 <!-- user action -->
                 <div class='btn-access'>
-                    <div class='book-mark'>
-                        <button class='b-mark'><i class='fa-solid fa-bookmark' style='color: #ababab;'></i></button>
-                    </div>
+                <div class='book-mark'>
+                <button class='b-mark'><a href='../function/bookmark.php?bookmark=$cat'><i class='fa-solid fa-bookmark' style='color: #ababab;'></i></a></button>
+            </div>
                     <div class='download'>
                         <button class='download-icon'><a href='../insertJournal/download.php?file=$pdf'><i class='fa-solid fa-download' style='color: #ababab;'></i></a></button>
                     </div>
@@ -407,6 +411,57 @@ function selectedsubject(){
             </div>";
         }
     }
+}
+
+
+// add bookmark
+
+function bookmark(){
+
+    global $con;
+
+
+    if (!isset($_SESSION['user_id'])) {
+        // Redirect to login page or handle as needed
+        header("Location: login.php");
+        exit();
+    }
+    
+    // Handle bookmarking
+    if (isset($_POST['bookmark'])) {
+        $user_id = $_SESSION['user_id'];
+        $journal_id = $_POST['journal_id']; // Replace with your actual input name
+        $article_id = $_POST['article_id']; // Replace with your actual input name
+    
+        // Check if the item is already bookmarked
+        $check_query = "SELECT * FROM bookmarks WHERE user_id = $user_id AND (journal_id = $journal_id OR article_id = $article_id)";
+        $check_result = mysqli_query($con, $check_query);
+    
+        if (mysqli_num_rows($check_result) == 0) {
+            // Item is not bookmarked, add it to bookmarks
+            $bookmark_query = "INSERT INTO bookmarks (user_id, journal_id, article_id) VALUES ($user_id, $journal_id, $article_id)";
+            mysqli_query($con, $bookmark_query);
+            echo "Item bookmarked successfully!";
+        } else {
+            // Item is already bookmarked, you can remove it or show a message
+            echo "Item is already bookmarked!";
+        }
+    }
+    
+    // Fetching bookmarked items for the user
+    $user_id = $_SESSION['user_id'];
+    $fetch_query = "SELECT * FROM bookmarks WHERE user_id = $user_id";
+    $fetch_result = mysqli_query($con, $fetch_query);
+    
+    // Loop through the result to display bookmarks
+    while ($row = mysqli_fetch_assoc($fetch_result)) {
+        $journal_id = $row['journal_id'];
+        $article_id = $row['article_id'];
+    
+        // Display your bookmarked items as needed
+        echo "<p>Journal ID: $journal_id, Article ID: $article_id</p>";
+    }
+    
 }
 
 ?>
