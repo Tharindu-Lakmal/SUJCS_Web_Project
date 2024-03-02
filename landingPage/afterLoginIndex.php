@@ -2,8 +2,9 @@
 
 <?php
 include('../connection.php');
-include('../function/commonFunction.php');
-include '../function/userFunction.php';
+// include('../function/commonFunction.php');
+include('../function/userFunction.php');
+include '../function/features.php';
 // include '../function/userSecondaryFunction.php';
 
 
@@ -299,7 +300,7 @@ include '../function/userFunction.php';
 
     <!-- custom js link-->
     <script src="../reuseComponents/navBar.js"></script>
-    <script src="../signIn/sign.js"></script>
+    <script src="../Signin/sign.js"></script>
 
     <!-- ionicon link -->
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>

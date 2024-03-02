@@ -1,6 +1,14 @@
 <?php
 
+
+include '../connection.php';
+
+
+
 function logIn() {
+
+    
+
     echo "
     
     <main>
@@ -14,7 +22,7 @@ function logIn() {
     
                     <div class='forms-wrap'>
     
-                        <form action='index.html' autocomplete='off' class='sign-in-form'>
+                        <form action='../landingPage/index.php' method='post' autocomplete='off' class='sign-in-form'>
                             <div class='logo'>
                                 <img src='../images/logo.png' alt='SUJCS' />
                             </div>
@@ -23,16 +31,25 @@ function logIn() {
                                 <h2>Welcome Back</h2>
                                 <h6>Not registred yet?</h6>
                                 <a href='#' class='toggle'>Sign up</a>
-                            </div>
+                            </div>";
+
+                            if (isset($errors) && !empty($errors)){
+                                echo '<p class="error">Invalid Username / Password</p>';
+                            } 
+
+                            if (isset($_GET['logout'])) {
+                                echo '<p class="info">You have successfully logged out from the system</p>';
+                            }
+                            
     
-                            <div class='actual-form'>
+                           " <div class='actual-form'>
                                 <div class='input-wrap'>
-                                    <input type='text' minlength='4' class='input-field' autocomplete='off' required />
+                                    <input type='text' name='user_name' minlength='4' class='input-field' autocomplete='off' required />
                                     <label>Name</label>
                                 </div>
     
                                 <div class='input-wrap'>
-                                    <input type='password' minlength='4' class='input-field' autocomplete='off' required />
+                                    <input type='password' name='user_password' minlength='4' class='input-field' autocomplete='off' required />
                                     <label>Password</label>
                                 </div>
     
@@ -40,15 +57,22 @@ function logIn() {
                                     <a href='#'>Forgotte password?</a>
                                 </p>
     
-                                <input type='submit' value='Sign In' class='btn btn-primary sign-btn' />
+                                <input type='submit' name='submit' value='Sign In' class='btn btn-primary sign-btn' />
     
                                 <p class='text'>
                                     Sign in will gives you power to be the BatMan.
                                 </p>
                             </div>
-                        </form>
+                        </form>";
+
+                        if (!empty($errors)){
+
+                            errorDisplay($errors);
+
+                            }
+
     
-                        <form action='index.html' autocomplete='off' class='sign-up-form'>
+                        "<form action='../landinPage/index.php' method='post' autocomplete='off' class='sign-up-form'>
                             <div class='logo'>
                                 <img src='../images/logo.png' alt='SUJCS' />
                             </div>
@@ -61,21 +85,21 @@ function logIn() {
     
                             <div class='actual-form'>
                                 <div class='input-wrap'>
-                                    <input type='text' minlength='4' class='input-field' autocomplete='off' required />
+                                    <input type='text' name='user_name' minlength='4' class='input-field' autocomplete='off' required />
                                     <label>Name</label>
                                 </div>
     
                                 <div class='input-wrap'>
-                                    <input type='email' class='input-field' autocomplete='off' required />
+                                    <input type='email' name='user_email' class='input-field' autocomplete='off' required />
                                     <label>Email</label>
                                 </div>
     
                                 <div class='input-wrap'>
-                                    <input type='password' minlength='4' class='input-field' autocomplete='off' required />
+                                    <input type='password' name='user_password' minlength='4' class='input-field' autocomplete='off' required />
                                     <label>Password</label>
                                 </div>
     
-                                <input type='submit' value='Sign Up' class=' btn btn-primary sign-btn' />
+                                <input type='submit' name='submit' value='Sign Up' class=' btn btn-primary sign-btn' />
     
                                 <p class='text'>
                                     By signing up, I agree to the
