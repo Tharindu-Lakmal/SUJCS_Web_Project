@@ -1,14 +1,13 @@
 <?php
 
-include './userFunction.php';
+
 include '../connection.php';
 
 
 
 function logIn() {
 
-    signUp();
-    signIn();
+    
 
     echo "
     

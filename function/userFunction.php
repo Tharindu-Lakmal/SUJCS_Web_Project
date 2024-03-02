@@ -4,16 +4,18 @@
 
 <?php
 
+@session_start();
+
 function checkReqfields($reqFields){
     $errors = array();
 //    we get that array fields one by one
     foreach ($reqFields as $field){
 
 //          we use trim function to check space
-        // if (empty(trim($_POST[$field]))){
+        if (empty(trim($_POST[$field]))){
 
-        //     $errors[] = $field. " is required";
-        // }
+            $errors[] = $field. " is required";
+        }
     }
     return $errors;
 
@@ -24,24 +26,24 @@ function checkMaxLength($maxLengthFields){
     foreach ($maxLengthFields as $field=> $maxLen){
 
 //          we use trim function to avoid space
-        // if (strlen(trim($_POST[$field]))>$maxLen){
+        if (strlen(trim($_POST[$field]))>$maxLen){
 
-        //     $errors[] = $field. "must be less than ".$maxLen. " characters";
-        // }
+            $errors[] = $field. "must be less than ".$maxLen. " characters";
+        }
     }
     return $errors;
 }
 
-function errorDisplay($errors){
-    echo "<div class='errmsg'> ";
-    echo "<b>There were some errors of your form.</b><br>";
-    foreach ($errors as $error){
-        $error = ucfirst(str_replace("_", " ", $error));
-        echo '- ' . $error . '<br>';
-    }
-    echo " </div> ";
+// function errorDisplay($errors){
+//     echo "<div class='errmsg'> ";
+//     echo "<b>There were some errors of your form.</b><br>";
+//     foreach ($errors as $error){S
+//         $error = ucfirst(str_replace("_", " ", $error));
+//         echo '- ' . $error . '<br>';
+//     }
+//     echo " </div> ";
 
-}
+// }
 
 
 function is_email($email)
@@ -64,8 +66,7 @@ function verify_query($resultSet){
 
 
 
-
-  function signUp(){
+function signUp(){
 
     global $con;
 
@@ -91,14 +92,14 @@ function verify_query($resultSet){
 //add to arary to array
 
 //      we check require characters
-        $maxLengthFields = array('user_name'=>100, 'user_email'=>100, 'user_password'=>20);
+        $maxLengthFields = array('user_name'=>100, 'user_email'=>100, 'user_password'=>100);
         $errors = array_merge($errors, checkMaxLength($maxLengthFields));
 
 //        checking email address
-        // if (!is_email($_POST['user_email'])){
-        //     $errors[] = 'Email address is invalid.';
+        if (!is_email($_POST['user_email'])){
+            $errors[] = 'Email address is invalid.';
 
-        // }
+        }
 
 //        Checking email address already exit
         $email = mysqli_real_escape_string($con, $_POST['user_email']);
@@ -148,72 +149,41 @@ function verify_query($resultSet){
   }
 
 
-
-  function signIn(){
-
-   global $con;
-
-// check for form submission
-if(isset($_POST["login_submit"])){
-
-    $errors = array();
-
-    //check if the username and password has been entered
-    if(!isset($_POST["user_email"]) || strlen(trim(($_POST["user_email"]))) < 1){
-        $errors = "username is missing/invalid";
-
-    }
-    if(!isset($_POST["user_password"]) || strlen(trim(($_POST["user_password"]))) < 1){
-        $errors = "username is missing/invalid";
-
-    }
-    //if there are any errors
-    if(empty($errors)){
-
-        //    save username and password into variable
-        $userEmail = mysqli_real_escape_string($con, $_POST["user_email"]);
-        $password = mysqli_real_escape_string($con, $_POST["user_password"]);
-        $hashPassword = sha1($password);
-
-//        use above function avoid a user affect for database
-        //     prepare database4 query
-        $query = "SELECT * FROM user WHERE user_email = '{$userEmail}' AND user_password = '{$hashPassword}'";
-    
-
-        $resultSet = mysqli_query($con, $query);
-
-        verify_query($resultSet);
-//            Query successful
-            if (mysqli_num_rows($resultSet) == 1){
-//                valid user found...using following function to take records to array
-                $user = mysqli_fetch_assoc($resultSet);
-//                using session variable to store temporary records data
-                $_SESSION['user_Id'] = $user['user_id'];
-                
-
-//                before go to the user page check the last logging
-                $query = "UPDATE user SET last_login = Now() WHERE id = {$_SESSION['user_Id']}";
-
-                $resultSet = mysqli_query($con, $query);
-
-                verify_query($resultSet);
+ 
 
 
 
-                //      redirect to user.php
-                header('location: ../landingPage/index.php');
-            }else{
+  function signIn() {
+    global $con;
 
-                $errors = "user name or password invalid";
-            }
+    if (isset($_POST['loginSubmit'])) {
+        $user_username = $_POST['user_name'];
+        $user_password = $_POST['user_password'];
+        $hashPassword = sha1($user_password);
 
 
+        $select_query = "SELECT * FROM `user` WHERE user_name='$user_username' AND user_password = '$hashPassword'";
+        $result = mysqli_query($con, $select_query);
+        $row_count = mysqli_num_rows($result);
+
+        // CHECKING that have more than rows related to that user name
+        if ($row_count > 0) {
+            $_SESSION['user_name'] = $user_username;
+            // No need for password_verify if using sha1 hashing
+            // if (password_verify($user_password, $row_data['user_password'])) {
+            echo "<script>alert('Login successful')</script>";
+            echo "<script>window.open('afterLoginIndex.php','_self')</script>";
+            // } else {
+            //     echo "<script>alert('Invalid Credentials')</script>";
+            // }
+        } else {
+            echo "<script>alert('Invalid Credentials')</script>";
+        }
     }
 }
 
 
 
-  }
 
 ?>
 

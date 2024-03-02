@@ -226,7 +226,7 @@ function articleSubjects() {
                             <button class='b-mark'><i class='fa-solid fa-bookmark' style='color: #ababab;'></i></button>
                         </div>
                         <div class='download'>
-                            <button class='download-icon'><i class='fa-solid fa-download' style='color: #ababab;'></i></button>
+                            <button class='download-icon'><a href='../insertJournal/download.php?file=$pdf'><i class='fa-solid fa-download' style='color: #ababab;'></i></a></button>
                         </div>
                     </div>
                 </div>";
@@ -284,7 +284,7 @@ function selectedJournalType(){
                         <button class='b-mark'><i class='fa-solid fa-bookmark' style='color: #ababab;'></i></button>
                     </div>
                     <div class='download'>
-                        <button class='download-icon'><i class='fa-solid fa-download' style='color: #ababab;'></i></button>
+                        <button class='download-icon'><a href='../insertJournal/download.php?file=$pdf'><i class='fa-solid fa-download' style='color: #ababab;'></i></a></button>
                     </div>
                 </div>
             </div>";
@@ -344,7 +344,7 @@ function selectedArticleType(){
                         <button class='b-mark'><i class='fa-solid fa-bookmark' style='color: #ababab;'></i></button>
                     </div>
                     <div class='download'>
-                        <button class='download-icon'><i class='fa-solid fa-download' style='color: #ababab;'></i></button>
+                        <button class='download-icon'><a href='../insertJournal/download.php?file=$pdf'><i class='fa-solid fa-download' style='color: #ababab;'></i></a></button>
                     </div>
                 </div>
             </div>";
@@ -401,7 +401,7 @@ function selectedsubject(){
                         <button class='b-mark'><i class='fa-solid fa-bookmark' style='color: #ababab;'></i></button>
                     </div>
                     <div class='download'>
-                        <button class='download-icon'><i class='fa-solid fa-download' style='color: #ababab;'></i></button>
+                        <button class='download-icon'><a href='../insertJournal/download.php?file=$pdf'><i class='fa-solid fa-download' style='color: #ababab;'></i></a></button>
                     </div>
                 </div>
             </div>";

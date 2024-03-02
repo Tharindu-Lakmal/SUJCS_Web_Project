@@ -3,6 +3,18 @@
 include '../connection.php';
 
 
+
+function errorDisplay($errors){
+    echo "<div class='errmsg'> ";
+    echo "<b>There were some errors of your form.</b><br>";
+    foreach ($errors as $error){
+        $error = ucfirst(str_replace("_", " ", $error));
+        echo '- ' . $error . '<br>';
+    }
+    echo " </div> ";
+
+}
+
 // Navigation Bar --------------------------------------------------------------------
 
 function navBar() {
@@ -82,12 +94,20 @@ function navBar() {
                                     <h2>Welcome Back</h2>
                                     <h6>Not registred yet?</h6>
                                     <a href='#' class='toggle'>Sign up</a>
-                                </div>
+                                </div>";
+
+                                if (isset($errors) && !empty($errors)){
+                                    echo "<p class='error'>Invalid Username / Password</p>";
+                                } 
+    
+                                if (isset($_GET['logout'])) {
+                                    echo "<p class='info'>You have successfully logged out from the system</p>";
+                                }
         
-                                <div class='actual-form'>
+                                echo "<div class='actual-form'>
                                     <div class='input-wrap'>
-                                        <input type='text' name='user_email' minlength='4' class='input-field' autocomplete='off' required />
-                                        <label>Email</label>
+                                        <input type='text' name='user_name' minlength='4' class='input-field' autocomplete='off' required />
+                                        <label>Name</label>
                                     </div>
         
                                     <div class='input-wrap'>
@@ -99,15 +119,21 @@ function navBar() {
                                         <a href='#'>Forgotte password?</a>
                                     </p>
         
-                                    <input type='submit' name='submit' value='Sign In' class='btn btn-primary sign-btn' />
+                                    <input type='submit' name='loginSubmit' value='Sign In' class='btn btn-primary sign-btn' />
         
                                     <p class='text'>
                                         Sign in will gives you power to be the BatMan.
                                     </p>
                                 </div>
-                            </form>
+                            </form>";
         
-                            <form action='../landingPage/index.php' method='post' autocomplete='off' class='sign-up-form'>
+                            if (!empty($errors)){
+
+                                errorDisplay($errors);
+    
+                                }
+
+                           echo" <form action='../landingPage/index.php' method='post' autocomplete='off' class='sign-up-form'>
                                 <div class='logo'>
                                     <img src='../images/logo.png' alt='SUJCS' />
                                 </div>
