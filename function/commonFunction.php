@@ -40,7 +40,7 @@ function navBar() {
     
                     <ul class='navbar-list'>
                         <li class='navbar-item'>
-                            <a href='#' class='navbar-link '>Home</a>
+                            <a href='index.php' class='navbar-link'>Home</a>
                         </li>
                         <li class='navbar-item'>
                             <a href='#' class='navbar-link'>About</a>
@@ -50,7 +50,7 @@ function navBar() {
                             <a href='#' class='navbar-link'>Reviews</a>
                         </li>
                         <li class='navbar-item'>
-                            <a href='#' class='navbar-link'>Guidlins</a>
+                            <a href='#guid-heading' class='navbar-link'>Guidlins</a>
                         </li>
                         <li class='navbar-item'>
                             <a href='#' class='navbar-link'>Contact Us</a>
@@ -58,9 +58,11 @@ function navBar() {
                     </ul>
     
                     <div class='header-action'>
-                        <a href='#' class='login-btn'>Login</a>
-    
-                        <a href='#' class='btn btn-primary'>Sign Up</a>
+                        
+                        <input type='submit' value='Login' class='login-btn' data-sign />
+
+                        <input type='submit' value='Sign Up' class='btn btn-primary' data-sign />
+                        
                     </div>
     
                 </nav>
@@ -74,10 +76,10 @@ function navBar() {
         </div>
 
 
-        <main>
+        <main class='sign-main' data-sign-main>
             <div class='box'>
     
-                    <div class='close-btn'>
+                    <div class='close-btn' data-close>
                         <i class='fa-solid fa-circle-xmark' style='color: #3e37c8;'></i>
                     </div>
     
@@ -85,8 +87,9 @@ function navBar() {
         
                         <div class='forms-wrap'>
         
+
                             <form action='../landingPage/index.php' method='post' autocomplete='off' class='sign-in-form'>
-                                <div class='logo'>
+                                <div class='logo-s'>
                                     <img src='../images/logo.png' alt='SUJCS' />
                                 </div>
         
@@ -119,7 +122,8 @@ function navBar() {
                                         <a href='../landingPage/forgotPassword.php'>Forgotte password?</a>
                                     </p>
         
-                                    <input type='submit' name='loginSubmit' value='Sign In' class='btn btn-primary sign-btn' />
+
+                                    <input type='submit' name='loginSubmit' value='Sign In' class='sign-btn' />
         
                                     <p class='text'>
                                         Sign in will gives you power to be the BatMan.
@@ -127,6 +131,7 @@ function navBar() {
                                 </div>
                             </form>";
         
+
                             if (!empty($errors)){
 
                                 errorDisplay($errors);
@@ -134,7 +139,7 @@ function navBar() {
                                 }
 
                            echo" <form action='../landingPage/index.php' method='post' autocomplete='off' class='sign-up-form'>
-                                <div class='logo'>
+                                <div class='logo-s'>
                                     <img src='../images/logo.png' alt='SUJCS' />
                                 </div>
         
@@ -160,7 +165,8 @@ function navBar() {
                                         <label>Password</label>
                                     </div>
         
-                                    <input type='submit' name='submit' value='Sign Up' class=' btn btn-primary sign-btn' />
+
+                                    <input type='submit' name='submit' value='Sign Up' class='sign-btn'style='margin-top: 3rem;' />
         
                                     <p class='text'>
                                         By signing up, I agree to the
@@ -175,7 +181,7 @@ function navBar() {
         
                             <div class='images-wrapper'>
                                 <img src='../images/lp_sub1.png' class='image img-1 show' alt='' />
-                                <img src='../images/lp_sub2.png' class='image img-2' alt='' />
+                                <img src='../images/about3.png' class='image img-2' alt='' />
                             </div>
         
                             <div class='text-slider'>
