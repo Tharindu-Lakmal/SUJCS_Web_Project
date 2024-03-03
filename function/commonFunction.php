@@ -116,7 +116,7 @@ function navBar() {
                                     </div>
         
                                     <p class='text fpassword' style='margin-block-end: 1rem;'>
-                                        <a href='#'>Forgotte password?</a>
+                                        <a href='../landingPage/forgotPassword.php'>Forgotte password?</a>
                                     </p>
         
                                     <input type='submit' name='loginSubmit' value='Sign In' class='btn btn-primary sign-btn' />
