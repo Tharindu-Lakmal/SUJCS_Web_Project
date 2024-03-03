@@ -1,0 +1,231 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+  }
+  
+  html {
+    background-color: #F8F7F4; /* Change this to the desired background color */
+    /*padding: 0; /* PLEASE DELETE THIS ONCE DONE THE DEMO */
+    /*margin: 0; /* PLEASE DELETE THIS ONCE DONE THE DEMO */
+  }
+  
+  .navbar {
+    background-color: #ffffff;
+    padding: 15px 0;
+  }
+  
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  
+  .logo img {
+    max-height: 40px;
+  }
+  
+  .menu ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .menu ul li {
+    display: inline-block;
+    margin-right: 20px;
+  }
+  
+  .menu ul li:last-child {
+    margin-right: 0;
+  }
+  
+  .menu ul li a {
+    color: #000000;
+    text-decoration: none;
+    
+  }
+  
+  .buttons a {
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 50px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .login-btn {
+    background-color: transparent;
+    
+    color: #000000;
+  }
+  
+  .signup-btn {
+    background-color: #007bff;
+    color: #ffffff;
+  }
+  
+  .signup-btn:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Your existing CSS styles */
+  
+  h3 {
+    color: #3F37C9; /* Change this to the desired color */
+    margin-top: 0; /* Remove default margin */
+    margin-top: 60px;
+    margin-left: 555px;
+  }
+  
+  .search-container {
+    display: flex;
+    justify-content: flex-start; /* Align items to the start of the container */
+    align-items: center; /* Center items vertically */
+    margin-top: 20px; /* Adjust as needed */
+  }
+  
+  input[type="text"] {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 50px 50px 50px 50px; /* Adjusted border radius */
+    width: 300px; /* Adjusted width */
+    outline: none;
+    margin-left: 550px;
+  }
+  
+  button[type="submit"] {
+    padding: 10px 20px;
+    border: none;
+    background-color: #007bff;
+    color: #fff;
+    border-radius: 50px 50px 50px 50px; /* Adjusted border radius */
+    cursor: pointer;
+    margin-left: 5px;
+  }
+  
+  button[type="submit"]:hover {
+    background-color: #0056b3;
+  }
+  
+  h4 {
+    color: #4942c3; /* Change this to the desired color */
+    margin-top: 0; /* Remove default margin */
+    margin-top: 80px;
+    margin-left: 250px;
+  }
+  h5 {
+    color: #6e45ea; /* Change this to the desired color */
+    margin-top: 0; /* Remove default margin */
+    margin-top: 80px;
+    margin-left: 250px;}
+  
+  p{
+    margin-left: 250px;
+    margin-bottom: 10px; 
+  }
+  
+  .white-box {
+    margin-top: 150px;
+    background-color: white; /* Set background color to white */
+    width: 1518px; /* Set width */
+    height: 100px; /* Set height */
+    /*border: 1px solid black; /* Add a black border */
+  }
+  
+  .two-column-list {
+    margin-left: 209.5px;
+    columns: 2; /* Divide the list into two columns */
+    -webkit-columns: 2; /* For Safari/Chrome/Opera */
+    -moz-columns: 2; /* For Firefox */
+    list-style-type: none; /* Remove default bullet points */
+  }
+  
+  .p {
+    color: red;
+  }
+  
+  footer {
+    background-color: #ffffff; /* Background color of the footer */
+    color: #2106d1; /* Text color of the footer */
+    padding: 50px 0; /* Padding top and bottom */
+    text-align: center; /* Center align text */
+  }
+  
+  /* CSS for footer links */
+  footer a {
+    color: #fff; /* Link color */
+    text-decoration: none; /* Remove underline */
+    margin: 0 15px; /* Add some space between links */
+    transition: color 0.3s; /* Smooth transition for link color */
+  }
+  
+  /* Change link color on hover */
+  footer a:hover {
+    color: #FFD700; /* Change link color on hover */
+  }
+  
+  /* CSS for the social media icons */
+  .social-icons {
+    margin-top: 30px; /* Add some space between the content above and below */
+  }
+  
+  /* CSS for the social media icon links */
+  .social-icons a {
+    display: inline-block; /* Make links appear in a row */
+    width: 40px; /* Set width */
+    height: 40px; /* Set height */
+    background-color: #FFD700; /* Background color of icons */
+    border-radius: 50%; /* Make icons circular */
+    line-height: 40px; /* Center icon vertically */
+    font-size: 18px; /* Font size of icon */
+    margin: 0 10px; /* Add some space between icons */
+    transition: background-color 0.3s; /* Smooth transition for background color */
+  }
+  
+  /* Change background color of icons on hover */
+  .social-icons a:hover {
+    background-color: #FFA500; /* Change background color on hover */
+  }
+  
+  /* CSS for the footer links */
+  .footer-links {
+    margin-top: 30px; /* Add some space between the content above and below */
+  }
+  
+  /* Style for the footer link container */
+  .footer-links ul {
+    list-style: none; /* Remove default list style */
+    padding: 0; /* Remove default padding */
+    display: flex; /* Use flexbox for layout */
+    justify-content: center; /* Center align the links */
+  }
+  
+  /* Style for the footer links */
+  .footer-links li {
+    margin: 0 15px; /* Add some space between links */
+  }
+  
+  /* Style for the copyright text */
+  .copyright {
+    margin-top: 30px; /* Add some space between the content above and below */
+  }
+
+  .list{
+    margin-top: 0; /* Remove default margin */
+    margin-top: 35px;
+    margin-left: 230px;
+  }
+  .subtopics{
+    margin-top: 65px;
+    margin-left: 100px;
+  }
+  .tables_figures_subtopics{
+    margin-top: 50px;
+    margin-left: 100px;
+  }
+  .reference_list_subtopics{
+    margin-top: 50px;
+    margin-left: 100px;
+  }
