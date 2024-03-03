@@ -41,7 +41,7 @@
             //upload journal
             $uploadJournal = "INSERT INTO `journals` (journal_title, journal_description, journal_keyword, Category_id
             ,journal_type_id,subject_id, author_name, author_affliation, author_email, author_designation, journal_pdf, journal_publish_date, date) VALUES 
-            ('$journalTitle', '$journalDescription', '$journalKeyword', '$journalcategory', '$journaltype', '$journalSubject', '$authorName', 
+            ('$journalTitle', '$journalDescription', '$journalKeyword', $journalcategory, '$journaltype', '$journalSubject', '$authorName', 
             '$authorAffliation', '$authorEmail','$authorDesignation', '$journalPdf', '$journalDate', NOW())";
 
             $result_query = mysqli_query($con, $uploadJournal);
