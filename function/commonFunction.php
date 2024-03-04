@@ -1,5 +1,19 @@
 <?php
 
+include '../connection.php';
+
+
+
+function errorDisplay($errors){
+    echo "<div class='errmsg'> ";
+    echo "<b>There were some errors of your form.</b><br>";
+    foreach ($errors as $error){
+        $error = ucfirst(str_replace("_", " ", $error));
+        echo '- ' . $error . '<br>';
+    }
+    echo " </div> ";
+
+}
 
 // Navigation Bar --------------------------------------------------------------------
 
@@ -73,7 +87,8 @@ function navBar() {
         
                         <div class='forms-wrap'>
         
-                            <form action='index.html' autocomplete='off' class='sign-in-form'>
+
+                            <form action='../landingPage/index.php' method='post' autocomplete='off' class='sign-in-form'>
                                 <div class='logo-s'>
                                     <img src='../images/logo.png' alt='SUJCS' />
                                 </div>
@@ -82,32 +97,48 @@ function navBar() {
                                     <h2>Welcome Back</h2>
                                     <h6>Not registred yet?</h6>
                                     <a href='#' class='toggle'>Sign up</a>
-                                </div>
+                                </div>";
+
+                                if (isset($errors) && !empty($errors)){
+                                    echo "<p class='error'>Invalid Username / Password</p>";
+                                } 
+    
+                                if (isset($_GET['logout'])) {
+                                    echo "<p class='info'>You have successfully logged out from the system</p>";
+                                }
         
-                                <div class='actual-form'>
+                                echo "<div class='actual-form'>
                                     <div class='input-wrap'>
-                                        <input type='text' minlength='4' class='input-field' autocomplete='off' required />
+                                        <input type='text' name='user_name' minlength='4' class='input-field' autocomplete='off' required />
                                         <label>Name</label>
                                     </div>
         
                                     <div class='input-wrap'>
-                                        <input type='password' minlength='4' class='input-field' autocomplete='off' required />
+                                        <input type='password' name='user_password' minlength='4' class='input-field' autocomplete='off' required />
                                         <label>Password</label>
                                     </div>
         
                                     <p class='text fpassword' style='margin-block-end: 1rem;'>
-                                        <a href='#'>Forgotte password?</a>
+                                        <a href='../landingPage/forgotPassword.php'>Forgotte password?</a>
                                     </p>
         
-                                    <input type='submit' value='Sign In' class='sign-btn' />
+
+                                    <input type='submit' name='loginSubmit' value='Sign In' class='sign-btn' />
         
                                     <p class='text'>
                                         Sign in will gives you power to be the BatMan.
                                     </p>
                                 </div>
-                            </form>
+                            </form>";
         
-                            <form action='index.html' autocomplete='off' class='sign-up-form'>
+
+                            if (!empty($errors)){
+
+                                errorDisplay($errors);
+    
+                                }
+
+                           echo" <form action='../landingPage/index.php' method='post' autocomplete='off' class='sign-up-form'>
                                 <div class='logo-s'>
                                     <img src='../images/logo.png' alt='SUJCS' />
                                 </div>
@@ -120,21 +151,22 @@ function navBar() {
         
                                 <div class='actual-form'>
                                     <div class='input-wrap'>
-                                        <input type='text' minlength='4' class='input-field' autocomplete='off' required />
+                                        <input type='text' name='user_name' minlength='4' class='input-field' autocomplete='off' required />
                                         <label>Name</label>
                                     </div>
         
                                     <div class='input-wrap'>
-                                        <input type='email' class='input-field' autocomplete='off' required />
+                                        <input type='email' name='user_email' class='input-field' autocomplete='off' required />
                                         <label>Email</label>
                                     </div>
         
                                     <div class='input-wrap'>
-                                        <input type='password' minlength='4' class='input-field' autocomplete='off' required />
+                                        <input type='password' name='user_password' minlength='4' class='input-field' autocomplete='off' required />
                                         <label>Password</label>
                                     </div>
         
-                                    <input type='submit' value='Sign Up' class='sign-btn'style='margin-top: 3rem;' />
+
+                                    <input type='submit' name='submit' value='Sign Up' class='sign-btn'style='margin-top: 3rem;' />
         
                                     <p class='text'>
                                         By signing up, I agree to the
@@ -193,6 +225,8 @@ function search() {
     </div>
     ";
 }
+
+
 
 
 

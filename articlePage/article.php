@@ -2,7 +2,8 @@
 
 <?php
 // include('../connection.php');
-include('../function/commonFunction.php');
+// include('../function/commonFunction.php');
+include('../function/features.php');
 ?>
 
 
@@ -92,12 +93,20 @@ include('../function/commonFunction.php');
                     </div>
 
                     <div class="filter-1">
+                        
                         <div class="filter-content-1">
-                            <h3>awrefef</h3><br><br><br>
-                            <h3>awrefef</h3><br><br><br>
-                            <h3>awrefef</h3><br><br><br>
-                            <h3>awrefef</h3><br><br><br>
+                            
+                        <?php   
+
+                        articleSubjects();
+                        
+                        
+                        ?>
+                        
+                        
+                                                    
                         </div>
+                        
                     </div>
 
                 </div>
@@ -123,205 +132,12 @@ include('../function/commonFunction.php');
 
                     <section class="articles">
 
-                        <div class="article-card">
+                    <?php selectCategories(); 
+                            selectedArticleType();
+                            selectedsubject();   
+                    
+                    ?>
 
-                            <!-- article image -->
-                            <div class="card-img">
-                                <img src="../images/about1.png" alt="">
-                            </div>
-
-                            <!-- article title -->
-                            <div class="a-title">
-                                <p class="p title">Advanced Machine Vision Paradigms for Medical Image Analysis</p>
-                                <p class="p sub-title">Type, 2024</p>
-                            </div>
-
-                            <!-- user action -->
-                            <div class="btn-access">
-                                <div class="book-mark">
-                                    <button class="b-mark"><i class="fa-solid fa-bookmark" style="color: #ababab;"></i></button>
-                                </div>
-                                <div class="download">
-                                    <button class="download-icon"><i class="fa-solid fa-download" style="color: #ababab;"></i></button>
-                                </div>
-                            </div>
-
-                        </div>
-
-                        <div class="article-card">
-
-                            <!-- article image -->
-                            <div class="card-img">
-                                <img src="../images/about1.png" alt="">
-                            </div>
-
-                            <!-- article title -->
-                            <div class="a-title">
-                                <p class="p title">Advanced Machine Vision Paradigms for Medical Image Analysis</p>
-                                <p class="p sub-title">Type, 2024</p>
-                            </div>
-
-                            <!-- user action -->
-                            <div class="btn-access">
-                                <div class="book-mark">
-                                    <button class="b-mark"><i class="fa-solid fa-bookmark" style="color: #ababab;"></i></button>
-                                </div>
-                                <div class="download">
-                                    <button class="download-icon"><i class="fa-solid fa-download" style="color: #ababab;"></i></button>
-                                </div>
-                            </div>
-
-                        </div>
-
-                        <div class="article-card">
-
-                            <!-- article image -->
-                            <div class="card-img">
-                                <img src="../images/about1.png" alt="">
-                            </div>
-
-                            <!-- article title -->
-                            <div class="a-title">
-                                <p class="p title">Advanced Machine Vision Paradigms for Medical Image Analysis</p>
-                                <p class="p sub-title">Type, 2024</p>
-                            </div>
-
-                            <!-- user action -->
-                            <div class="btn-access">
-                                <div class="book-mark">
-                                    <button class="b-mark"><i class="fa-solid fa-bookmark" style="color: #ababab;"></i></button>
-                                </div>
-                                <div class="download">
-                                    <button class="download-icon"><i class="fa-solid fa-download" style="color: #ababab;"></i></button>
-                                </div>
-                            </div>
-
-                        </div>
-
-                        <div class="article-card">
-
-                            <!-- article image -->
-                            <div class="card-img">
-                                <img src="../images/about1.png" alt="">
-                            </div>
-
-                            <!-- article title -->
-                            <div class="a-title">
-                                <p class="p title">Advanced Machine Vision Paradigms for Medical Image Analysis</p>
-                                <p class="p sub-title">Type, 2024</p>
-                            </div>
-
-                            <!-- user action -->
-                            <div class="btn-access">
-                                <div class="book-mark">
-                                    <button class="b-mark"><i class="fa-solid fa-bookmark" style="color: #ababab;"></i></button>
-                                </div>
-                                <div class="download">
-                                    <button class="download-icon"><i class="fa-solid fa-download" style="color: #ababab;"></i></button>
-                                </div>
-                            </div>
-
-                        </div>
-
-                        <div class="article-card">
-
-                            <!-- article image -->
-                            <div class="card-img">
-                                <img src="../images/about1.png" alt="">
-                            </div>
-
-                            <!-- article title -->
-                            <div class="a-title">
-                                <p class="p title">Advanced Machine Vision Paradigms for Medical Image Analysis</p>
-                                <p class="p sub-title">Type, 2024</p>
-                            </div>
-
-                            <!-- user action -->
-                            <div class="btn-access">
-                                <div class="book-mark">
-                                    <button class="b-mark"><i class="fa-solid fa-bookmark" style="color: #ababab;"></i></button>
-                                </div>
-                                <div class="download">
-                                    <button class="download-icon"><i class="fa-solid fa-download" style="color: #ababab;"></i></button>
-                                </div>
-                            </div>
-
-                        </div>
-
-                        <div class="article-card">
-
-                            <!-- article image -->
-                            <div class="card-img">
-                                <img src="../images/about1.png" alt="">
-                            </div>
-
-                            <!-- article title -->
-                            <div class="a-title">
-                                <p class="p title">Advanced Machine Vision Paradigms for Medical Image Analysis</p>
-                                <p class="p sub-title">Type, 2024</p>
-                            </div>
-
-                            <!-- user action -->
-                            <div class="btn-access">
-                                <div class="book-mark">
-                                    <button class="b-mark"><i class="fa-solid fa-bookmark" style="color: #ababab;"></i></button>
-                                </div>
-                                <div class="download">
-                                    <button class="download-icon"><i class="fa-solid fa-download" style="color: #ababab;"></i></button>
-                                </div>
-                            </div>
-
-                        </div>
-
-                        <div class="article-card">
-
-                            <!-- article image -->
-                            <div class="card-img">
-                                <img src="../images/about1.png" alt="">
-                            </div>
-
-                            <!-- article title -->
-                            <div class="a-title">
-                                <p class="p title">Advanced Machine Vision Paradigms for Medical Image Analysis</p>
-                                <p class="p sub-title">Type, 2024</p>
-                            </div>
-
-                            <!-- user action -->
-                            <div class="btn-access">
-                                <div class="book-mark">
-                                    <button class="b-mark"><i class="fa-solid fa-bookmark" style="color: #ababab;"></i></button>
-                                </div>
-                                <div class="download">
-                                    <button class="download-icon"><i class="fa-solid fa-download" style="color: #ababab;"></i></button>
-                                </div>
-                            </div>
-
-                        </div>
-
-                        <div class="article-card">
-
-                            <!-- article image -->
-                            <div class="card-img">
-                                <img src="../images/about1.png" alt="">
-                            </div>
-
-                            <!-- article title -->
-                            <div class="a-title">
-                                <p class="p title">Advanced Machine Vision Paradigms for Medical Image Analysis</p>
-                                <p class="p sub-title">Type, 2024</p>
-                            </div>
-
-                            <!-- user action -->
-                            <div class="btn-access">
-                                <div class="book-mark">
-                                    <button class="b-mark"><i class="fa-solid fa-bookmark" style="color: #ababab;"></i></button>
-                                </div>
-                                <div class="download">
-                                    <button class="download-icon"><i class="fa-solid fa-download" style="color: #ababab;"></i></button>
-                                </div>
-                            </div>
-
-                        </div>
                     </section>
 
                 </div>

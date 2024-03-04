@@ -1,8 +1,13 @@
 <!-- database connection -->
 
 <?php
-// include('../connection.php');
+include('../connection.php');
 include('../function/commonFunction.php');
+include '../function/userFunction.php';
+// include '../function/userSecondaryFunction.php';
+
+
+
 ?>
 
 
@@ -54,6 +59,8 @@ include('../function/commonFunction.php');
 
         <!-- Navigation Bar ------------------------------- -->
         <?php
+        signIn();
+        signUp();
         navBar();
         ?>
 
@@ -131,7 +138,7 @@ include('../function/commonFunction.php');
                     <p class="category-text">
                         Explore the latest advancements in Information Technology
                     </p>
-                    <a href="../articlePage/article.php" class="btn btn-category btn-primary">Articles</a>
+                    <a href="../articlePage/article.php?category_id=2" class="btn btn-category btn-primary">Articles</a>
                 </div>
 
                 <!-- Journals -->
@@ -140,7 +147,7 @@ include('../function/commonFunction.php');
                     <p class="category-text">
                         featuring professionally curated journals that cover diverse topics
                     </p>
-                    <a href="#" class="btn btn-category btn-primary">Journals</a>
+                    <a href="../journalPage/journal.php?category_id=1" class="btn btn-category btn-primary">Journals</a>
                 </div>
 
                 <!-- Authors -->
