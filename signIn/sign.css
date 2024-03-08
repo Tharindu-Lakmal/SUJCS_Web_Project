@@ -107,7 +107,7 @@ input {
   display: flex;
   align-items: center;
   justify-content: center;
-  visibility: visible;
+  visibility: hidden;
   z-index: 100;
 }
 

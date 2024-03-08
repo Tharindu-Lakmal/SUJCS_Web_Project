@@ -1,0 +1,382 @@
+
+@media (max-width: 1400px) {
+
+    /* Reused Style */
+    .section {
+        max-width: 1400px;
+    }
+
+    .container {
+        max-width: 1350px;
+    }
+
+    .container-2 {
+        max-width: 1300px;
+    }
+
+    /* categories */
+  
+
+    /* For publisher/researcher content */
+    .pcontent {
+        text-align: justify;
+    }
+    .pr-content-2 {
+        padding-block: 50px;
+        width: 60%;
+        padding-right: 3rem;
+    }
+
+    .pr-img {
+        margin-left: 30px;
+    }
+
+    .pr-img img {
+        object-fit: contain;
+    }
+
+    /* Purpose content */
+    .pur-content{
+        padding-block: 0;
+    }
+
+    .pur-content-2 {
+        padding-block-end: 5rem;
+        width: 60%;
+        padding-right: 3rem;
+    }
+
+
+    /* Footer */
+}
+
+@media (max-width: 1200px) {
+    /* Custom Property */
+
+    /* Reused Style */
+
+    .container {
+        max-width: 1100px;
+    }
+
+    .container-2 {
+        max-width: 1100px;
+        margin: 0 100px;
+    }
+
+    .category {
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+
+    .pr-img img {
+        object-fit: contain;
+    }
+    
+    /* Footer */
+}
+
+@media (max-width: 992px) {
+    
+    /* Custom Property */
+
+    :root{
+
+        /* Typograpy */
+
+        /* Font size */
+        --fontSize-1: 6.4rem;
+        --fontSize-2: 4.8rem;
+        --fontSize-3: 3rem;
+
+    }
+
+    /* Reused Style */
+
+    .container {
+        max-width: 950px;
+        width: 100%;
+        margin-inline: auto;
+    }
+
+    .container-2 {
+        max-width: 900px;
+        width: 90%;
+        margin-inline: auto;
+    }
+
+    .search_container {
+        width: 70%;
+    }
+
+    /* categories */
+    .category {
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .card {
+        max-width: 30rem;
+    }
+
+    /* For publisher/researcher content */
+    .pr-content {
+        flex-wrap: wrap;
+    }
+    .pcontent {
+        text-align: justify;
+    }
+    .pr-content-2 {
+        padding-right: 0;
+        padding-block: 50px;
+        width: 100%;
+        order: 2;
+    }
+
+    .pr-img {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+    .pr-img img {
+        width: 100%;
+        /* object-fit: contain; */
+    }
+
+    /* Purpose content */
+    .pur-content, .guid-content{
+        flex-wrap: wrap;
+    }
+
+    .pur-content-2, .guid-content-2 {
+        padding-right: 0;
+        padding-block: 50px;
+        width: 100%;
+        order: 2;
+    }
+
+    .guid-items {
+        text-align: justify;
+    }
+
+    .guid-img {
+        margin: 0 auto;
+        padding: 0;
+    }
+    .pr-img img {
+        width: 100%;
+        /* object-fit: contain; */
+    }
+
+    .pcontent {
+        padding-right: 0;
+    }
+    /* footer */
+    
+
+}
+
+@media (max-width: 768px) {
+    /* Custom Property */
+
+    :root{
+
+        /* Typograpy */
+
+        /* Font size */
+        --fontSize-1: 6.4rem;
+        --fontSize-2: 4.8rem;
+        --fontSize-3: 3rem;
+
+    }
+
+    /* Reused Style */
+
+    .container {
+        max-width: 950px;
+        width: 100%;
+        margin-inline: auto;
+    }
+
+    .container-2 {
+        max-width: 900px;
+        width: 90%;
+        margin-inline: auto;
+    }
+
+    .search_container {
+        width: 70%;
+    }
+
+    /* categories */
+    .category {
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .card {
+        max-width: 30rem;
+    }
+
+    /* For publisher/researcher content */
+    .pr-content {
+        flex-wrap: wrap;
+    }
+    .pcontent {
+        text-align: justify;
+    }
+    .pr-content-2 {
+        padding-right: 0;
+        padding-block: 50px;
+        width: 100%;
+        order: 2;
+    }
+
+    .pr-img {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+    .pr-img img {
+        width: 100%;
+        /* object-fit: contain; */
+    }
+
+    /* Purpose content */
+    .pur-content, .guid-content{
+        flex-wrap: wrap;
+    }
+
+    .pur-content-2, .guid-content-2 {
+        padding-right: 0;
+        padding-block: 50px;
+        width: 100%;
+        order: 2;
+    }
+
+    .guid-items {
+        text-align: justify;
+    }
+
+    .guid-img {
+        margin: 0 auto;
+        padding: 0;
+    }
+    .pr-img img {
+        width: 100%;
+        /* object-fit: contain; */
+    }
+
+    .pcontent {
+        padding-right: 0;
+    }
+    /* footer */
+
+}
+
+@media (max-width: 575px) {
+    /* Custom Property */
+
+    :root{
+
+        /* Typograpy */
+
+        /* Font size */
+        --fontSize-1: 6.4rem;
+        --fontSize-2: 4.8rem;
+        --fontSize-3: 3rem;
+
+    }
+
+    /* Reused Style */
+
+    .section {
+        max-width: 100%;
+    }
+
+    .container-2 {
+        max-width: 550px;
+        margin-inline: auto;
+    }
+
+    .search_container {
+        width: 90%;
+    }
+
+    /* categories */
+    .category {
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .card {
+        max-width: 30rem;
+    }
+
+    /* For publisher/researcher content */
+    .pr-content {
+        flex-wrap: wrap;
+    }
+    .pcontent {
+        text-align: justify;
+    }
+    .pr-content-2 {
+        padding-right: 0;
+        padding-block: 50px;
+        width: 100%;
+        order: 2;
+    }
+
+    .pr-img {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+    .pr-img img {
+        width: 100%;
+        /* object-fit: contain; */
+    }
+
+    /* Purpose content */
+    .pur-content, .guid-content{
+        flex-wrap: wrap;
+    }
+
+    .pur-content-2, .guid-content-2 {
+        padding-right: 0;
+        padding-block: 50px;
+        width: 100%;
+        order: 2;
+    }
+
+    .guid-items {
+        text-align: justify;
+    }
+
+    .guid-img {
+        margin: 0 auto;
+        padding: 0;
+    }
+    .pr-img img {
+        width: 100%;
+        /* object-fit: contain; */
+    }
+
+    .guid-img img {
+        width: 70%;
+        /* object-fit: contain; */
+    }
+
+    .pcontent {
+        padding-right: 0;
+    }
+    /* footer */
+}
