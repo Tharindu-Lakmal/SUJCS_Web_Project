@@ -45,9 +45,11 @@ include '../function/userFunction.php';
     <!-- custom search bar css link -->
     <link rel="stylesheet" href="../reuseComponents/search.css">
     <!-- custom responsive css link -->
-    <link rel="stylesheet" href="./responsiveStyle.css">
+    <link rel="stylesheet" href="./responsive.css">
     <!-- custom signin css link -->
-    <link rel="stylesheet" href="../Signin/sign.css">
+    <link rel="stylesheet" href="../SignIn/sign.css">
+    <!-- custom footer css link -->
+    <link rel="stylesheet" href="../reuseComponents/footer.css">
 
 
 </head>
@@ -296,6 +298,9 @@ include '../function/userFunction.php';
 
 
     <!-- Footer ------------------------------- -->
+    <?php
+        footer();
+    ?>
 
     <!-- custom js link-->
     <script src="../reuseComponents/navBar.js"></script>

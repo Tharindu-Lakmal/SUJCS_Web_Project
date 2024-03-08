@@ -227,10 +227,48 @@ function search() {
 }
 
 
-
-
-
-
 // Footer --------------------------------------------------------------------
+
+function footer() {
+    echo "
+    <div class='section footer'>
+        <div class='container-2'>
+
+            <div class='content'>
+                <div class='logo-footer'>
+                    <img src='../images/logo.png' alt='SUJCS-logo'>
+                </div>
+
+                <div class='address'>
+                    <h4>Postal Address</h4>
+                    <p class='add'>
+                        Sabaragamuwa University of Sri Lanka,<br>
+                        P.O. Box 02,<br> 
+                        Belihuloya,<br>
+                        70140,<br>
+                        Sri Lanka.
+                    </p>
+                </div>
+
+                <div class='contact'>
+                    <h4>Contact Us</h4>
+                    <ul>
+                        <li><img class='media-icon' src='../images/facebook1.png' alt='icon'><a href='#'>Facebook</a></li>
+                        <li><img class='media-icon' src='../images/instagram1.png' alt='icon'><a href='#'>Instagram</a></li>
+                        <li><img class='media-icon' src='../images/phone.png' alt='icon'><a href='#'>LinkdIn</a></li>
+                        <li><img class='media-icon' src='../images/mail.png' alt='icon'><a href='#'>Mail</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class='copy-right'>
+                <p class='note'>Copyright © 2021 - Sabaragamuwa University Journal of Computer Sciences.</p>
+                <h6>ALL RIGHTS RESERVED</h6>
+            </div>
+
+        </div>
+    </div>
+    ";
+}
 
 ?>
