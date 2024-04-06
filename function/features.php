@@ -9,14 +9,14 @@ function navBar() {
 
     echo "
         <div class='container'>
-            <a href='#' class='logo'>
+            <a href='../landingPage/afterLoginIndex.php' class='logo'>
                 <img src='../images/logo.png' width='64px' height='27px' alt='logo'>
             </a>
 
             <nav class='navbar' data-navbar>
 
                 <div class='navbar-top'>
-                    <a href='#' class='logo'>
+                    <a href='../landingPage/afterLoginIndex.php' class='logo'>
                         <img src='../images/logo.png' width='64px' height='27px' alt='logo'>
                     </a>
 
@@ -28,19 +28,19 @@ function navBar() {
 
                 <ul class='navbar-list'>
                     <li class='navbar-item'>
-                        <a href='#' class='navbar-link '>Home</a>
+                        <a href='../landingPage/afterLoginIndex.php' class='navbar-link '>Home</a>
                     </li>
                     <li class='navbar-item'>
-                        <a href='#' class='navbar-link'>About</a>
+                        <a href='../aboutPage/about.php' class='navbar-link'>About</a>
                     </li>
                     <li class='navbar-item'>
-                        <a href='#' class='navbar-link'>Call for Papers</a>
+                        <a href='../reviewPage/organizationOM.php' class='navbar-link'>Call for Papers</a>
                     </li>
                     <li class='navbar-item'>
-                        <a href='#' class='navbar-link'>Reviews</a>
+                        <a href='../reviewPage/review.php' class='navbar-link'>Reviews</a>
                     </li>
                     <li class='navbar-item'>
-                        <a href='#' class='navbar-link'>Guidelines</a>
+                        <a href='submissionPC.php' class='navbar-link'>Guidelines</a>
                     </li>
                     <li class='navbar-item'>
                         <a href='#' class='navbar-link'>Contact Us</a>
@@ -203,6 +203,8 @@ function articleSubjects() {
                 $pdf = $row['journal_pdf'];
                 $journalTypeId = $row['journal_type_id'];
                 $cat = $row['category_id'];
+                $author = $row['author_name'];
+                $image = $row['journal_image'];
     
                 // Fetch type_name from journal_types table
                 $sqlType = "SELECT * FROM `journal_types` WHERE type_id ='$journalTypeId'";
@@ -214,12 +216,12 @@ function articleSubjects() {
                 <div class='article-card'>
                     <!-- article image -->
                     <div class='card-img'>
-                        <img src='../images/about1.png' alt=''>
+                        <img src='../images/$image' alt=''>
                     </div>
                     <!-- article title -->
                     <div class='a-title'>
                         <p class='p title'>$title</p>
-                        <p class='p sub-title'>$typeName, $publishDate</p>
+                        <p class='p sub-title'>$author, $publishDate</p>
                     </div>
                     <!-- user action -->
                     <div class='btn-access'>
@@ -463,6 +465,10 @@ function bookmark(){
     }
     
 }
+
+
+
+
 
 ?>
 
