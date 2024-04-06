@@ -18,6 +18,8 @@
         $authorAffliation = $_POST['author_affliation'];
         $authorEmail = $_POST['author_email'];
         $authorDesignation = $_POST['author_designation'];
+        $journal_image = $_FILES['journal_image']['name'];
+        $temp_image = $_FILES['journal_image']['tmp_name'];
         
 
         //files
@@ -30,19 +32,20 @@
         //checking empty condition
         if($journalTitle=='' or $journalDescription=='' or $journalKeyword=='' or
         $journalDate=='' or $journalcategory=='' or $journaltype=='' or $journalSubject=='' or $authorName=='' or  $authorAffliation=='' or
-        $authorEmail=='' or $authorDesignation=='' or  $journalPdf=='') {
+        $authorEmail=='' or $authorDesignation=='' or  $journalPdf=='' or $journal_image=='') {
             echo "<script>alert('Please fill all the fields')</script>";
             exit();
         }
         else {
             move_uploaded_file($tempJournalPdf, "../journalPdf/$journalPdf");
+            move_uploaded_file($temp_image, "../journal_images/$journal_image");
             
 
             //upload journal
             $uploadJournal = "INSERT INTO `journals` (journal_title, journal_description, journal_keyword, Category_id
-            ,journal_type_id,subject_id, author_name, author_affliation, author_email, author_designation, journal_pdf, journal_publish_date, date) VALUES 
+            ,journal_type_id,subject_id, author_name, author_affliation, author_email, author_designation, journal_pdf, journal_publish_date, date, journal_image) VALUES 
             ('$journalTitle', '$journalDescription', '$journalKeyword', $journalcategory, '$journaltype', '$journalSubject', '$authorName', 
-            '$authorAffliation', '$authorEmail','$authorDesignation', '$journalPdf', '$journalDate', NOW())";
+            '$authorAffliation', '$authorEmail','$authorDesignation', '$journalPdf', '$journalDate', NOW(), journal_image)";
 
             $result_query = mysqli_query($con, $uploadJournal);
 
@@ -304,6 +307,14 @@
                     </label>
                     <input type="text" name="author_designation" id="author_designation" class="form-control" 
                     placeholder="Enter author designation" autocomplete="off" required="required">
+                </div>
+
+                <!-- upload image -->
+                <div class="form-outline">
+                    <label for="journal_image" class="form-label">
+                    Upload image
+                    </label>
+                    <input type="file" name="journal_image" id="journal_image" class="pdf-control" required="required">
                 </div>
                                 
                 <!-- p button -->

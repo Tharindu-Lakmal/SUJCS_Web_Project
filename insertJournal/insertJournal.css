@@ -8,14 +8,17 @@
   margin: 50px 0;
 }
 .uploadContainer h1 {
-  font-weight: 700;
+  font-weight: 500;
+  margin-bottom: 10px;
 }
 .uploadContainer .form-container {
-  width: 40%;
+  width: 30%;
   height: auto;
   padding: 30px;
   background-color: #E8E8E8;
   border-radius: 25px;
+  display: flex;
+  justify-content: center;
 }
 .uploadContainer .form-container input {
   background-color: #ffffff;

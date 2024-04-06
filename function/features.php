@@ -204,7 +204,10 @@ function articleSubjects() {
                 $journalTypeId = $row['journal_type_id'];
                 $cat = $row['category_id'];
                 $author = $row['author_name'];
+<<<<<<< Updated upstream
                 $image = $row['journal_image'];
+=======
+>>>>>>> Stashed changes
     
                 // Fetch type_name from journal_types table
                 $sqlType = "SELECT * FROM `journal_types` WHERE type_id ='$journalTypeId'";
