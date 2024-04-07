@@ -119,10 +119,6 @@ html {
 
 /* Software Engineering Degree Programme */
 
-.section-se {
-  /* background-color: var(--bg-white); */
-}
-
 .se-content {
   display: flex;
   padding-block: 3rem;
@@ -155,61 +151,51 @@ html {
 }
 
 
-
-
-
-
-
-.fifth-Context-outer {
+/* Scope */
+.card-container {
+  max-width: 100%;
   display: flex;
-  padding: 0;
-  margin-top: 50px;
-  font-family: "roboto";
-}
-.fifth-Context-outer .fifth-context h4 {
-  font-size: var(--fontSize-4);
-  color: var(--text-majorelle-blue);
-  margin-bottom: 25px;
-}
-.fifth-Context-outer .fifth-context p {
-  text-align: justify;
-  font-size: 1.8rem;
-  margin-bottom: 10px;
+  flex-direction: row;
+  flex-wrap: wrap;
 }
 
-.scope {
-  margin-top: 0;
-  font-family: "Roboto Serif", serif;
-}
-.scope h4 {
-  font-size: var(--fontSize-4);
-  color: var(--text-majorelle-blue);
+.card {
+  background-color: white;
+  width: 31%;
+  padding: 20px;
+  border-radius: 30px;
   margin-bottom: 20px;
-  margin-top: 10px;
+  margin-inline-end: 20px;
 }
-.scope .scope-outer {
-  display: flex;
-  margin-bottom: 20px;
-}
-.scope .scope-outer .scope-box {
-  height: auto;
-  width: 100%;
-  margin-right: 10px;
-  border: 2px solid var(--border-readmore);
-  border-radius: 20px;
-  background-color: var(--bg-white);
+
+.card h4 {
   color: var(--text-scope);
-  padding-bottom: 25px;
-}
-.scope .scope-outer .scope-box h4 {
-  margin-left: 20px;
-  color: var(--text-scope);
-  font-size: var(--fontSize-5);
-}
-.scope .scope-outer .scope-box ul {
-  margin-left: 30px;
   font-size: var(--fontSize-6);
 }
+
+.card ul li {
+  font-size: 16px;
+}
+
+.guid-items {
+  display: flex;
+  padding-block-start: 0.6rem;
+}
+
+.guid-items i {
+  font-size: var(--fontSize-6);
+  padding-right: 1rem;
+  padding-block-start: 0.5rem;
+}
+
+.card-context {
+  padding-bottom: 0;
+}
+
+
+
+
+
 @media only screen and (min-width: 375px) and (max-width: 767px) {
   .scope .scope-outer .scope-box {
     width: 100%;

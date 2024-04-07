@@ -93,8 +93,6 @@
     </section>
 
 
-
-
     <!-- Main content -->
     <section class="section main">
 
@@ -237,162 +235,315 @@
 
 
 
+    <!-- Our aim -->
+    <section class="section main">
 
+        <div class="container-2">
 
+            <div class="main-context card-context">
+                <h4>Our aim</h4>
 
-
-    <div class="fifth-Context-outer">
-        <div class="fifth-context">
-            <h4>Our aim</h4>
-            <p>The fundamental goal of this journal is to create a forum where researchers, innovators, scholars, and students can exchange their research findings. We encourage research across all branches of computer science to foster the progress of knowledge and comprehension. As a peer-reviewed journal, we strive to publish original and high-quality Research Articles, Review Articles, Survey Articles, Case Studies, and Technical Notes. Priority will be given to articles featuring advanced research concepts that contribute to societal well-being.</p>
-
-
-        </div>
-
-    </div>`
-    <!-- scope -->
-    <div class="scope">
-        <h4 class="scp">Scope</h4>
-        <div class="scope-outer">
-
-            <div class="scope-box">
-                <h4>
-                    Communication Network & Information
-                    Technologies
-                </h4>
-
-                <ul>
-                    <li style="margin-bottom:5px;"><i class="fa-solid fa-arrow-right" style="color: #3f37c9; margin-right: 5px;"></i>Ad hoc & Sensor Networks</li>
-                    <li style="margin-bottom:5px;"><i class="fa-solid fa-arrow-right" style="color: #3f37c9; margin-right: 5px;"></i>Adaptive Applications</li>
-                    <li style="margin-bottom:5px;"><i class="fa-solid fa-arrow-right" style="color: #3f37c9; margin-right: 5px;"></i>Admission/Congestion/Flow Control</li>
-                    <li style="margin-bottom:5px;"><i class="fa-solid fa-arrow-right" style="color: #3f37c9; margin-right: 5px;"></i>Authentication, Authorization & Accounting</li>
-                    <li style="margin-bottom:5px;"><i class="fa-solid fa-arrow-right" style="color: #3f37c9; margin-right: 5px;"></i>Broadband Communications</li>
-                    <li style="margin-bottom:5px;"><i class="fa-solid fa-arrow-right" style="color: #3f37c9; margin-right: 5px;"></i>Broadband Networks</li>
-                </ul>
-
-            </div>
-            <div class="scope-box">
-                <h4>
-                    Data Mining and Knowledge Discovery
-                </h4>
-                <ul>
-                    <li style="margin-bottom:5px;"><i class="fa-solid fa-arrow-right" style="color: #3f37c9;  margin-right: 5px;"></i>Theory & Foundational Issues</li>
-                    <li style="margin-bottom:5px;"><i class="fa-solid fa-arrow-right" style="color: #3f37c9;  margin-right: 5px;"></i>Data Mining Methods</li>
-                    <li style="margin-bottom:5px;"><i class="fa-solid fa-arrow-right" style="color: #3f37c9;  margin-right: 5px;"></i>Algorithms for Data Mining</li>
-                    <li style="margin-bottom:5px;"><i class="fa-solid fa-arrow-right" style="color: #3f37c9;  margin-right: 5px;"></i>Knowledge Discovery Process</li>
-                    <li style="margin-bottom:5px;"><i class="fa-solid fa-arrow-right" style="color: #3f37c9;  margin-right: 5px;"></i>Application Issues</li>
-                </ul>
-
-            </div>
-            <div class="scope-box">
-                <h4 style="margin-top: 20px;">
-                    Software Engineering
-                </h4>
-
-                <ul>
-                    <li style="margin-bottom:5px;"><i class="fa-solid fa-arrow-right" style="color: #3f37c9;  margin-right: 5px;"></i>Software Process</li>
-                    <li style="margin-bottom:5px;"><i class="fa-solid fa-arrow-right" style="color: #3f37c9;  margin-right: 5px;"></i>Software Engineering Practice</li>
-                    <li style="margin-bottom:5px;"><i class="fa-solid fa-arrow-right" style="color: #3f37c9;  margin-right: 5px;"></i>Web Engineering</li>
-                    <li style="margin-bottom:5px;"><i class="fa-solid fa-arrow-right" style="color: #3f37c9;  margin-right: 5px;"></i>Quality Management</li>
-                    <li style="margin-bottom:5px;"><i class="fa-solid fa-arrow-right" style="color: #3f37c9;  margin-right: 5px;"></i>Managing Software Projects</li>
-                    <li style="margin-bottom:5px;"><i class="fa-solid fa-arrow-right" style="color: #3f37c9;  margin-right: 5px;"></i>Advanced Topics in Software Engineering</li>
-                </ul>
+                <p>
+                    The fundamental goal of this journal is to create a forum where researchers, 
+                    innovators, scholars, and students can exchange their research findings. 
+                    We encourage research across all branches of computer science to foster 
+                    the progress of knowledge and comprehension. As a peer-reviewed journal, 
+                    we strive to publish original and high-quality Research Articles, Review Articles, 
+                    Survey Articles, Case Studies, and Technical Notes. Priority will be given to 
+                    articles featuring advanced research concepts that contribute to societal well-being.
+                </p>
 
             </div>
 
         </div>
 
-        <div class="scope-outer">
+    </section>
 
-            <div class="scope-box">
-                <h4>
-                    Database Management & Information Retrieval
-                </h4>
 
-                <ul>
-                    <li style="margin-bottom:5px;"><i class="fa-solid fa-arrow-right" style="color: #3f37c9;  margin-right: 5px;"></i>Data & Information Integration & Modelling</li>
-                    <li style="margin-bottom:5px;"><i class="fa-solid fa-arrow-right" style="color: #3f37c9;  margin-right: 5px;"></i>Data & Information Networks</li>
-                    <li style="margin-bottom:5px;"><i class="fa-solid fa-arrow-right" style="color: #3f37c9;  margin-right: 5px;"></i>Data & Information Privacy & Security</li>
-                    <li style="margin-bottom:5px;"><i class="fa-solid fa-arrow-right" style="color: #3f37c9;  margin-right: 5px;"></i>Data & Information Quality</li>
-                    <li style="margin-bottom:5px;"><i class="fa-solid fa-arrow-right" style="color: #3f37c9;  margin-right: 5px;"></i>Data & Information Semantics</li>
-                    <li style="margin-bottom:5px;"><i class="fa-solid fa-arrow-right" style="color: #3f37c9;  margin-right: 5px;"></i>Data & Information Streams</li>
-                    <li style="margin-bottom:5px;"><i class="fa-solid fa-arrow-right" style="color: #3f37c9;  margin-right: 5px;"></i>Data Management in Grid & P2P Systems</li>
-                </ul>
+    <!-- Scope -->
+    <section class="section main">
 
-            </div>
-            <div class="scope-box">
-                <h4 style="margin-top: 20px;">
-                    Mobile Computing
-                </h4>
-                <ul>
-                    <li style="margin-bottom:5px;"><i class="fa-solid fa-arrow-right" style="color: #3f37c9;  margin-right: 5px;"></i>Mobility Management</li>
-                    <li style="margin-bottom:5px;"><i class="fa-solid fa-arrow-right" style="color: #3f37c9;  margin-right: 5px;"></i>Distributed Real Time Systems</li>
-                    <li style="margin-bottom:5px;"><i class="fa-solid fa-arrow-right" style="color: #3f37c9;  margin-right: 5px;"></i>E-commerce</li>
-                    <li style="margin-bottom:5px;"><i class="fa-solid fa-arrow-right" style="color: #3f37c9;  margin-right: 5px;"></i>Education Technology & Training</li>
+        <div class="container-2">
 
-                </ul>
+            <div class="main-context card-context">
+                <h4>Scope</h4>
 
-            </div>
-            <div class="scope-box">
-                <h4>
-                    Information System Application & Security
-                </h4>
+                <div class="card-container">
+                    <!-- card 1 -->
+                    <div class="card">
+                        <h4>
+                            Communication Network & Information Technologies
+                        </h4>
 
-                <ul>
-                    <li style="margin-bottom:5px;"><i class="fa-solid fa-arrow-right" style="color: #3f37c9;  margin-right: 5px;"></i>Humana Resource Management & Computing</li>
-                    <li style="margin-bottom:5px;"><i class="fa-solid fa-arrow-right" style="color: #3f37c9;  margin-right: 5px;"></i>Architectures/Infrastructures, Agent/Intelligent/Knowledge-based Systems</li>
-                    <li style="margin-bottom:5px;"><i class="fa-solid fa-arrow-right" style="color: #3f37c9;  margin-right: 5px;"></i>[Bio]Medical Informatics, Social Informatics</li>
-                    <li style="margin-bottom:5px;"><i class="fa-solid fa-arrow-right" style="color: #3f37c9;  margin-right: 5px;"></i>Collaborative Work Systems/Management, Human Factors</li>
-                    <li style="margin-bottom:5px;"><i class="fa-solid fa-arrow-right" style="color: #3f37c9;  margin-right: 5px;"></i>Data Mining, Knowledge Discovery, Data Warehouse, OLAP, Ontologies</li>
-                    <li style="margin-bottom:5px;"><i class="fa-solid fa-arrow-right" style="color: #3f37c9;  margin-right: 5px;"></i>Database architectures/applications, decision support systems</li>
-                    <li style="margin-bottom:5px;"><i class="fa-solid fa-arrow-right" style="color: #3f37c9;  margin-right: 5px;"></i>Enterprise/Executive Information Systems</li>
-                    <li style="margin-bottom:5px;"><i class="fa-solid fa-arrow-right" style="color: #3f37c9;  margin-right: 5px;"></i>Ethics in Information System</li>
+                        <ul class="card-list">
+                            <li class="guid-items">
+                                <i class="fa-solid fa-arrow-right" style="color: #3f37c9;"></i> 
+                                Ad hoc & Sensor Networks
+                            </li>
+                            <li class="guid-items">
+                                <i class="fa-solid fa-arrow-right" style="color: #3f37c9;"></i> 
+                                Adaptive Applications
+                            </li>
+                            <li class="guid-items">
+                                <i class="fa-solid fa-arrow-right" style="color: #3f37c9;"></i> 
+                                Admission/Congestion/Flow Control
+                            </li>
+                            <li class="guid-items">
+                                <i class="fa-solid fa-arrow-right" style="color: #3f37c9;"></i> 
+                                Authentication, Authorization & Accounting
+                            </li>
+                            <li class="guid-items">
+                                <i class="fa-solid fa-arrow-right" style="color: #3f37c9;"></i> 
+                                Broadband Communications
+                            </li>
+                            <li class="guid-items">
+                                <i class="fa-solid fa-arrow-right" style="color: #3f37c9;"></i> 
+                                Broadband Networks
+                            </li>
+                        </ul>
+                    </div>
 
-                </ul>
+                    <!-- card 2 -->
+                    <div class="card">
+                        <h4>
+                            Data Mining and Knowledge Discovery
+                        </h4>
+
+                        <ul class="card-list">
+                            <li class="guid-items">
+                                <i class="fa-solid fa-arrow-right" style="color: #3f37c9;"></i> 
+                                Theory & Foundational Issues
+                            </li>
+                            <li class="guid-items">
+                                <i class="fa-solid fa-arrow-right" style="color: #3f37c9;"></i> 
+                                Data Mining Methods
+                            </li>
+                            <li class="guid-items">
+                                <i class="fa-solid fa-arrow-right" style="color: #3f37c9;"></i> 
+                                Algorithms for Data Mining
+                            </li>
+                            <li class="guid-items">
+                                <i class="fa-solid fa-arrow-right" style="color: #3f37c9;"></i> 
+                                Knowledge Discovery Process
+                            </li>
+                            <li class="guid-items">
+                                <i class="fa-solid fa-arrow-right" style="color: #3f37c9;"></i> 
+                                Application Issues
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- card 3 -->
+                    <div class="card">
+                        <h4>
+                            Software Engineering
+                        </h4>
+
+                        <ul class="card-list">
+                            <li class="guid-items">
+                                <i class="fa-solid fa-arrow-right" style="color: #3f37c9;"></i> 
+                                Software Process
+                            </li>
+                            <li class="guid-items">
+                                <i class="fa-solid fa-arrow-right" style="color: #3f37c9;"></i> 
+                                Software Engineering Practice
+                            </li>
+                            <li class="guid-items">
+                                <i class="fa-solid fa-arrow-right" style="color: #3f37c9;"></i> 
+                                Web Engineering
+                            </li>
+                            <li class="guid-items">
+                                <i class="fa-solid fa-arrow-right" style="color: #3f37c9;"></i> 
+                                Quality Management
+                            </li>
+                            <li class="guid-items">
+                                <i class="fa-solid fa-arrow-right" style="color: #3f37c9;"></i> 
+                                Managing Software Projects
+                            </li>
+                            <li class="guid-items">
+                                <i class="fa-solid fa-arrow-right" style="color: #3f37c9;"></i> 
+                                Advanced Topics in Software Engineering
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- card 4 -->
+                    <div class="card">
+                        <h4>
+                            Database Management & Information Retrieval
+                        </h4>
+
+                        <ul class="card-list">
+                            <li class="guid-items">
+                                <i class="fa-solid fa-arrow-right" style="color: #3f37c9;"></i> 
+                                Data & Information Integration & Modelling
+                            </li>
+                            <li class="guid-items">
+                                <i class="fa-solid fa-arrow-right" style="color: #3f37c9;"></i> 
+                                Data & Information Networks
+                            </li>
+                            <li class="guid-items">
+                                <i class="fa-solid fa-arrow-right" style="color: #3f37c9;"></i> 
+                                Data & Information Privacy & Security
+                            </li>
+                            <li class="guid-items">
+                                <i class="fa-solid fa-arrow-right" style="color: #3f37c9;"></i> 
+                                Data & Information Quality
+                            </li>
+                            <li class="guid-items">
+                                <i class="fa-solid fa-arrow-right" style="color: #3f37c9;"></i> 
+                                Data & Information Semantics
+                            </li>
+                            <li class="guid-items">
+                                <i class="fa-solid fa-arrow-right" style="color: #3f37c9;"></i> 
+                                Data & Information Streams
+                            </li>
+                            <li class="guid-items">
+                                <i class="fa-solid fa-arrow-right" style="color: #3f37c9;"></i> 
+                                Data Management in Grid & P2P Systems
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- card 5 -->
+                    <div class="card">
+                        <h4>
+                            Mobile Computing
+                        </h4>
+
+                        <ul class="card-list">
+                            <li class="guid-items">
+                                <i class="fa-solid fa-arrow-right" style="color: #3f37c9;"></i> 
+                                Mobility Management
+                            </li>
+                            <li class="guid-items">
+                                <i class="fa-solid fa-arrow-right" style="color: #3f37c9;"></i> 
+                                Distributed Real Time Systems
+                            </li>
+                            <li class="guid-items">
+                                <i class="fa-solid fa-arrow-right" style="color: #3f37c9;"></i> 
+                                E-commerce
+                            </li>
+                            <li class="guid-items">
+                                <i class="fa-solid fa-arrow-right" style="color: #3f37c9;"></i> 
+                                Education Technology & Training
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- card 6 -->
+                    <div class="card">
+                        <h4>
+                            Information System Application & Security
+                        </h4>
+
+                        <ul class="card-list">
+                            <li class="guid-items">
+                                <i class="fa-solid fa-arrow-right" style="color: #3f37c9;"></i> 
+                                Humana Resource Management & Computing
+                            </li>
+                            <li class="guid-items">
+                                <i class="fa-solid fa-arrow-right" style="color: #3f37c9;"></i> 
+                                Architectures/Infrastructures, Agent/Intelligent/Knowledge-based Systems
+                            </li>
+                            <li class="guid-items">
+                                <i class="fa-solid fa-arrow-right" style="color: #3f37c9;"></i> 
+                                [Bio]Medical Informatics, Social Informatics
+                            </li>
+                            <li class="guid-items">
+                                <i class="fa-solid fa-arrow-right" style="color: #3f37c9;"></i> 
+                                Data Mining, Knowledge Discovery, Data Warehouse, OLAP, Ontologies
+                            </li>
+                            <li class="guid-items">
+                                <i class="fa-solid fa-arrow-right" style="color: #3f37c9;"></i> 
+                                Database architectures/applications, decision support systems
+                            </li>
+                            <li class="guid-items">
+                                <i class="fa-solid fa-arrow-right" style="color: #3f37c9;"></i> 
+                                Enterprise/Executive Information Systems
+                            </li>
+                            <li class="guid-items">
+                                <i class="fa-solid fa-arrow-right" style="color: #3f37c9;"></i> 
+                                Ethics in Information System
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- card 7 -->
+                    <div class="card">
+                        <h4>
+                            Human Computer Interaction
+                        </h4>
+
+                        <ul class="card-list">
+                            <li class="guid-items">
+                                <i class="fa-solid fa-arrow-right" style="color: #3f37c9;"></i> 
+                                Innovative Interaction Techniques
+                            </li>
+                            <li class="guid-items">
+                                <i class="fa-solid fa-arrow-right" style="color: #3f37c9;"></i> 
+                                Multimodal Interaction
+                            </li>
+                            <li class="guid-items">
+                                <i class="fa-solid fa-arrow-right" style="color: #3f37c9;"></i> 
+                                Speech Interaction
+                            </li>
+                            <li class="guid-items">
+                                <i class="fa-solid fa-arrow-right" style="color: #3f37c9;"></i> 
+                                Graphic Interaction
+                            </li>
+                            <li class="guid-items">
+                                <i class="fa-solid fa-arrow-right" style="color: #3f37c9;"></i> 
+                                Natural Language Interaction
+                            </li>
+                            <li class="guid-items">
+                                <i class="fa-solid fa-arrow-right" style="color: #3f37c9;"></i> 
+                                Interaction in Mobile & Embedded Systems
+                            </li>
+                            <li class="guid-items">
+                                <i class="fa-solid fa-arrow-right" style="color: #3f37c9;"></i> 
+                                Interface Design & Evaluation Methodologies
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- card 8 -->
+                    <div class="card">
+                        <h4>
+                            Parallel & Distributed Technologies
+                        </h4>
+
+                        <ul class="card-list">
+                            <li class="guid-items">
+                                <i class="fa-solid fa-arrow-right" style="color: #3f37c9;"></i> 
+                                Parallel & Distributed Algorithms
+                            </li>
+                            <li class="guid-items">
+                                <i class="fa-solid fa-arrow-right" style="color: #3f37c9;"></i> 
+                                Applications of Parallel & Distributed Computing
+                            </li>
+                            <li class="guid-items">
+                                <i class="fa-solid fa-arrow-right" style="color: #3f37c9;"></i> 
+                                Parallel & Distributed Architectures
+                            </li>
+                            <li class="guid-items">
+                                <i class="fa-solid fa-arrow-right" style="color: #3f37c9;"></i> 
+                                Parallel & Distributed Software
+                            </li>
+                            <li class="guid-items">
+                                <i class="fa-solid fa-arrow-right" style="color: #3f37c9;"></i> 
+                                Cloud, Edge & Fog Computing
+                            </li>
+                        </ul>
+                    </div>
+
+                </div>
 
             </div>
 
         </div>
 
-        <div class="scope-outer">
-
-            <div class="box">
-                <h4 style="margin-top: 20px;">
-                    Human Computer Interaction
-                </h4>
-
-                <ul>
-                    <li style="margin-bottom:5px;"><i class="fa-solid fa-arrow-right" style="color: #3f37c9;  margin-right: 5px;"></i>Innovative Interaction Techniques</li>
-                    <li style="margin-bottom:5px;"><i class="fa-solid fa-arrow-right" style="color: #3f37c9;  margin-right: 5px;"></i>Multimodal Interaction</li>
-                    <li style="margin-bottom:5px;"><i class="fa-solid fa-arrow-right" style="color: #3f37c9;  margin-right: 5px;"></i>Speech Interaction</li>
-                    <li style="margin-bottom:5px;"><i class="fa-solid fa-arrow-right" style="color: #3f37c9;  margin-right: 5px;"></i>Graphic Interaction</li>
-                    <li style="margin-bottom:5px;"><i class="fa-solid fa-arrow-right" style="color: #3f37c9;  margin-right: 5px;"></i>Natural Language Interaction</li>
-                    <li style="margin-bottom:5px;"><i class="fa-solid fa-arrow-right" style="color: #3f37c9;  margin-right: 5px;"></i>Interaction in Mobile & Embedded Systems</li>
-                    <li style="margin-bottom:5px;"><i class="fa-solid fa-arrow-right" style="color: #3f37c9;  margin-right: 5px;"></i>Interface Design & Evaluation Methodologies</li>
-                </ul>
-
-            </div>
-            <div class="box">
-                <h4>
-                    Parallel & Distributed Technologies
-                </h4>
-                <ul>
-                    <li style="margin-bottom:5px;"><i class="fa-solid fa-arrow-right" style="color: #3f37c9;  margin-right: 5px;"></i>Parallel & Distributed Algorithms</li>
-                    <li style="margin-bottom:5px;"><i class="fa-solid fa-arrow-right" style="color: #3f37c9;  margin-right: 5px;"></i>Applications of Parallel & Distributed Computing</li>
-                    <li style="margin-bottom:5px;"><i class="fa-solid fa-arrow-right" style="color: #3f37c9;  margin-right: 5px;"></i>Parallel & Distributed Architectures</li>
-                    <li style="margin-bottom:5px;"><i class="fa-solid fa-arrow-right" style="color: #3f37c9;  margin-right: 5px;"></i>Parallel & Distributed Software</li>
-                    <li style="margin-bottom:5px;"><i class="fa-solid fa-arrow-right" style="color: #3f37c9;  margin-right: 5px;"></i>Cloud, Edge & Fog Computing</li>
-                </ul>
-
-            </div>
-
-
-        </div>
-    </div>
-
-
-    <!-- scope -->
-    </div>
+    </section>
 
 
 
