@@ -40,20 +40,20 @@ function navBar() {
     
                     <ul class='navbar-list'>
                         <li class='navbar-item'>
-                            <a href='index.php' class='navbar-link'>Home</a>
+                            <a href='..\landingPage\index.php' class='navbar-link'>Home</a>
                         </li>
                         <li class='navbar-item'>
-                            <a href='#' class='navbar-link'>About</a>
+                            <a href='..\AboutPage\about.php' class='navbar-link'>About</a>
                         </li>
                         
                         <li class='navbar-item'>
-                            <a href='#' class='navbar-link'>Reviews</a>
+                            <a href='..\reviewPage\reviewPage.php' class='navbar-link'>Reviews</a>
                         </li>
                         <li class='navbar-item'>
-                            <a href='#guid-heading' class='navbar-link'>Guidlins</a>
+                            <a href='#guidlines' class='navbar-link'>Guidlins</a>
                         </li>
                         <li class='navbar-item'>
-                            <a href='#' class='navbar-link'>Contact Us</a>
+                            <a href='#footer' class='navbar-link'>Contact Us</a>
                         </li>
                     </ul>
     
@@ -227,24 +227,11 @@ function search() {
 }
 
 
-<<<<<<< Updated upstream
-=======
-
-
-
-
-
-
-
-
-
-
->>>>>>> Stashed changes
 // Footer --------------------------------------------------------------------
 
 function footer() {
     echo "
-    <div class='section footer'>
+    <div class='section footer' id='footer'>
         <div class='container-2'>
 
             <div class='content'>

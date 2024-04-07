@@ -1,38 +1,107 @@
-header {
-  position: fixed;
+html {
+  font-family: var(--ff-poppins);
+  font-size: 10px;
+  scroll-behavior: smooth;
 }
 
-.main-outer {
-  background-color: var(--bg-about);
-}
-
-.image-outer {
-  width: 100%;
-  height: 100vh;
-  background-image: url("../images/hero.png");
-  background-size: 100% auto;
-  background-repeat: no-repeat;
-  margin-left: -1px;
-  background-color: var(--bg-about);
-  border: 1px solid transparent;
-}
-.image-outer h1 {
-  font-family: var(--ff-poppins-serif);
-  color: var(--text-white);
+.h1 {
   font-size: var(--fontSize-1);
-  margin: 130px 0 10px 76px;
+  line-height: 1.2;
 }
-.image-outer h3 {
+
+.h2 {
+  font-size: var(--fontSize-2);
+}
+
+.h3 {
+  font-size: var(--fontSize-4);
+  font-weight: var(--weight-regular);
+  line-height: 1.2;
+}
+
+.section {
+  margin-block-end: var(--section-spacing);
+  margin-inline: auto;
+}
+
+.container-2 {
+  margin: 0 200px;
+}
+
+/* hero styling styles */
+
+.hero {
+  height: auto;
+  margin-block-end: var(--section-spacing);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.hero .container {
+  padding-block: 15rem;
+}
+
+.hero .hero-content{
+  position: relative;
+  margin: auto 0;
+}
+
+.hero .section-title {
   color: var(--text-white);
-  font-size: var(--fontSize-3);
   font-family: var(--ff-poppins-serif);
-  margin-left: 76px;
 }
+
+.hero .section-sub-title {
+  color: var(--text-white);
+  font-family: var(--ff-poppins-serif);
+}
+
+
+/* Computing and Information Systems Degree Programme */
+
+.section-pr {
+  background-color: var(--bg-white);
+}
+
+.pr-content {
+  display: flex;
+  padding-block: 3rem;
+}
+
+.pr-content-2 {
+  display: grid;
+  flex-direction: column;
+  justify-content: center;
+  padding-block: 50px;
+  width: 50%;
+  padding-right: 3rem;
+}
+
+.publisher {
+  margin-block-end: 4rem;
+}
+
+.pr-img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  padding: 0 3rem;
+}
+
+.pr-heading {
+  color: var(--bg-majorelle-blue);
+  margin-block-end: 2rem;
+}
+
+
+
+
+
 
 .main-context {
-  margin: -200px 150px 0 150px;
   background-color: var(--bg-about);
-  font-family: "roboto";
   padding-bottom: 50px;
 }
 .main-context h4 {
@@ -46,119 +115,50 @@ header {
   font-size: 1.8rem;
   margin-bottom: 25px;
 }
-.main-context button {
-  border: 2px solid var(--border-readmore);
-  color: var(--text-white);
-  border-radius: 35px;
-  padding: 0 30px;
-  height: 40px;
-  font-size: var(--fontSize-6);
-  background-color: var(--bg-majorelle-blue);
-}
-.main-context button:hover, .main-context button:focus-visible {
-  background-color: var(--bg-ocean-blue);
+
+
+/* Software Engineering Degree Programme */
+
+.section-se {
+  /* background-color: var(--bg-white); */
 }
 
-.main-outer-secondContext {
-  width: 100%;
-  background-color: var(--bg-white);
+.se-content {
   display: flex;
-  font-family: "roboto";
-}
-.main-outer-secondContext .secondContext {
-  display: flex;
-  padding: 0;
-  margin-top: 50px;
-  height: 400px;
-}
-.main-outer-secondContext .secondContext .inner-secondContext {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  align-items: left;
-  justify-content: center;
-  text-align: left;
-}
-.main-outer-secondContext .secondContext .inner-secondContext h4 {
-  font-size: var(--fontSize-4);
-  color: var(--text-majorelle-blue);
-  margin-bottom: 25px;
-}
-.main-outer-secondContext .secondContext .inner-secondContext p {
-  text-align: justify;
-  font-size: 1.8rem;
-  margin-bottom: 20px;
-}
-.main-outer-secondContext .secondContext .inner-secondContext button {
-  border: 2px solid var(--border-readmore);
-  color: var(--text-white);
-  border-radius: 35px;
-  width: 20%;
-  height: 40px;
-  font-size: var(--fontSize-6);
-  background-color: var(--bg-majorelle-blue);
-}
-.main-outer-secondContext .secondContext .inner-secondContext button:hover, .main-outer-secondContext .secondContext .inner-secondContext button:focus-visible {
-  background-color: var(--bg-ocean-blue);
-}
-.main-outer-secondContext .secondContext .inner-image-secondContext {
-  flex: 0.8;
-  display: flex;
-  align-items: center;
-  text-align: center;
-  justify-content: right;
-}
-.main-outer-secondContext .secondContext .inner-image-secondContext img {
-  width: 90%;
+  padding-block: 3rem;
 }
 
-.thirdContext {
-  display: flex;
-  padding: 0;
-  margin: 50px 150px 0 150px;
-  height: 400px;
-  font-family: "roboto";
-}
-.thirdContext .inner-thirdContext {
-  flex: 1;
-  display: flex;
+.se-content-2 {
+  display: grid;
   flex-direction: column;
-  align-items: left;
   justify-content: center;
-  text-align: left;
+  padding-block: 50px;
+  width: 50%;
+  padding-left: 3rem;
 }
-.thirdContext .inner-thirdContext h4 {
-  font-size: var(--fontSize-4);
-  color: var(--text-majorelle-blue);
-  margin-bottom: 25px;
+
+.publisher {
+  margin-block-end: 4rem;
 }
-.thirdContext .inner-thirdContext p {
-  text-align: justify;
-  font-size: 1.8rem;
-  margin-bottom: 25px;
-}
-.thirdContext .inner-thirdContext button {
-  border: 2px solid var(--border-readmore);
-  color: var(--text-white);
-  border-radius: 35px;
-  width: 20%;
-  height: 40px;
-  font-size: var(--fontSize-6);
-  background-color: var(--bg-majorelle-blue);
-}
-.thirdContext .inner-thirdContext button:hover, .thirdContext .inner-thirdContext button:focus-visible {
-  background-color: var(--bg-ocean-blue);
-}
-.thirdContext .inner-image-thirdContext {
-  flex: 0.8;
+
+.se-img {
   display: flex;
+  justify-content: center;
   align-items: center;
-  text-align: center;
-  justify-content: left;
+  width: 50%;
+  padding: 0 3rem;
 }
-.thirdContext .inner-image-thirdContext img {
-  width: 90%;
+
+.se-heading {
+  color: var(--bg-majorelle-blue);
+  margin-block-end: 2rem;
 }
+
+
+
+
+
+
 
 .fifth-Context-outer {
   display: flex;

@@ -82,7 +82,7 @@ include '../function/userFunction.php';
     <!-- main area -->
 
     <!-- Hero section -->
-    <section class="section hero" style="background-image: url(../images/hero1.png)">
+    <section class="section hero" style="background-image: url(../images/hero1.jpg)">
 
         <!-- Hero content -->
         <div class="container">
@@ -243,7 +243,7 @@ include '../function/userFunction.php';
 
 
     <!-- Guidance content -->
-    <section class="section">
+    <section class="section" id="guidlines">
 
         <!-- Guidance content -->
         <div class="container-2">

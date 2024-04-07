@@ -37,7 +37,6 @@ h4 {
 
 .content {
     display: flex;
-    justify-content: space-around;
     align-items: flex-start;
     padding-block: 40px;
     flex-wrap: wrap;
@@ -64,4 +63,16 @@ h4 {
 
 .copy-right h6 {
     margin: 0 auto;
+}
+
+.logo-footer, .address, .contact {
+    margin-right: 120px;
+}
+
+.section {
+    margin-inline: auto;
+}
+
+.container-2 {
+    margin: 0 200px;
 }
