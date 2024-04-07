@@ -10,15 +10,18 @@
     margin: 50px 0;
 
     h1{
-        font-weight: 700 ;
+        font-weight: 500 ;
+        margin-bottom: 10px;
     }
 
     .form-container{
-        width: 40%;
+        width: 30%;
         height: auto;
         padding: 30px;
         background-color: #E8E8E8;
         border-radius: 25px;
+        display: flex;
+        justify-content: center;
 
         // border: 1px solid red;
 
@@ -31,6 +34,8 @@
             padding: 6px 25px;
             margin: 10px 0;
             font-size: 1.5rem;
+            
+            
         }
 
         .file-input-container {

@@ -21,7 +21,7 @@ function navBar() {
     
     echo "
         <div class='container'>
-                <a href='#' class='logo'>
+                <a href='../landingPage/index.php' class='logo'>
                     <img src='../images/logo.png' width='64px' height='27px' alt='logo'>
                 </a>
     
@@ -217,16 +217,29 @@ function navBar() {
 
 function search() {
     echo "
+    <form action='../search/searchJournal.php' method='GET'>
     <div class='search_container'>
-
-        <input class='input' type='text' placeholder='Search here'>
-        <button class='search_btn btn'><ion-icon name='search'></ion-icon></button>
-
+        <input class='input' type='text' placeholder='Search here' name='keyword'>
+        <button type='submit' class='search_btn btn'><ion-icon name='search'></ion-icon></button>
     </div>
+</form>
     ";
 }
 
 
+<<<<<<< Updated upstream
+=======
+
+
+
+
+
+
+
+
+
+
+>>>>>>> Stashed changes
 // Footer --------------------------------------------------------------------
 
 function footer() {
