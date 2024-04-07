@@ -217,12 +217,13 @@ function navBar() {
 
 function search() {
     echo "
-    <form action='../search/searchJournal.php' method='GET'>
     <div class='search_container'>
-        <input class='input' type='text' placeholder='Search here' name='keyword'>
-        <button type='submit' class='search_btn btn'><ion-icon name='search'></ion-icon></button>
+        <form action='../search/searchJournal.php' method='GET'>
+            <input class='input' type='text' placeholder='Search here' name='keyword'>
+            <button type='submit' class='search_btn btn'><ion-icon name='search'></ion-icon></button>
+        </form>
     </div>
-</form>
+
     ";
 }
 

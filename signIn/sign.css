@@ -166,16 +166,9 @@ input {
 }
 
 form {
-  max-width: 360px;
   width: 100%;
-  margin: 0 10px 0 10px;
   height: 100%;
   display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-  grid-column: 1 / 2;
-  grid-row: 1 / 2;
-  transition: opacity 0.02s 0.4s;
 }
 
 form.sign-up-form {
