@@ -50,6 +50,8 @@ include '../function/features.php';
     <!-- custom signin css link -->
     <link rel="stylesheet" href="../Signin/sign.css">
 
+    <link rel="stylesheet" href="../reuseComponents/footer.css">
+
 
 </head>
 
@@ -297,6 +299,11 @@ include '../function/features.php';
 
 
     <!-- Footer ------------------------------- -->
+
+    <?php
+        footer();
+    ?>
+
 
     <!-- custom js link-->
     <script src="../reuseComponents/navBar.js"></script>

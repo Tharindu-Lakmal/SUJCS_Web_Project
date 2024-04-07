@@ -3,6 +3,7 @@
 <?php
     // include('../connection.php');
     include('../function/commonFunction.php');
+
 ?>
 
 
@@ -39,6 +40,7 @@
     <!-- custom navbar css link -->
     <link rel="stylesheet" href="../reuseComponents/navBar.css">
     <link rel="stylesheet" href="./search.css">
+    <link rel="stylesheet" href="../search.css">
     <link rel="stylesheet" href="./responsiveAbout.css">
     
 
