@@ -226,22 +226,7 @@ function search() {
     ";
 }
 
-
-<<<<<<< Updated upstream
-=======
-
-
-
-
-
-
-
-
-
-
->>>>>>> Stashed changes
 // Footer --------------------------------------------------------------------
-
 function footer() {
     echo "
     <div class='section footer'>
