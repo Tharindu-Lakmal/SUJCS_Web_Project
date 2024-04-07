@@ -119,10 +119,6 @@ html {
 
 /* Software Engineering Degree Programme */
 
-.section-se {
-  /* background-color: var(--bg-white); */
-}
-
 .se-content {
   display: flex;
   padding-block: 3rem;
