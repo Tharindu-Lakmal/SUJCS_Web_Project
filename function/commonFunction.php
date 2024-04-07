@@ -21,14 +21,14 @@ function navBar() {
     
     echo "
         <div class='container'>
-                <a href='../landingPage/index.php' class='logo'>
+                <a href='../landingPage/afterLoginIndex.php' class='logo'>
                     <img src='../images/logo.png' width='64px' height='27px' alt='logo'>
                 </a>
     
                 <nav class='navbar' data-navbar>
     
                     <div class='navbar-top'>
-                        <a href='#' class='logo'>
+                        <a href='../landingPage/afterLoginIndex.php' class='logo'>
                             <img src='../images/logo.png' width='64px' height='27px' alt='logo'>
                         </a>
     
@@ -40,20 +40,20 @@ function navBar() {
     
                     <ul class='navbar-list'>
                         <li class='navbar-item'>
-                            <a href='..\landingPage\index.php' class='navbar-link'>Home</a>
+                            <a href='../landingPage/afterLoginIndex.php' class='navbar-link'>Home</a>
                         </li>
                         <li class='navbar-item'>
-                            <a href='..\AboutPage\about.php' class='navbar-link'>About</a>
+                            <a href='../aboutPage/about.php' class='navbar-link'>About</a>
                         </li>
                         
                         <li class='navbar-item'>
-                            <a href='..\reviewPage\reviewPage.php' class='navbar-link'>Reviews</a>
+                            <a href='../reviewPage/organizationOM.php' class='navbar-link'>Reviews</a>
                         </li>
                         <li class='navbar-item'>
-                            <a href='#guidlines' class='navbar-link'>Guidlins</a>
+                            <a href='../reviewPage/reviewPage.php' class='navbar-link'>Guidlins</a>
                         </li>
                         <li class='navbar-item'>
-                            <a href='#footer' class='navbar-link'>Contact Us</a>
+                            <a href='../reviewPage/submissionPC.php' class='navbar-link'>Contact Us</a>
                         </li>
                     </ul>
     
@@ -217,12 +217,14 @@ function navBar() {
 
 function search() {
     echo "
-    <form action='../search/searchJournal.php' method='GET'>
     <div class='search_container'>
+    <form action='../searchPage/searchPage.php' method='GET' class=''>
+    
         <input class='input' type='text' placeholder='Search here' name='keyword'>
-        <button type='submit' class='search_btn btn'><ion-icon name='search'></ion-icon></button>
-    </div>
+        <button type='submit' class='search_btn btn'><ion-icon name='search'></ion-icon></button>  
 </form>
+</div>
+
     ";
 }
 

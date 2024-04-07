@@ -40,7 +40,7 @@ function navBar() {
                         <a href='../reviewPage/review.php' class='navbar-link'>Reviews</a>
                     </li>
                     <li class='navbar-item'>
-                        <a href='submissionPC.php' class='navbar-link'>Guidelines</a>
+                        <a href='../reviewPage/submissionPC.php' class='navbar-link'>Guidelines</a>
                     </li>
                     <li class='navbar-item'>
                         <a href='#' class='navbar-link'>Contact Us</a>
@@ -72,15 +72,60 @@ function navBar() {
 function search() {
     echo "
     <div class='search_container'>
+    <form action='../searchPage/searchPage.php' method='GET' class='search-form'>
+    
+        <input class='input' type='text' placeholder='Search here' name='search_data'>
+        <button type='submit' class='search_btn btn' name='search_data_journal'><ion-icon name='search'></ion-icon></button>  
+</form>
+</div>
 
-        <input class='input' type='text' placeholder='Search here'>
-        <button class='search_btn btn'><ion-icon name='search'></ion-icon></button>
-
-    </div>
     ";
 }
 
 
+
+
+function footer() {
+    echo "
+    <div class='section footer'>
+        <div class='container-2'>
+
+            <div class='content'>
+                <div class='logo-footer'>
+                    <img src='../images/logo.png' alt='SUJCS-logo'>
+                </div>
+
+                <div class='address'>
+                    <h4>Postal Address</h4>
+                    <p class='add'>
+                        Sabaragamuwa University of Sri Lanka,<br>
+                        P.O. Box 02,<br> 
+                        Belihuloya,<br>
+                        70140,<br>
+                        Sri Lanka.
+                    </p>
+                </div>
+
+                <div class='contact'>
+                    <h4>Contact Us</h4>
+                    <ul>
+                        <li><img class='media-icon' src='../images/facebook1.png' alt='icon'><a href='#'>Facebook</a></li>
+                        <li><img class='media-icon' src='../images/instagram1.png' alt='icon'><a href='#'>Instagram</a></li>
+                        <li><img class='media-icon' src='../images/phone.png' alt='icon'><a href='#'>LinkdIn</a></li>
+                        <li><img class='media-icon' src='../images/mail.png' alt='icon'><a href='#'>Mail</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class='copy-right'>
+                <p class='note'>Copyright © 2021 - Sabaragamuwa University Journal of Computer Sciences.</p>
+                <h6>ALL RIGHTS RESERVED</h6>
+            </div>
+
+        </div>
+    </div>
+    ";
+}
 
 // function for show journal type and that subjects
 
@@ -465,6 +510,73 @@ function bookmark(){
     }
     
 }
+
+
+
+
+function searchBar() {
+    global $con;
+
+    // condition to check isset or not
+    if(isset($_GET['search_data_journal'])) {
+
+        $search_data_value = $_GET['search_data'];
+
+            $search_query = "Select * from journals where journal_keyword like '%$search_data_value%'"; //limit 0,5
+            $result_query = mysqli_query($con, $search_query);
+            // $row = mysqli_fetch_assoc($result_query);
+            // echo $row['product_title'];
+
+            // count the num of rows resent in the database
+            $num_of_rows = mysqli_num_rows($result_query);
+            if($num_of_rows == 0) {
+                echo "<h3 class='text-center'>No matching search results</h3>";
+            }
+
+            while($row = mysqli_fetch_assoc($result_query)){
+                $title = $row['journal_title'];
+                $publishDate = $row['journal_publish_date'];
+                $pdf = $row['journal_pdf'];
+                $journalTypeId = $row['journal_type_id'];
+                $cat = $row['category_id'];
+                $author = $row['author_name'];
+                $image = $row['journal_image'];
+    
+                // Fetch type_name from journal_types table
+                $sqlType = "SELECT * FROM `journal_types` WHERE type_id ='$journalTypeId'";
+                $resultType = mysqli_query($con, $sqlType);
+                $rowType = mysqli_fetch_assoc($resultType);
+                $typeName = ($rowType) ? $rowType['type_name'] : '';
+            
+                echo "
+                <div class='article-card'>
+                    <!-- article image -->
+                    <div class='card-img'>
+                        <img src='../images/$image' alt=''>
+                    </div>
+                    <!-- article title -->
+                    <div class='a-title'>
+                        <p class='p title'>$title</p>
+                        <p class='p sub-title'>$author, $publishDate</p>
+                    </div>
+                    <!-- user action -->
+                    <div class='btn-access'>
+                        <div class='book-mark'>
+                            <button class='b-mark'><a href='../function/bookmark.php?bookmark=$cat'><i class='fa-solid fa-bookmark' style='color: #ababab;'></i></a></button>
+                        </div>
+                        <div class='download'>
+                            <button class='download-icon'><a href='../insertJournal/download.php?file=$pdf'><i class='fa-solid fa-download' style='color: #ababab;'></i></a></button>
+                        </div>
+                    </div>
+                </div>";
+            }
+        
+    }
+}
+
+
+
+
 
 
 
