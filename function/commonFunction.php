@@ -227,9 +227,7 @@ function search() {
     ";
 }
 
-
 // Footer --------------------------------------------------------------------
-
 function footer() {
     echo "
     <div class='section footer' id='footer'>
