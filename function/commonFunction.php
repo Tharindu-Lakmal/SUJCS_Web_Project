@@ -233,7 +233,7 @@ function search() {
 
 function footer() {
     echo "
-    <div class='section footer'>
+    <div class='section footer' id='footer'>
         <div class='container-2'>
 
             <div class='content'>
