@@ -1,0 +1,72 @@
+.hero-section {
+	padding-bottom: 50px;
+}
+
+.profile-container {
+	background-color: #0073CE;
+	max-width: 800px;
+	padding: 100px;
+	border-radius: 0 1000px 1000px 0;
+}
+
+.profile {
+	display: flex;
+	flex-direction: row;
+	justify-content: left;
+	gap: 40px;
+	width: 572px;
+}
+
+.profile .card {
+	display: flex;
+	flex-direction: column;
+	background-color: white;
+	border-radius: 10px;
+	max-width: 200px;
+	box-shadow: 1px 1px 5px gray;
+}
+
+.profile .card img {
+	width: 200px;
+	border-radius: 10px;
+}
+
+.profile .card div {
+	font-size: small;
+	padding: 10px;
+}
+
+.profile .text h2 {
+	color: #3F37C9;
+	margin-bottom: 30px;
+}
+
+.hero-section .profile .text p, .hero-section .profile .text a {
+	color: white;
+}
+
+.profile .text p {
+	margin-bottom: 20px;
+}
+
+
+.profile-data {
+	background-color: white;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 50px;
+	gap: 20px;
+}
+
+@media all and (max-width: 700px) {
+	.profile {
+		flex-direction: column;
+		align-items: center;
+		width: auto;
+	}
+
+	.profile-container {
+		border-radius: 0;
+	}
+}
