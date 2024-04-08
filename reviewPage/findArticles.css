@@ -1,0 +1,26 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+  }
+  
+html {
+  background-color: #F8F7F4; /* Change this to the desired background color */
+  /*padding: 0; /* PLEASE DELETE THIS ONCE DONE THE DEMO */
+  /*margin: 0; /* PLEASE DELETE THIS ONCE DONE THE DEMO */
+}
+
+.section {
+  margin-block-end: var(--section-spacing);
+  margin-inline: auto;
+}
+
+.container-2 {
+  margin: 0 200px;
+}
+
+.card {
+  margin-left: 6rem;
+}
+
+
+
