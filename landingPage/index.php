@@ -82,7 +82,7 @@ include '../function/userFunction.php';
     <!-- main area -->
 
     <!-- Hero section -->
-    <section class="section hero" style="background-image: url(../images/hero1.jpg)">
+    <section class="section hero" style="background-image: url(../images/hero1.png)">
 
         <!-- Hero content -->
         <div class="container">
