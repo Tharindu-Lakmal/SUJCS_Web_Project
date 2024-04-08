@@ -337,27 +337,38 @@ function addBookmark() {
 
 // select profile journals 
 
-function profileJournals(){
-
+function profileJournals() {
     global $con;
-    
-    if(isset($_GET['category_id'])){
+
+    // Check if category_id is set in the URL
+    if (isset($_GET['category_id'])) {
+        // Get category_id from the URL
         $categoryId = $_GET['category_id'];
         
-        // SQL query to select details from journals table based on bookmark category_id
+        // Check if user is logged in
+        if (!isset($_SESSION['user_id'])) {
+            // Redirect to login page if user is not logged in
+            header("Location: ../login.php");
+            exit();
+        }
+
+        // Get user ID
+        $userId = $_SESSION['user_id'];
+
+        // SQL query to select details from journals table based on bookmark category_id and user_id
         $sql = "SELECT journals.* FROM journals
                 INNER JOIN bookmark ON journals.journal_id = bookmark.journal_id
-                WHERE bookmark.category_id = $categoryId";
-    
+                WHERE bookmark.category_id = $categoryId AND bookmark.user_id = $userId";
+
         $result = mysqli_query($con, $sql);
 
         $num_of_rows = mysqli_num_rows($result);
-        if($num_of_rows == 0) {
+        if ($num_of_rows == 0) {
             echo "<h3 class='text-center'>No related documents for this category</h3>";
         }
-    
+
         // Fetching and processing the results
-        while($row = mysqli_fetch_assoc($result)){
+        while ($row = mysqli_fetch_assoc($result)) {
             $title = $row['journal_title'];
             $publishDate = $row['journal_publish_date'];
             $pdf = $row['journal_pdf'];
@@ -371,31 +382,60 @@ function profileJournals(){
             $resultType = mysqli_query($con, $sqlType);
             $rowType = mysqli_fetch_assoc($resultType);
             $typeName = ($rowType) ? $rowType['type_name'] : '';
-        
+
+            // Display the article card
             echo "
             <div class='article-card'>
-        <!-- article image -->
-        <div class='card-img'>
-            <img src='../images/$image' alt=''>
-        </div>
-        <!-- article title -->
-        <div class='a-title'>
-            <p class='p title'>$title</p>
-            <p class='p sub-title'>$author, $publishDate</p>
-        </div>
-        <!-- user action -->
-        <div class='btn-access'>
-            <div class='book-mark'>
-                <button class='b-mark'><a href='../function/bookmark.php?bookmark=$cat'><i class='fa-solid fa-bookmark' style='color: #ababab;'></i></a></button>
-            </div>
-            <div class='download'>
-                <button class='download-icon'><a href='../insertJournal/download.php?file=$pdf'><i class='fa-solid fa-download' style='color: #ababab;'></i></a></button>
-            </div>
-        </div>
-    </div>";
+                <!-- article image -->
+                <div class='card-img'>
+                    <img src='../images/$image' alt=''>
+                </div>
+                <!-- article title -->
+                <div class='a-title'>
+                    <p class='p title'>$title</p>
+                    <p class='p sub-title'>$author, $publishDate</p>
+                </div>
+                <!-- user action -->
+                <div class='btn-access'>
+                    <div class='book-mark'>
+                        <button class='b-mark'><a href='../userProfile/userProfile.php?categ=$cat'><i class='fa-solid fa-bookmark' style='color: #ababab;'></i></a></button>
+                    </div>
+                    <div class='download'>
+                        <button class='download-icon'><a href='../insertJournal/download.php?file=$pdf'><i class='fa-solid fa-download' style='color: #ababab;'></i></a></button>
+                    </div>
+                </div>
+            </div>";
         }
     }
-      
-    }
+}
+
+
+
+
+
+
+function removeBookmark(){
+	global $con;
+
+	if(isset($_SESSION['user_id']) && isset($_GET['categ'])) {
+		$user_id = $_SESSION['user_id'];
+		$category_id = $_GET['categ'];
+	
+		// Check if the bookmark exists for the user and category
+		$check_query = "SELECT * FROM bookmark WHERE user_id = $user_id AND category_id = $category_id";
+		$check_result = mysqli_query($con, $check_query);
+	
+		if (mysqli_num_rows($check_result) > 0) {
+			// Bookmark exists, remove it
+			$delete_query = "DELETE FROM bookmark WHERE user_id = $user_id AND category_id = $category_id";
+			mysqli_query($con, $delete_query);
+
+			echo "<script>alert('Bookmark removed successfully!')</script>";
+		} 
+	} 
+}
+
+
+
 
 ?>

@@ -97,10 +97,10 @@ include('../function/commonFunction.php');
                             <a href="userProfile.php?category_id=2">Articles</a>
                         </li>
                         <li class="list-item">
-                            <a href="#">Account Details</a>
+                            <a href="../function/delete.php">Delete Account</a>
                         </li>
                         <li class="list-item">
-                            <a href="#">Delete Account</a>
+                            <a href="../function/userLogout.php">Log Out</a>
                         </li>
                     </ul>
 
@@ -114,6 +114,8 @@ include('../function/commonFunction.php');
                         
                         addBookmark();
                         profileJournals();
+                        removeBookmark()
+                        
                     ?>
 
                 </div>
