@@ -9,14 +9,14 @@ function navBar() {
 
     echo "
         <div class='container'>
-            <a href='../landingPage/afterLoginIndex.php' class='logo'>
+            <a href='../landingPage/index.php' class='logo'>
                 <img src='../images/logo.png' width='64px' height='27px' alt='logo'>
             </a>
 
             <nav class='navbar' data-navbar>
 
                 <div class='navbar-top'>
-                    <a href='../landingPage/afterLoginIndex.php' class='logo'>
+                    <a href='../landingPage/index.php' class='logo'>
                         <img src='../images/logo.png' width='64px' height='27px' alt='logo'>
                     </a>
 
@@ -28,7 +28,7 @@ function navBar() {
 
                 <ul class='navbar-list'>
                     <li class='navbar-item'>
-                        <a href='../landingPage/afterLoginIndex.php' class='navbar-link '>Home</a>
+                        <a href='../landingPage/index.php' class='navbar-link '>Home</a>
                     </li>
                     <li class='navbar-item'>
                         <a href='../aboutPage/about.php' class='navbar-link'>About</a>
@@ -37,7 +37,7 @@ function navBar() {
                         <a href='../reviewPage/organizationOM.php' class='navbar-link'>Call for Papers</a>
                     </li>
                     <li class='navbar-item'>
-                        <a href='../reviewPage/review.php' class='navbar-link'>Reviews</a>
+                        <a href='../reviewPage/reviewPage.php' class='navbar-link'>Reviews</a>
                     </li>
                     <li class='navbar-item'>
                         <a href='../reviewPage/submissionPC.php' class='navbar-link'>Guidelines</a>

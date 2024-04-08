@@ -217,18 +217,19 @@ function navBar()
 
 // search-------------------------------
 
-function search()
-{
-	echo "
+function search() {
+    echo "
     <div class='search_container'>
-        <form action='../search/searchJournal.php' method='GET'>
-            <input class='input' type='text' placeholder='Search here' name='keyword'>
-            <button type='submit' class='search_btn btn'><ion-icon name='search'></ion-icon></button>
-        </form>
-    </div>
+    <form action='../searchPage/searchPage.php' method='GET' class='search-form'>
+    
+        <input class='input' type='text' placeholder='Search here' name='search_data'>
+        <button type='submit' class='search_btn btn' name='search_data_journal'><ion-icon name='search'></ion-icon></button>  
+</form>
+</div>
 
     ";
 }
+
 
 // Footer --------------------------------------------------------------------
 function footer()
