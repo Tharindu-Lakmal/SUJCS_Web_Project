@@ -133,6 +133,308 @@ include '../function/userFunction.php';
 				<a href="mailto:ravindra.dangalla@appsc.sab.ac.lk">ravindra.dangalla@appsc.sab.ac.lk</a>
 			</div>
 		</div>
+		<div class="profile">
+			<div class="card">
+				<img src="../images/popular-articles/p7.png" alt="">
+			</div>
+			<div class="text">
+				<h2></h2>
+				<p>
+					Dr. KT Rathnayake <br>
+					Sabaragamuwa University of Sri Lanka
+				</p>
+				<a href="mailto:kapilar@appsc.sab.ac.lk">kapilar@appsc.sab.ac.lk</a>
+			</div>
+		</div>
+		<div class="profile">
+			<div class="card">
+				<img src="../images/popular-articles/p8.jpg" alt="">
+			</div>
+			<div class="text">
+				<h2></h2>
+				<p>
+					Dr. H Rupasinghe <br>
+					Sabaragamuwa University of Sri Lanka
+				</p>
+				<a href="mailto:hiruni@ssl.sab.ac.lk">hiruni@ssl.sab.ac.lk</a>
+			</div>
+		</div>
+		<div class="profile">
+			<div class="card">
+				<img src="../images/popular-articles/p9.jpg" alt="">
+			</div>
+			<div class="text">
+				<h2></h2>
+				<p>
+					Dr. EMUWJB Ekanayake <br>
+					Uva Wellassa University of Sri Lanka
+				</p>
+				<a href="mailto:jayalath@uwu.ac.lk">jayalath@uwu.ac.lk</a>
+			</div>
+		</div>
+		<div class="profile">
+			<div class="card">
+				<img src="../images/popular-articles/p10.jpg" alt="">
+			</div>
+			<div class="text">
+				<h2></h2>
+				<p>
+					Prof. C Jayawardene <br>
+					Sri Lanka Institute of Information Technology
+				</p>
+				<a href="mailto:chandimal.j@sliit.lk">chandimal.j@sliit.lk</a>
+			</div>
+		</div>
+		<div class="profile">
+			<div class="card">
+				<img src="../images/popular-articles/p11.jpg" alt="">
+			</div>
+			<div class="text">
+				<h2></h2>
+				<p>
+					Dr. A Jayakody <br>
+					Sri Lanka Institute of Information Technology
+				</p>
+				<a href="mailto:nuradhajaya@gmail.com">nuradhajaya@gmail.com</a> <br>
+				<a href="mailto:anuradha.j@sliit.lk">anuradha.j@sliit.lk</a>
+			</div>
+		</div>
+		<div class="profile">
+			<div class="card">
+				<img src="../images/popular-articles/p12.jpg" alt="">
+			</div>
+			<div class="text">
+				<h2></h2>
+				<p>
+					Dr. W Rankothge <br>
+					Sri Lanka Institute of Information Technology
+				</p>
+				<a href="mailto:windhya.r@sliit.lk">windhya.r@sliit.lk</a>
+			</div>
+		</div>
+		<div class="profile">
+			<div class="card">
+				<img src="../images/popular-articles/p13.jpg" alt="">
+			</div>
+			<div class="text">
+				<h2></h2>
+				<p>
+					Dr. D Nawinna <br>
+					Sri Lanka Institute of Information Technology
+				</p>
+				<a href="mailto:dasuni.n@sliit.lk">dasuni.n@sliit.lk</a>
+			</div>
+		</div>
+		<div class="profile">
+			<div class="card">
+				<img src="../images/popular-articles/p14.jpg" alt="">
+			</div>
+			<div class="text">
+				<h2></h2>
+				<p>
+					Dr. P Abeygunawardhana <br>
+					Sri Lanka Institute of Information Technology
+				</p>
+				<a href="mailto:Pradeep.a@sliit.lk">Pradeep.a@sliit.lk</a>
+			</div>
+		</div>
+		<div class="profile">
+			<div class="card">
+				<img src="../images/popular-articles/p15.jpg" alt="">
+			</div>
+			<div class="text">
+				<h2></h2>
+				<p>
+					Dr. J Jayasinghe <br>
+					Wayamba University of Sri Lanka
+				</p>
+				<a href="mailto:jeevani@wyb.ac.lk">jeevani@wyb.ac.lk</a>
+			</div>
+		</div>
+		<div class="profile">
+			<div class="card">
+				<img src="../images/popular-articles/p16.png" alt="">
+			</div>
+			<div class="text">
+				<h2></h2>
+				<p>
+					Prof. C Premachandra <br>
+					Shibaura Institute of Technology <br>
+					Japan
+				</p>
+			</div>
+		</div>
+		<div class="profile">
+			<div class="card">
+				<img src="../images/popular-articles/p17.jpg" alt="">
+			</div>
+			<div class="text">
+				<h2></h2>
+				<p>
+					Prof. Jiangning Wu <br>
+					Dalian University of Technology <br>
+					China
+				</p>
+				<a href="mailto:j3wu@ryerson.ca">j3wu@ryerson.ca</a>
+			</div>
+		</div>
+		<div class="profile">
+			<div class="card">
+				<img src="../images/popular-articles/p18.jpg" alt="">
+			</div>
+			<div class="text">
+				<h2></h2>
+				<p>
+					Prof. Lin Li <br>
+					Wuhan University of Technology <br>
+					China
+				</p>
+				<a href="mailto:lilin@whu.edu.cn">lilin@whu.edu.cn</a>
+			</div>
+		</div>
+		<div class="profile">
+			<div class="card">
+				<img src="../images/popular-articles/p19.jpg" alt="">
+			</div>
+			<div class="text">
+				<h2></h2>
+				<p>
+					Prof. SR Kodituwakku <br>
+					University of Peradeniya <br>
+					Sri Lanka
+				</p>
+				<a href="mailto:alukak@pdn.ac.lk">alukak@pdn.ac.lk</a> <br>
+				<a href="mailto:salukak@sci.pdn.ac.lk">salukak@sci.pdn.ac.lk</a>
+			</div>
+		</div>
+		<div class="profile">
+			<div class="card">
+				<img src="../images/popular-articles/p20.png" alt="">
+			</div>
+			<div class="text">
+				<h2></h2>
+				<p>
+					Prof. N Kodikara <br>
+					University of Colombo School of Computing <br>
+					Sri Lanka
+				</p>
+				<a href="mailto:ndk@ucsc.cmb.ac.lk">ndk@ucsc.cmb.ac.lk</a>
+			</div>
+		</div>
+		<div class="profile">
+			<div class="card">
+				<img src="../images/popular-articles/p21.jpg" alt="">
+			</div>
+			<div class="text">
+				<h2></h2>
+				<p>
+					Prof. PM Jayaweera <br>
+					University of Sri Jayewardenepura <br>
+					Sri Lanka
+				</p>
+				<a href="mailto:Prasad@dscs.sjp.ac.lk">Prasad@dscs.sjp.ac.lk</a>
+			</div>
+		</div>
+		<div class="profile">
+			<div class="card">
+				<img src="../images/popular-articles/p22.png" alt="">
+			</div>
+			<div class="text">
+				<h2></h2>
+				<p>
+					Dr. TGI Fernando <br>
+					University of Sri Jayewardenepura <br>
+					Sri Lanka
+				</p>
+				<a href="mailto:tgi@sjp.ac.lk">tgi@sjp.ac.lk</a> <br>
+				<a href="mailto:tgi.fernando@gmail.com">tgi.fernando@gmail.com</a>
+			</div>
+		</div>
+		<div class="profile">
+			<div class="card">
+				<img src="../images/popular-articles/p23.jpg" alt="">
+			</div>
+			<div class="text">
+				<h2></h2>
+				<p>
+					Dr. KASN Sumathipala <br>
+					University of Moratuwa <br>
+					Sri Lanka
+				</p>
+				<a href="mailto:sagaras@uom.lk">sagaras@uom.lk</a>
+			</div>
+		</div>
+		<div class="profile">
+			<div class="card">
+				<img src="../images/popular-articles/p24.jpg" alt="">
+			</div>
+			<div class="text">
+				<h2></h2>
+				<p>
+					Dr. SR Liyanage <br>
+					University of Kelaniya <br>
+					Sri Lanka
+				</p>
+				<a href="mailto:sidath@kln.ac.lk">sidath@kln.ac.lk</a>
+			</div>
+		</div>
+		<div class="profile">
+			<div class="card">
+				<img src="../images/popular-articles/p25.png" alt="">
+			</div>
+			<div class="text">
+				<h2></h2>
+				<p>
+					Dr. C Rajapakse <br>
+					University of Kelaniya <br>
+					Sri Lanka
+				</p>
+				<a href="mailto:chathura@kln.ac.lk">chathura@kln.ac.lk</a>
+			</div>
+		</div>
+		<div class="profile">
+			<div class="card">
+				<img src="../images/popular-articles/p26.jpg" alt="">
+			</div>
+			<div class="text">
+				<h2></h2>
+				<p>
+					Dr. K Thabotharan <br>
+					University of Jaffna <br>
+					Sri Lanka
+				</p>
+				<a href="mailto:thabo@jfn.ac.lk">thabo@jfn.ac.lk</a>
+			</div>
+		</div>
+		<div class="profile">
+			<div class="card">
+				<img src="../images/popular-articles/p27.jpg" alt="">
+			</div>
+			<div class="text">
+				<h2></h2>
+				<p>
+					Dr. RD Nawarathna <br>
+					University of Peradeniya <br>
+					Sri Lanka <br>
+				</p>
+				<a href="mailto:ruwand@pdn.ac.lk">ruwand@pdn.ac.lk</a> <br>
+				<a href="mailto:ruwan.nawarathna@gmail.com">ruwan.nawarathna@gmail.com</a>
+			</div>
+		</div>
+		<div class="profile">
+			<div class="card">
+				<img src="../images/popular-articles/p28.jpg" alt="">
+			</div>
+			<div class="text">
+				<h2></h2>
+				<p>
+					Dr. L Ranathunga <br>
+					University of Moratuwa <br>
+					Sri Lanka
+				</p>
+				<a href="mailto:lochandaka@uom.lk">lochandaka@uom.lk</a>
+			</div>
+		</div>
 	</section>
 
 	<?php
