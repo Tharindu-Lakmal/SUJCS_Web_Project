@@ -1,17 +1,54 @@
 <?php
+include('../connection.php');
+include('../function/commonFunction.php');
+include '../function/userFunction.php';
 ?>
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>SUJCS</title>
-  <link rel="stylesheet" href="organizationOM.css">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<title>SUJCS | Sabaragamuwa University of Sri Lanka</title>
+	<link rel="icon" href="../images/tab_logo.png">
+	<meta name="title" content="SUJCS - Sabaragamuwa University Journal of Computer Science">
+	<meta name="description" content="Official website of faculty of computer science">
+
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==
+    " crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+	<link rel="stylesheet" href="../reuseComponents/navBar.css">
+	<link rel="stylesheet" href="../reuseComponents/search.css">
+	<link rel="stylesheet" href="../SignIn/sign.css">
+	<link rel="stylesheet" href="../reuseComponents/footer.css">
+	<link rel="stylesheet" href="./styles.css">
+  <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
-  <nav class="navbar">
+	<header class="header " data-header>
+		<?php
+		signIn();
+		signUp();
+		navBar();
+		?>
+	</header>
+
+	<section class="search">
+		<?php
+		search();
+		?>
+
+	</section>
+
+<body>
+  <link rel="stylesheet" href="organizationOM.css">
+  <!-- <nav class="navbar">
     <div class="container">
       <div class="logo">
         <img src="D:/work/HTML/WEB_PROJECT/SUJCS_Web_Project/images/logo.png" alt="Logo">
@@ -38,29 +75,12 @@
       <input type="text" placeholder="Search here">
       <button type="submit">Search</button>
     </div>
-  </div>
+  </div> -->
 
   <body>
-    <h4 style="font-size: 16px;">Organization Of Manuscript</h4>
-    <p style="color: grey;" ,style="text-align: justify;">The manuscript should contain the items mentioned hereunder.
-    </p>
-    <p style="color: grey;" ,style="text-align: justify;">Title, List of authors together with affiliations</p>
-    <div class="list">
-      <ol style="color: grey;">
-        <li>Abstract & Keywords</li>
-        <li>Introduction</li>
-        <li>Literature Review</li>
-        <li>Materials & Methods</li>
-        <li>Results & Discussion</li>
-        <li>Conclusion</li>
-        <li>Acknowledgments (optional)</li>
-        <li>References</li>
-        <li>Annexures (optional)</li>
-      </ol>
-    </div>
-    <h5 style="font-size: 14px;">Language</h5>
+    <h5 style="font-size: 20px;"><b>Language</b></h5>
     <p style="color: grey;">The language of the manuscript must be in English (British standard).</p>
-    <h5 style="font-size: 14px;" ,style="color: grey;">Length of Paper</h5>
+    <h5 style="font-size: 20px;" ,style="color: grey;"><b>Length of Paper</b></h5>
     <p style="color: grey;">The paper's length must fall within the range of 7000 to 10000 words, encompassing the
       references and annexures. Any submission<br>
       exceeding 10000 words will be declined. Articles should be typed in 12-point Times New Roman font, with 1.5 line
@@ -68,7 +88,7 @@
       A4 paper, maintaining normal margins (Top 1”, Bottom 1”, Left 1”, and Right 1”). Authors are encouraged to express
       ideas concisely<br>
       while ensuring clarity in their writing.</p>
-    <h5 style="font-size: 14px;">Title Page</h5>
+    <h5 style="font-size: 20px;"><b>Title Page</b></h5>
     <p style="color: grey;">The Title page is a separate page before the text. It should include the following
       information:</p>
     <div class="subtopics">
@@ -93,31 +113,31 @@
     <p></p> <!-- Empty paragraph for space -->
 
 
-    <h5 style="font-size: 14px;">Abstract</h5>
+    <h5 style="font-size: 20px;"><b>Abstract</b></h5>
     <p style="color: grey;">Compose a brief and professional summary of the research within a 250-word limit. Clearly
       state the research purpose, highlight
       principal findings, and summarize key conclusions. Avoid including references in this standalone abstract.</p>
 
-    <h5 style="font-size: 14px;">Key Words</h5>
+    <h5 style="font-size: 20px;"><b>Key Words</b></h5>
     <p style="color: grey;">Immediately after the abstract, a maximum of 5 keywords, avoiding general and plural terms
       and multiple concepts
       (Ex:'and', 'of')<br>should be provided. Keywords should be presented. The keywords should be arranged in
       alphabetical order.</p>
-    <h5 style="font-size: 14px;">Literature Review</h5>
+    <h5 style="font-size: 20px;"><b>Literature Review</b></h5>
     <p style="color: grey;">This section should provide a sufficient evaluation of the theoretical/empirical literature
       to identify the knowledge gaps.</p>
-    <h5 style="font-size: 14px;">Materials and Methods</h5>
+    <h5 style="font-size: 20px;"><b>Materials and Methods</b></h5>
     <p style="color: grey;">This section should contain adequate and detailed information of all the procedures and
       steps followed.</p>
-    <h5 style="font-size: 14px;">Results & Discussion</h5>
+    <h5 style="font-size: 20px;"><b>Results & Discussion</b></h5>
     <p style="color: grey;">This section should describe the results and the outputs of the research work.</p>
-    <h5 style="font-size: 14px;">Conclusions</h5>
+    <h5 style="font-size: 20px;"><b>Conclusions</b></h5>
     <p style="color: grey;">This section should clearly explain the important conclusions of the work highlighting its
       significance, relevance and values.</p>
-    <h5 style="font-size: 14px;">Sub-division of the Article</h5>
+    <h5 style="font-size: 20px;"><b>Sub-division of the Article</b></h5>
     <p style="color: grey;">This section should clearly explain the important conclusions of the work highlighting its
       significance, relevance and values.</p>
-    <h5 style="font-size: 14px;">Tables and Figures</h5>
+    <h5 style="font-size: 20px;"><b>Tables and Figures</b></h5>
     <p style="color: grey;">This section should clearly explain the important conclusions of the work highlighting its
       significance, relevance and values.</p>
     <div class="tables_figures_subtopics">
@@ -140,9 +160,9 @@
         https://www.elsevier.com/artwork-and-media-instructions.</p>
     </div>
 
-    <h5 style="font-size: 14px;">Acknowledgement</h5>
+    <h5 style="font-size: 20px;"><b>Acknowledgement</b></h5>
     <p style="color: grey;">If the research is sponsored or supported by an organization, please indicate it.</p>
-    <h5 style="font-size: 14px;">Reference List</h5>
+    <h5 style="font-size: 20px;"><b>Reference List</b></h5>
     <div class="reference_list_subtopics">
       <p style="color:gray;" ,style="font-size:16;"><b>Citation in Text</b></p>
       <p style="color:gray;">Match citations in the text with entries in the reference list. Provide full references for
