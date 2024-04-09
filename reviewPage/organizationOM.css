@@ -9,10 +9,11 @@ body {
     /*margin: 0; /* PLEASE DELETE THIS ONCE DONE THE DEMO */
   }
   
-  .navbar {
+  /* .navbar {
     background-color: #ffffff;
     padding: 15px 0;
-  }
+    position: fixed;
+  } */
   
   .container {
     display: flex;
@@ -144,88 +145,4 @@ body {
   
   .p {
     color: red;
-  }
-  
-  footer {
-    background-color: #ffffff; /* Background color of the footer */
-    color: #2106d1; /* Text color of the footer */
-    padding: 50px 0; /* Padding top and bottom */
-    text-align: center; /* Center align text */
-  }
-  
-  /* CSS for footer links */
-  footer a {
-    color: #fff; /* Link color */
-    text-decoration: none; /* Remove underline */
-    margin: 0 15px; /* Add some space between links */
-    transition: color 0.3s; /* Smooth transition for link color */
-  }
-  
-  /* Change link color on hover */
-  footer a:hover {
-    color: #FFD700; /* Change link color on hover */
-  }
-  
-  /* CSS for the social media icons */
-  .social-icons {
-    margin-top: 30px; /* Add some space between the content above and below */
-  }
-  
-  /* CSS for the social media icon links */
-  .social-icons a {
-    display: inline-block; /* Make links appear in a row */
-    width: 40px; /* Set width */
-    height: 40px; /* Set height */
-    background-color: #FFD700; /* Background color of icons */
-    border-radius: 50%; /* Make icons circular */
-    line-height: 40px; /* Center icon vertically */
-    font-size: 18px; /* Font size of icon */
-    margin: 0 10px; /* Add some space between icons */
-    transition: background-color 0.3s; /* Smooth transition for background color */
-  }
-  
-  /* Change background color of icons on hover */
-  .social-icons a:hover {
-    background-color: #FFA500; /* Change background color on hover */
-  }
-  
-  /* CSS for the footer links */
-  .footer-links {
-    margin-top: 30px; /* Add some space between the content above and below */
-  }
-  
-  /* Style for the footer link container */
-  .footer-links ul {
-    list-style: none; /* Remove default list style */
-    padding: 0; /* Remove default padding */
-    display: flex; /* Use flexbox for layout */
-    justify-content: center; /* Center align the links */
-  }
-  
-  /* Style for the footer links */
-  .footer-links li {
-    margin: 0 15px; /* Add some space between links */
-  }
-  
-  /* Style for the copyright text */
-  .copyright {
-    margin-top: 30px; /* Add some space between the content above and below */
-  }
-
-  .list{
-    margin-top: 0; /* Remove default margin */
-    margin-top: 35px;
-    margin-left: 230px;
-  }
-  .subtopics{
-    margin-top: 65px;
-    margin-left: 100px;
-  }
-  .tables_figures_subtopics{
-    margin-top: 50px;
-    margin-left: 100px;
-  }
-  .reference_list_subtopics{
-    margin-top: 50px;
-    margin-left: 100px;
   }
