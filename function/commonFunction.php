@@ -49,7 +49,7 @@ function navBar()
 					<a href='../reviewPage/organizationOM.php' class='navbar-link'>Reviews</a>
 				</li>
 				<li class='navbar-item'>
-					<a href='../reviewPage/reviewPage.php' class='navbar-link'>Guidlins</a>
+					<a href='../reviewPage/reviewPage.php' class='navbar-link'>Guidelines</a>
 				</li>
 				<li class='navbar-item'>
 					<a href='../reviewPage/submissionPC.php' class='navbar-link'>Contact Us</a>
