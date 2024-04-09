@@ -195,44 +195,5 @@ html {
 
 
 
+/* Responsive styles */
 
-@media only screen and (min-width: 375px) and (max-width: 767px) {
-  .scope .scope-outer .scope-box {
-    width: 100%;
-  }
-}
-.scope .scope-outer .scope-box:last-child {
-  margin-right: 0;
-}
-.scope .scope-outer .box {
-  width: 33%;
-  height: auto;
-  margin-right: 10px;
-  border: 2px solid var(--border-readmore);
-  border-radius: 20px;
-  background-color: var(--bg-white);
-  color: var(--text-scope);
-  padding-bottom: 25px;
-}
-.scope .scope-outer .box h4 {
-  margin-left: 20px;
-  color: var(--text-scope);
-  font-size: var(--fontSize-5);
-}
-.scope .scope-outer .box ul {
-  margin-left: 30px;
-  font-size: var(--fontSize-6);
-}
-@media only screen and (min-width: 375px) and (max-width: 767px) {
-  .scope .scope-outer .box {
-    width: 100%;
-  }
-}
-@media only screen and (min-width: 375px) and (max-width: 767px) {
-  .scope .scope-outer {
-    display: flex;
-    flex-direction: column;
-  }
-}
-
-/*# sourceMappingURL=about.css.map */
