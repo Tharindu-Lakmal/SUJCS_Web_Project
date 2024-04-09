@@ -14,7 +14,7 @@ include('../function/features.php');
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>SUJCS | Sabaragamuwa University of Sri Lanka</title>
+    <title>SUJCS | Articles</title>
 
     <link rel="icon" href="../images/tab_logo.png">
 
@@ -41,6 +41,10 @@ include('../function/features.php');
     <link rel="stylesheet" href="../reuseComponents/search.css">
     <!-- custom responsive css link -->
     <link rel="stylesheet" href="../reuseComponents/JAresponStyle.css">
+    <!-- custom signin css link -->
+    <link rel="stylesheet" href="../SignIn/sign.css">
+    <!-- custom footer css link -->
+    <link rel="stylesheet" href="../reuseComponents/footer.css">
 
 </head>
 
@@ -51,7 +55,7 @@ include('../function/features.php');
 
         <!-- Navigation Bar ------------------------------- -->
         <?php
-        navBar();
+            navBar();
         ?>
 
     </header>
@@ -132,9 +136,10 @@ include('../function/features.php');
 
                     <section class="articles">
 
-                    <?php selectCategories(); 
-                            selectedArticleType();
-                            selectedsubject();   
+                    <?php 
+                        selectCategories(); 
+                        selectedArticleType();
+                        selectedsubject();   
                     
                     ?>
 
@@ -155,6 +160,9 @@ include('../function/features.php');
 
 
     <!-- Footer ------------------------------- -->
+    <?php
+        footer();
+    ?>
 
     <!-- custom js link-->
     <script src="../reuseComponents/navBar.js"></script>
