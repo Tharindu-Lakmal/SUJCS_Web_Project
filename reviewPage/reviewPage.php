@@ -155,7 +155,7 @@ include '../function/userFunction.php';
       passport-sized photographs<br>
       alongside other images. Share the biographies in an editable format like Word, not in PDF.</p>
   </header>
-  <h4 style="font-size: 22px;, <span style="position: relative; left: 50px;></span><a style="color: #3F37C9;" href="https://example.com">Organization Of Manuscript </a>
+  <h4 style="font-size: 22px;"><a style="color: #3F37C9;" href="https://example.com">Organization Of Manuscript </a>
   </h4>
   <!-- Two-column bullet list -->
   <ul class="two-column-list">

@@ -1,6 +1,6 @@
 body {
     margin: 0;
-    font-family: Arial, sans-serif;
+    font-family: 'Poppins', sans-serif;
   }
   
   html {
@@ -9,121 +9,19 @@ body {
     /*margin: 0; /* PLEASE DELETE THIS ONCE DONE THE DEMO */
   }
   
-  /* .navbar {
-    background-color: #ffffff;
-    padding: 15px 0;
-    position: fixed;
-  } */
-  
-  .container {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-  }
-  
-  .logo img {
-    max-height: 40px;
-  }
-  
-  .menu ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-  }
-  
-  .menu ul li {
-    display: inline-block;
-    margin-right: 20px;
-  }
-  
-  .menu ul li:last-child {
-    margin-right: 0;
-  }
-  
-  .menu ul li a {
-    color: #000000;
-    text-decoration: none;
-    
-  }
-  
-  .buttons a {
-    text-decoration: none;
-    padding: 10px 20px;
-    border-radius: 50px;
-    transition: background-color 0.3s ease;
-  }
-  
-  .login-btn {
-    background-color: transparent;
-    
-    color: #000000;
-  }
-  
-  .signup-btn {
-    background-color: #007bff;
-    color: #ffffff;
-  }
-  
-  .signup-btn:hover {
-    background-color: #0056b3;
-  }
   
   /* Your existing CSS styles */
-  
-  h3 {
-    color: #3F37C9; /* Change this to the desired color */
-    margin-top: 0; /* Remove default margin */
-    margin-top: 60px;
-    margin-left: 555px;
+ 
+  h5, b {
+    font-size: 24px;
+    font-weight: 300;
+    color: hsla(243, 57%, 50%, 1);/* Remove default margin */
+    margin-top: 50px;
   }
-  
-  .search-container {
-    display: flex;
-    justify-content: flex-start; /* Align items to the start of the container */
-    align-items: center; /* Center items vertically */
-    margin-top: 20px; /* Adjust as needed */
-  }
-  
-  input[type="text"] {
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 50px 50px 50px 50px; /* Adjusted border radius */
-    width: 300px; /* Adjusted width */
-    outline: none;
-    margin-left: 550px;
-  }
-  
-  button[type="submit"] {
-    padding: 10px 20px;
-    border: none;
-    background-color: #007bff;
-    color: #fff;
-    border-radius: 50px 50px 50px 50px; /* Adjusted border radius */
-    cursor: pointer;
-    margin-left: 5px;
-  }
-  
-  button[type="submit"]:hover {
-    background-color: #0056b3;
-  }
-  
-  h4 {
-    color: #4942c3; /* Change this to the desired color */
-    margin-top: 0; /* Remove default margin */
-    margin-top: 80px;
-    margin-left: 250px;
-  }
-  h5 {
-    color: #6e45ea; /* Change this to the desired color */
-    margin-top: 0; /* Remove default margin */
-    margin-top: 80px;
-    margin-left: 250px;}
   
   p{
-    margin-left: 250px;
+    font-size: 18px;
+    color: hsl(209, 40%, 10%);
     margin-bottom: 10px; 
   }
   
@@ -143,6 +41,28 @@ body {
     list-style-type: none; /* Remove default bullet points */
   }
   
-  .p {
-    color: red;
+
+  .subtopics {
+    margin-left: 6rem;
   }
+
+  .subtopics b {
+    font-size: 22px;
+    font-weight: 300;
+    color: hsla(243, 57%, 50%, 1);
+  }
+
+  .guid-items {
+    display: flex;
+    padding-block-start: 1rem;
+}
+.guid-items i {
+    font-size: 18px;
+    padding-right: 1rem;
+    padding-block-start: 0.5rem;
+}
+
+.guid-items a:is(:hover, :focus-visible) {
+    color: hsla(209, 41%, 10%, 0.9);
+    opacity: 0.8;
+}
