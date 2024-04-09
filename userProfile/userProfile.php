@@ -3,6 +3,8 @@
 <?php
 // include('../connection.php');
 include('../function/commonFunction.php');
+@session_start();
+
 ?>
 
 
@@ -89,16 +91,16 @@ include('../function/commonFunction.php');
 
                     <ul class="user-actions">
                         <li class="list-item">
-                            <a href="userProfile.php?journals_content">Journals</a>
+                            <a href="userProfile.php?category_id=1">Journals</a>
                         </li>
                         <li class="list-item">
-                            <a href="userProfile.php?articles_content">Articles</a>
+                            <a href="userProfile.php?category_id=2">Articles</a>
                         </li>
                         <li class="list-item">
-                            <a href="#">Account Details</a>
+                            <a href="../function/delete.php">Delete Account</a>
                         </li>
                         <li class="list-item">
-                            <a href="#">Delete Account</a>
+                            <a href="../function/userLogout.php">Log Out</a>
                         </li>
                     </ul>
 
@@ -109,12 +111,11 @@ include('../function/commonFunction.php');
                 <div class="main-content">
 
                     <?php
-                        if(isset($_GET['journals_content'])) {
-                            include('journals_content.php');
-                        }
-                        elseif(isset($_GET['articles_content'])) {
-                            include('articles_content.php');
-                        }
+                        
+                        addBookmark();
+                        profileJournals();
+                        removeBookmark()
+                        
                     ?>
 
                 </div>

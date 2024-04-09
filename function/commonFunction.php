@@ -1,7 +1,7 @@
 <?php
 
 include '../connection.php';
-
+@session_start();
 
 
 function errorDisplay($errors)
@@ -20,14 +20,14 @@ function errorDisplay($errors)
 function navBar()
 { ?>
 	<div class='container'>
-		<a href='../landingPage/afterLoginIndex.php' class='logo'>
+		<a href='../landingPage/index.php' class='logo'>
 			<img src='../images/logo.png' width='64px' height='27px' alt='logo'>
 		</a>
 
 		<nav class='navbar' data-navbar>
 
 			<div class='navbar-top'>
-				<a href='../landingPage/afterLoginIndex.php' class='logo'>
+				<a href='../landingPage/index.php' class='logo'>
 					<img src='../images/logo.png' width='64px' height='27px' alt='logo'>
 				</a>
 
@@ -39,7 +39,7 @@ function navBar()
 
 			<ul class='navbar-list'>
 				<li class='navbar-item'>
-					<a href='../landingPage/afterLoginIndex.php' class='navbar-link'>Home</a>
+					<a href='../landingPage/index.php' class='navbar-link'>Home</a>
 				</li>
 				<li class='navbar-item'>
 					<a href='../aboutPage/about.php' class='navbar-link'>About</a>
@@ -217,18 +217,19 @@ function navBar()
 
 // search-------------------------------
 
-function search()
-{
-	echo "
+function search() {
+    echo "
     <div class='search_container'>
-        <form action='../search/searchJournal.php' method='GET'>
-            <input class='input' type='text' placeholder='Search here' name='keyword'>
-            <button type='submit' class='search_btn btn'><ion-icon name='search'></ion-icon></button>
-        </form>
-    </div>
+    <form action='../searchPage/searchPage.php' method='GET' class='search-form'>
+    
+        <input class='input' type='text' placeholder='Search here' name='search_data'>
+        <button type='submit' class='search_btn btn' name='search_data_journal'><ion-icon name='search'></ion-icon></button>  
+</form>
+</div>
 
     ";
 }
+
 
 // Footer --------------------------------------------------------------------
 function footer()
@@ -273,5 +274,168 @@ function footer()
     </div>
     ";
 }
+
+
+
+
+
+// add to the bookmark
+function addBookmark() {
+    global $con;
+
+    // Check if user is logged in
+    if (!isset($_SESSION['user_id'])) {
+        // Redirect to login page
+        header("Location: ../landingPage/index.php");
+        exit();
+    }
+
+    // Handle bookmarking
+    if (isset($_GET['bookmark'])) {
+        // Get user ID
+        $user_id = $_SESSION['user_id'];
+
+        // Get category ID from URL
+        $category_id = $_GET['bookmark']; 
+
+        // Query to fetch journal ID based on category ID
+        $query = "SELECT journal_id FROM journals WHERE category_id = $category_id";
+
+        // Execute query
+        $result = mysqli_query($con, $query);
+
+        // Check if query executed successfully and returned a result
+        if ($result && mysqli_num_rows($result) > 0) {
+            // Fetch journal ID
+            $row = mysqli_fetch_assoc($result);
+            $journal_id = $row['journal_id'];
+
+            // Check if the item is already bookmarked
+            $check_query = "SELECT * FROM bookmark WHERE user_id = $user_id AND category_id = $category_id";
+            $check_result = mysqli_query($con, $check_query);
+
+            // If the item is not bookmarked, add it to bookmarks
+            if (mysqli_num_rows($check_result) == 0) {
+                $bookmark_query = "INSERT INTO bookmark (user_id, category_id, journal_id) VALUES ($user_id, $category_id, $journal_id)";
+                mysqli_query($con, $bookmark_query);
+				echo "<script>alert('Item bookmarked successfully!')</script>";
+                
+            } else {
+				echo "<script>alert('Item is already bookmarked!')</script>";
+                
+            }
+        } else {
+			echo "<script>alert('Error: Failed to fetch journal ID.')</script>";
+        }
+    }
+}
+
+
+
+
+
+
+// select profile journals 
+
+function profileJournals() {
+    global $con;
+
+    // Check if category_id is set in the URL
+    if (isset($_GET['category_id'])) {
+        // Get category_id from the URL
+        $categoryId = $_GET['category_id'];
+        
+        // Check if user is logged in
+        if (!isset($_SESSION['user_id'])) {
+            // Redirect to login page if user is not logged in
+            header("Location: ../login.php");
+            exit();
+        }
+
+        // Get user ID
+        $userId = $_SESSION['user_id'];
+
+        // SQL query to select details from journals table based on bookmark category_id and user_id
+        $sql = "SELECT journals.* FROM journals
+                INNER JOIN bookmark ON journals.journal_id = bookmark.journal_id
+                WHERE bookmark.category_id = $categoryId AND bookmark.user_id = $userId";
+
+        $result = mysqli_query($con, $sql);
+
+        $num_of_rows = mysqli_num_rows($result);
+        if ($num_of_rows == 0) {
+            echo "<h3 class='text-center'>No related documents for this category</h3>";
+        }
+
+        // Fetching and processing the results
+        while ($row = mysqli_fetch_assoc($result)) {
+            $title = $row['journal_title'];
+            $publishDate = $row['journal_publish_date'];
+            $pdf = $row['journal_pdf'];
+            $journalTypeId = $row['journal_type_id'];
+            $cat = $row['category_id'];
+            $author = $row['author_name'];
+            $image = $row['journal_image'];
+
+            // Fetch type_name from journal_types table
+            $sqlType = "SELECT * FROM `journal_types` WHERE type_id ='$journalTypeId'";
+            $resultType = mysqli_query($con, $sqlType);
+            $rowType = mysqli_fetch_assoc($resultType);
+            $typeName = ($rowType) ? $rowType['type_name'] : '';
+
+            // Display the article card
+            echo "
+            <div class='article-card'>
+                <!-- article image -->
+                <div class='card-img'>
+                    <img src='../images/$image' alt=''>
+                </div>
+                <!-- article title -->
+                <div class='a-title'>
+                    <p class='p title'>$title</p>
+                    <p class='p sub-title'>$author, $publishDate</p>
+                </div>
+                <!-- user action -->
+                <div class='btn-access'>
+                    <div class='book-mark'>
+                        <button class='b-mark'><a href='../userProfile/userProfile.php?categ=$cat'><i class='fa-solid fa-bookmark' style='color: #ababab;'></i></a></button>
+                    </div>
+                    <div class='download'>
+                        <button class='download-icon'><a href='../insertJournal/download.php?file=$pdf'><i class='fa-solid fa-download' style='color: #ababab;'></i></a></button>
+                    </div>
+                </div>
+            </div>";
+        }
+    }
+}
+
+
+
+
+
+
+function removeBookmark(){
+	global $con;
+
+	if(isset($_SESSION['user_id']) && isset($_GET['categ'])) {
+		$user_id = $_SESSION['user_id'];
+		$category_id = $_GET['categ'];
+	
+		// Check if the bookmark exists for the user and category
+		$check_query = "SELECT * FROM bookmark WHERE user_id = $user_id AND category_id = $category_id";
+		$check_result = mysqli_query($con, $check_query);
+	
+		if (mysqli_num_rows($check_result) > 0) {
+			// Bookmark exists, remove it
+			$delete_query = "DELETE FROM bookmark WHERE user_id = $user_id AND category_id = $category_id";
+			mysqli_query($con, $delete_query);
+
+			echo "<script>alert('Bookmark removed successfully!')</script>";
+		} 
+	} 
+}
+
+
+
 
 ?>
