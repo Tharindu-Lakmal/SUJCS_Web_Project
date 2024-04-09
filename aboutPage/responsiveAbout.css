@@ -1,350 +1,85 @@
 
-/* responsive for larger than 375px screen */
+@media screen and (max-width: 1400px) {
 
-@media only screen and (min-width: 375px) and (max-width: 570px) {
-
-    /* Custom Property */
-
-    :root{
-
-        /* Typograpy */
-
-        /* Font size */
-        --fontSize-1: 3.8rem;
-        --fontSize-2: 3rem;
-        --fontSize-3: 2.8rem;
-        --fontSize-4: 2.6rem;
-        --fontSize-5: 2.2rem;
-        --fontSize-6: 1.8rem;
-        --fontSize-7: 1.6rem;
-
-        /* Spacing */
-        --section-spacing: 40px;
-
-    }
-    
-    
     /* Reused Style */
-
     .section {
-        padding-block-end: var(--section-spacing);
+        max-width: 1400px;
     }
 
-   
-    .search_container {
-        width: 80%;
+    .container {
+        max-width: 1350px;
     }
 
-    
-    .image-outer {
-       
-        width: 100%;
-        margin-inline: auto;
+    .container-2 {
+        max-width: 1300px;
     }
 
-    .image-outer h1{
-        margin-top: 20px;
-    }
-
-    .main-context{
-        max-width: 340px;
-        width: 100%;
-        margin-inline: auto;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-    }
-
-    .main-outer-secondContext{
-        margin-top: 200px;
-    }
-
-    .main-context button{
-        width: 100%;
-    }
-    .secondContext {
-        margin-top: 200px;
-      max-width: 340px;
-         width: 100%;
-        margin-inline: auto;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-
-    }
-
-    .secondContext .inner-image-secondcontext{
-        width: 100%;
-        height: auto;
-        
-    }
-
-    .secondContext .inner-secondcontext{
-        width: 100%;
-        height: auto;
-    }
-
-    .main-outer-secondContext .secondContext .inner-secondContext button{
-        width: 100%;
-        margin-bottom: 50px;
-    }
-
-    .thirdContext{
-    
-        margin-top: 300px;
-        margin-inline: auto;
-      max-width: 340px;
-         width: 100%;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
-
-    .thirdContext .inner-image-thirdcontext{
-        width: 100%;
-        height: auto;
-    }
-    .thirdContext .inner-thirdcontext{
-        width: 100%;
-        height: auto;
-    }
-
-    .thirdContext .inner-thirdContext button{
-        width: 100%;
-    }
-
-
-    .fifth-context{
-        margin-top: 100px;
-        margin-inline: auto;
-      max-width: 340px;
-         width: 100%;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
-    }
-    
-    .scope{
-       
-        margin-inline: auto;
-      max-width: 340px;
-         width: 100%;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        
-    }
-    
-    button{
-        padding: 4px 12px;
-    }
-
-
-    /* .scope-outer{
-        display: flex;
-       flex-direction: column;
-    }
-    .scope-box{
-
-        width: 100%;
-        
-    } */
-
-
-    /* Footer */
-
-
-
-  /* responsive for larger than 575px screen */
-
-  @media only screen and (min-width: 575px) and (max-width: 767px) {
-
-    /* Custom Property */
-
-    :root{
-
-        /* Typograpy */
-
-        /* Font size */
-        --fontSize-1: 4rem;
-        --fontSize-2: 3.2rem;
-        --fontSize-3: 2.8rem;
-        --fontSize-4: 2.6rem;
-        --fontSize-5: 2.2rem;
-        --fontSize-6: 1.8rem;
-        --fontSize-7: 1.6rem;
-
-        /* Spacing */
-        --section-spacing: 40px;
-
-    }
-    
-    
-    /* Reused Style */
-
-    .section {
-        padding-block-end: var(--section-spacing);
-    }
-
-    
-    .search_container {
-        width: 70%;
-    }
-
-
-
-    .image-outer {
-       
-        width: 100%;
-        margin-inline: auto;
-    }
-
-    .image-outer h1{
-        margin-top: 0px;
-    }
-
-    .main-context{
-        max-width: 540px;
-        width: 100%;
-        margin-inline: auto;
-    }
-
-    .secondContext {
-      max-width: 540px;
-         width: 100%;
-        margin-inline: auto;
-
-    }
-
-    .thirdContext{
-        max-width: 540px;
-        width: 100%;
-        margin-inline: auto;
-    }
-
-    .fifth-context{
-        max-width: 540px;
-        width: 100%;
-        margin-inline: auto;
-    }
-    
-    .scope{
-        max-width: 540px;
-        width: 100%;
-        margin-inline: auto;
-    }
-    button{
-        padding: 4px 12px;
-    }
-
-
-    .scope-outer{
-        display: flex;
-        flex-direction: column;
-    }
-    .scope-box{
-
-        width: 100%;
-        
-    }
-
+    /* categories */
   
-   
-    /* Footer */
 
+    /* For publisher/researcher content */
+    .pcontent {
+        text-align: justify;
+    }
+    .pr-content-2 {
+        padding-block: 50px;
+        width: 60%;
+        padding-right: 3rem;
+    }
+
+    .pr-img {
+        margin-left: 30px;
+    }
+
+    .pr-img img {
+        object-fit: contain;
+    }
+
+    /* Purpose content */
+    .pur-content{
+        padding-block: 0;
+    }
+
+    .pur-content-2 {
+        padding-block-end: 5rem;
+        width: 60%;
+        padding-right: 3rem;
+    }
+
+
+    /* Footer */
 }
 
-
-/* responsive for larger than 768px screen */
-
-@media only screen and (min-width: 768px) and (max-width: 990px) {
-
+@media screen and (max-width: 1200px) {
     /* Custom Property */
 
-    :root{
-
-        /* Typograpy */
-
-        /* Font size */
-        --fontSize-1: 4.8rem;
-        --fontSize-2: 4rem;
-        --fontSize-3: 2.8rem;
-        --fontSize-4: 2.6rem;
-        --fontSize-5: 2.2rem;
-        --fontSize-6: 1.8rem;
-        --fontSize-7: 1.6rem;
-
-        /* Spacing */
-        --section-spacing: 120px;
-
-    }
-    
-    
     /* Reused Style */
 
-   
-    .search_container {
-        width: 70%;
+    .container {
+        max-width: 1100px;
     }
 
-    .image-outer {
-       
-        width: 100%;
-        margin-inline: auto;
+    .container-2 {
+        max-width: 1100px;
+        margin: 0 100px;
     }
 
-    .image-outer h1{
-        margin-top: 80px;
+    .category {
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 20px;
     }
 
-    .main-context{
-        max-width: 720px;
-        width: 100%;
-        margin-inline: auto;
-    }
-
-    .secondContext {
-      max-width: 720px;
-         width: 100%;
-        margin-inline: auto;
-
-    }
-
-    .thirdContext{
-        max-width: 720px;
-        width: 100%;
-        margin-inline: auto;
-    }
-
-    .fifth-context{
-        max-width: 720px;
-        width: 100%;
-        margin-inline: auto;
+    .pr-img img {
+        object-fit: contain;
     }
     
-    .scope{
-        max-width: 720px;
-        width: 100%;
-        margin-inline: auto;
-    }
-   
-    
-
     /* Footer */
-
 }
 
-
-
-/* responsive for larger than 992px screen */
-
-@media only screen and (min-width: 992px) and (max-width: 1190px) {
-
+@media screen and (max-width: 992px) {
+    
     /* Custom Property */
 
     :root{
@@ -360,38 +95,15 @@
 
     /* Reused Style */
 
-    .image-outer {
-
-        width: 100%;
-        margin-inline: auto;
-    }
-    .main-context {
-        max-width: 900px;
+    .container {
+        max-width: 950px;
         width: 100%;
         margin-inline: auto;
     }
 
-    .secondContext {
+    .container-2 {
         max-width: 900px;
-        width: 100%;
-        margin-inline: auto;
-    }
-
-    .thirdContext{
-        max-width: 900px;
-        width: 100%;
-        margin-inline: auto;
-    }
-
-    .fifth-context{
-        max-width: 900px;
-        width: 100%;
-        margin-inline: auto;
-    }
-    
-    .scope{
-        max-width: 900px;
-        width: 100%;
+        width: 90%;
         margin-inline: auto;
     }
 
@@ -399,32 +111,76 @@
         width: 70%;
     }
 
-    .inner-image-thirdcontext{
-       height: 400px;
-       width: auto;
-    }
-    .inner-image-secondcontext{
-        height: auto;
-       width: 400px;
-    }
-
-
-    .inner-image-thirdcontext{
-        height: 400px;
-        width: auto;
+    /* categories */
+    .category {
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 10px;
     }
 
+    .card {
+        max-width: 30rem;
+    }
+
+    /* For publisher/researcher content */
+    .pr-content {
+        flex-wrap: wrap;
+    }
+    .pcontent {
+        text-align: justify;
+    }
+    .pr-content-2 {
+        padding-right: 0;
+        padding-block: 50px;
+        width: 100%;
+        order: 2;
+    }
+
+    .pr-img {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+    .pr-img img {
+        width: 100%;
+        /* object-fit: contain; */
+    }
+
+    /* Purpose content */
+    .pur-content, .guid-content{
+        flex-wrap: wrap;
+    }
+
+    .pur-content-2, .guid-content-2 {
+        padding-right: 0;
+        padding-block: 50px;
+        width: 100%;
+        order: 2;
+    }
+
+    .guid-items {
+        text-align: justify;
+    }
+
+    .guid-img {
+        margin: 0 auto;
+        padding: 0;
+    }
+    .pr-img img {
+        width: 100%;
+        /* object-fit: contain; */
+    }
+
+    .pcontent {
+        padding-right: 0;
+    }
     /* footer */
     
 
 }
 
-
-/* responsive for larger than 1200px screen */
-
-@media (min-width: 1200px) {
-
-
+@media screen and (max-width: 768px) {
     /* Custom Property */
 
     :root{
@@ -440,45 +196,91 @@
 
     /* Reused Style */
 
-
-    .image-outer {
-        max-width: 100%;
+    .container {
+        max-width: 950px;
+        width: 100%;
+        margin-inline: auto;
     }
 
-    .secondContext {
-        max-width: 1000px;
-        margin-left: 150px;
-        margin-right: 150px;
+    .container-2 {
+        max-width: 900px;
+        width: 90%;
+        margin-inline: auto;
     }
 
-    .thirdContext{
-        max-width: 1000px;
+    .search_container {
+        width: 70%;
     }
 
-    .fifth-context{
-        max-width: 1000px;
-        margin-left: 150px;
-        margin-right: 150px;
+    /* categories */
+    .category {
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 10px;
     }
-    
-    .scope{
-        max-width: 1000px;
-        margin-left: 150px;
-        margin-right: 150px;
+
+    .card {
+        max-width: 30rem;
     }
-    
-    
-    /* Footer */
-    
+
+    /* For publisher/researcher content */
+    .pr-content {
+        flex-wrap: wrap;
+    }
+    .pcontent {
+        text-align: justify;
+    }
+    .pr-content-2 {
+        padding-right: 0;
+        padding-block: 50px;
+        width: 100%;
+        order: 2;
+    }
+
+    .pr-img {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+    .pr-img img {
+        width: 100%;
+        /* object-fit: contain; */
+    }
+
+    /* Purpose content */
+    .pur-content, .guid-content{
+        flex-wrap: wrap;
+    }
+
+    .pur-content-2, .guid-content-2 {
+        padding-right: 0;
+        padding-block: 50px;
+        width: 100%;
+        order: 2;
+    }
+
+    .guid-items {
+        text-align: justify;
+    }
+
+    .guid-img {
+        margin: 0 auto;
+        padding: 0;
+    }
+    .pr-img img {
+        width: 100%;
+        /* object-fit: contain; */
+    }
+
+    .pcontent {
+        padding-right: 0;
+    }
+    /* footer */
 
 }
 
-
-/* responsive for larger than 1400px screen */
-
-@media (min-width: 1400px) {
-
-
+@media screen and (max-width: 575px) {
     /* Custom Property */
 
     :root{
@@ -486,44 +288,102 @@
         /* Typograpy */
 
         /* Font size */
-        --fontSize-1: 7.2rem;
+        --fontSize-1: 6.4rem;
+        --fontSize-2: 4.8rem;
+        --fontSize-3: 3rem;
 
     }
 
     /* Reused Style */
 
-
-    .image-outer {
+    .section {
         max-width: 100%;
     }
-
-    .secondContext {
-        max-width: 1200px;
-        margin-left: 150px;
-        margin-right: 150px;
+    .hero {
+        padding-block-end: 0;
     }
 
-    .thirdContext{
-        max-width: 1200px;
+    .hero .container {
+        padding-block: 5rem !important;
     }
 
-    .fifth-context{
-        max-width: 1200px;
-        margin-left: 150px;
-        margin-right: 150px;
+    .container-2 {
+        max-width: 550px;
+        margin: 0 !important;
     }
-    
-    .scope{
-        max-width: 1200px;
-        margin-left: 150px;
-        margin-right: 150px;
+
+    .search_container {
+        width: 90%;
     }
-   
-    .first{
-        margin-bottom: 5px;
-      }
 
-    /* Footer */
-    
+    /* categories */
+    .category {
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 10px;
+    }
 
+    .card {
+        max-width: 30rem;
+    }
+
+    /* For publisher/researcher content */
+    .pr-content {
+        flex-wrap: wrap;
+    }
+    .pcontent {
+        text-align: justify;
+    }
+    .pr-content-2 {
+        padding-right: 0;
+        padding-block: 50px;
+        width: 100%;
+        order: 2;
+    }
+
+    .pr-img {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+    .pr-img img {
+        width: 100%;
+        /* object-fit: contain; */
+    }
+
+    /* Purpose content */
+    .pur-content, .guid-content{
+        flex-wrap: wrap;
+    }
+
+    .pur-content-2, .guid-content-2 {
+        padding-right: 0;
+        padding-block: 50px;
+        width: 100%;
+        order: 2;
+    }
+
+    .guid-items {
+        text-align: justify;
+    }
+
+    .guid-img {
+        margin: 0 auto;
+        padding: 0;
+    }
+    .pr-img img {
+        width: 100%;
+        /* object-fit: contain; */
+    }
+
+    .guid-img img {
+        width: 70%;
+        /* object-fit: contain; */
+    }
+
+    .pcontent {
+        padding-right: 0;
+    }
+    /* footer */
 }
