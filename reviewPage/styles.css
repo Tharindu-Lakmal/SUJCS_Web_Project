@@ -76,7 +76,6 @@ h3 {
   color: #3F37C9; /* Change this to the desired color */
     margin-top: 0; /* Remove default margin */
     margin-top: 60px;
-    margin-left: 555px;
 }
 
 .search-container {
@@ -92,7 +91,6 @@ input[type="text"] {
   border-radius: 50px 50px 50px 50px; /* Adjusted border radius */
   width: 300px; /* Adjusted width */
   outline: none;
-  margin-left: 550px;
 }
 
 button[type="submit"] {
@@ -113,11 +111,9 @@ h4 {
   color: #3F37C9; /* Change this to the desired color */
   margin-top: 0; /* Remove default margin */
   margin-top: 80px;
-  margin-left: 250px;
 }
 
 p{
-  margin-left: 250px;
   margin-bottom: 10px; 
 }
 
