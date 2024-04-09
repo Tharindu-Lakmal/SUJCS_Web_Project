@@ -30,6 +30,8 @@
     <!-- custom css link -->
     <link rel="stylesheet" href="../landingPage/index.css">
     <link rel="stylesheet" href="./index.css">
+     <!-- custom footer css link -->
+     <link rel="stylesheet" href="../reuseComponents/footer.css">
 
 </head>
 <body>
@@ -65,7 +67,20 @@
 
     <!-- custom js link-->
     <script src="../landingPage/index.js"></script>
+ <!-- Footer ------------------------------- -->
 
+ <?php
+        footer();
+    ?>
+
+
+    <!-- custom js link-->
+    <script src="../reuseComponents/navBar.js"></script>
+    <script src="../Signin/sign.js"></script>
+
+    <!-- ionicon link -->
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
     
 
 </body>

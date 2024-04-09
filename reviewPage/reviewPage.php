@@ -9,6 +9,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Review Process</title>
   <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="footer.css">
 </head>
 
 <body>
@@ -139,6 +140,21 @@
     <li><a style="color: #3F37C9;" href="https://example.com">Acknowledgments</a></li>
     <li><a style="color: #3F37C9;" href="https://example.com">Reference List</a></li>
   </ul>
+
+   <!-- Footer ------------------------------- -->
+
+   <?php
+        footer();
+    ?>
+
+
+    <!-- custom js link-->
+    <script src="../reuseComponents/navBar.js"></script>
+    <script src="../Signin/sign.js"></script>
+
+    <!-- ionicon link -->
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 </body>
 
 </html>
