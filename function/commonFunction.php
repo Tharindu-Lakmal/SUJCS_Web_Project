@@ -39,7 +39,7 @@ function navBar()
 
 			<ul class='navbar-list'>
 				<li class='navbar-item'>
-					<a href='../landingPage/afterLoginIndex.php' class='navbar-link'>Home</a>
+					<a href='../landingPage/Index.php' class='navbar-link'>Home</a>
 				</li>
 				<li class='navbar-item'>
 					<a href='../aboutPage/about.php' class='navbar-link'>About</a>
