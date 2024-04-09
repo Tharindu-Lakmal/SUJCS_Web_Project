@@ -557,6 +557,9 @@
     <!-- custom js link-->
     <script src="./about.js"></script>
 
+    <script src="../reuseComponents/navBar.js"></script>
+    <script src="../signIn/sign.js"></script>
+
 
 
     <!-- ionicon link -->
