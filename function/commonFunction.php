@@ -282,11 +282,12 @@ function footer()
 // add to the bookmark
 function addBookmark() {
     global $con;
+	session_reset();
 
     // Check if user is logged in
     if (!isset($_SESSION['user_id'])) {
         // Redirect to login page
-        header("Location: ../landingPage/index.php");
+        echo "<script>window.open('../signIn/sign.php','_self')</script>";
         exit();
     }
 
