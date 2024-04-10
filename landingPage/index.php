@@ -3,7 +3,7 @@
 <?php
 include('../connection.php');
 include('../function/commonFunction.php');
-include '../function/userFunction.php';
+include('../function/userFunction.php');
 // include '../function/userSecondaryFunction.php';
 
 
@@ -158,7 +158,7 @@ include '../function/userFunction.php';
                     <p class="category-text">
                         Find our well qualified Authors by simply clicking
                     </p>
-                    <a href="#" class="btn btn-category btn-primary">Authors</a>
+                    <a href="../editorPage/editor.php" class="btn btn-category btn-primary">Authors</a>
                 </div>
             </div>
 

@@ -117,16 +117,6 @@
     ?>
     </header>
 
-    <!-- Search Bar -->
-    <section class="search">
-
-        <!-- Search Bar ------------------------------- -->
-        <?php
-        search();
-        ?>
-
-    </section>
-
     
 
     <!-- Insert products form -->
