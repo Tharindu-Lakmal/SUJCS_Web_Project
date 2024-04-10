@@ -72,10 +72,7 @@ include '../function/userFunction.php';
     <h4 class="find-a">Find Articles</h4>
 
     <!-- Search Bar ------------------------------- -->
-    <?php
-    search();
-    ?>
-
+    <div style="margin-top: 150px;"></div>
   </section>
 
   <!-- Main heading -->

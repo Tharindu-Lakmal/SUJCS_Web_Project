@@ -46,13 +46,13 @@ function navBar()
 				</li>
 
 				<li class='navbar-item'>
-					<a href='../reviewPage/organizationOM.php' class='navbar-link'>Reviews</a>
+					<a href='../reviewPage/reviewPage.php' class='navbar-link'>Reviews</a>
 				</li>
 				<li class='navbar-item'>
-					<a href='../reviewPage/reviewPage.php' class='navbar-link'>Guidelines</a>
+					<a href='../reviewPage/organizationOM.php' class='navbar-link'>Guidelines</a>
 				</li>
 				<li class='navbar-item'>
-					<a href='../editorPage/editor.php' class='navbar-link'>Editorial Board</a>
+					<a href='../popular-articles/index.php' class='navbar-link'>Editorial Board</a>
 				</li>
 			</ul>
 
@@ -376,7 +376,7 @@ function profileJournals() {
             $journalTypeId = $row['journal_type_id'];
             $cat = $row['category_id'];
             $author = $row['author_name'];
-            $image = $row['journal_image'];
+            // $image = $row['journal_image'];
 
             // Fetch type_name from journal_types table
             $sqlType = "SELECT * FROM `journal_types` WHERE type_id ='$journalTypeId'";
@@ -389,7 +389,7 @@ function profileJournals() {
             <div class='article-card'>
                 <!-- article image -->
                 <div class='card-img'>
-                    <img src='../images/$image' alt=''>
+                    <img src='../images/jimage.jpeg' alt=''>
                 </div>
                 <!-- article title -->
                 <div class='a-title'>

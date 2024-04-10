@@ -30,7 +30,7 @@ function error422($message){
 
         return error422('Enter your user name');
 
-    }elseif(empty(trim($name))){
+    }elseif(empty(trim($email))){
 
         return error422('Enter your email');
 

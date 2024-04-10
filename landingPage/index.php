@@ -74,7 +74,7 @@ include('../function/userFunction.php');
 
         <!-- Search Bar ------------------------------- -->
         <?php
-        search();
+        // search();
         ?>
 
     </section>
