@@ -107,11 +107,7 @@ button[type="submit"]:hover {
   background-color: #0056b3;
 }
 
-h4 {
-  color: #3F37C9; /* Change this to the desired color */
-  margin-top: 0; /* Remove default margin */
-  margin-top: 80px;
-}
+
 
 p{
   margin-bottom: 10px; 
@@ -126,13 +122,10 @@ p{
 }
 
 .two-column-list {
-  margin-left: 209.5px;
+  margin-left: 6rem;
   columns: 2; /* Divide the list into two columns */
   -webkit-columns: 2; /* For Safari/Chrome/Opera */
   -moz-columns: 2; /* For Firefox */
   list-style-type: none; /* Remove default bullet points */
 }
 
-.p {
-  color: red;
-}
