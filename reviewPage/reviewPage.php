@@ -54,37 +54,37 @@ include '../function/userFunction.php';
     <div class="container-2">
 
         <h5><b>Review Process</b></h5>
-        <p style="color: grey;" ,style="text-align: justify;">Submitted manuscripts undergo an initial assessment, where
+        <p>Submitted manuscripts undergo an initial assessment, where
           they are evaluated for thematic relevance and content quality. Manuscripts not adhering to the author guidelines will be returned to the author without further processing.</p>
-        <p style="color: grey;" ,style="text-align: justify;">Manuscripts that successfully clear the initial screening
+        <p>Manuscripts that successfully clear the initial screening
           proceed through a double-blind peer-review procedure. The Editor in Chief, in collaboration with the Coordinating Editor, assigns three reviewers from the same or a related field
           to conduct the evaluation based on predetermined criteria. The final acceptance or rejection decision for the paper is
           determined by the Editor in Chief and the editorial team, taking into consideration the evaluation reports provided by the
           reviewers.</p>
 
         <h5><b>Copyright</b></h5>
-        <p style="color: grey;">Copyright on any research article in the SUJCS is retained by the author(s).</p>
+        <p>Copyright on any research article in the SUJCS is retained by the author(s).</p>
         <div class="copyright" style="margin-left: 6rem;">
             
             <p></p> <!-- Empty paragraph for space -->
-            <p style="color: grey;">1. The authors grant SUJCS a license to publish the article and to identify itself as the
+            <p>1. The authors grant SUJCS a license to publish the article and to identify itself as the
               original publisher.</p>
             <p></p> <!-- Empty paragraph for space -->
-            <p style="color: grey;">2. Articles in the SUJCS are Open Access articles published under the Creative Commons CC
+            <p>2. Articles in the SUJCS are Open Access articles published under the Creative Commons CC
               BY-SA License (https://creativecommons.org/licenses/by-sa/4.0/).</p>
-            <p style="color: grey;">3. This license permits use distribution and reproduction in any medium provided which is
+            <p>3. This license permits use distribution and reproduction in any medium provided which is
               licensed under the same terms and the original work is properly cited.</p>
         </div>
 
         <h5><b>Copyright Notice</b></h5>
-        <p style="color: grey;">Copyright on any research article in the SUJCS is retained by the author(s). Articles in the
+        <p>Copyright on any research article in the SUJCS is retained by the author(s). Articles in the
           SUJCS are Open Access articles published under the Creative Commons CC BY-SA License (https://creativecommons.org/licenses/by-sa/4.0/ ). 
           The authors grant SUJCS a license to publish the article and identify itself as the original publisher. This
           license permits use, distribution and reproduction in any medium, provided it is licensed under the same terms and the original work is
           properly cited.</p>
 
         <h5><b>Declaration of interest</b></h5>
-        <p style="color: grey;">All authors must disclose any financial and personal relationships with other people or
+        <p>All authors must disclose any financial and personal relationships with other people or
           organizations that could inappropriately influence (bias) their work. Authors should complete the declaration of interest statement using this template and
           upload it to the submission system at the step, Attach/Upload Files. If there are no interests to declare, please choose: 'Declarations of interest: none' in the template. This statement will be published within the
           article, if it is accepted.</p>
