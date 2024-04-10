@@ -8,14 +8,14 @@ include '../connection.php';
 function navBar()
 { ?>
 	<div class='container'>
-		<a href='../landingPage/afterLoginIndex.php' class='logo'>
+		<a href='../landingPage/index.php' class='logo'>
 			<img src='../images/logo.png' width='64px' height='27px' alt='logo'>
 		</a>
 
 		<nav class='navbar' data-navbar>
 
 			<div class='navbar-top'>
-				<a href='../landingPage/afterLoginIndex.php' class='logo'>
+				<a href='../landingPage/index.php' class='logo'>
 					<img src='../images/logo.png' width='64px' height='27px' alt='logo'>
 				</a>
 
@@ -34,13 +34,13 @@ function navBar()
 				</li>
 
 				<li class='navbar-item'>
-					<a href='../reviewPage/organizationOM.php' class='navbar-link'>Reviews</a>
+					<a href='../reviewPage/reviewPage.php' class='navbar-link'>Reviews</a>
 				</li>
 				<li class='navbar-item'>
-					<a href='../reviewPage/reviewPage.php' class='navbar-link'>Guidlins</a>
+					<a href='../reviewPage/organizationOM.php' class='navbar-link'>Guidelines</a>
 				</li>
 				<li class='navbar-item'>
-                <a href='../popular-articles/' class='navbar-link'>Popular</a>Editorial Board</a>
+					<a href='../popular-articles/index.php' class='navbar-link'>Editorial Board</a>
 				</li>
 			</ul>
 
@@ -384,7 +384,7 @@ function articleSubjects() {
                 $journalTypeId = $row['journal_type_id'];
                 $cat = $row['category_id'];
                 $author = $row['author_name'];
-                $image = $row['journal_image'];
+                // $image = $row['journal_image'];
     
                 // Fetch type_name from journal_types table
                 $sqlType = "SELECT * FROM `journal_types` WHERE type_id ='$journalTypeId'";
@@ -396,7 +396,7 @@ function articleSubjects() {
                 <div class='article-card'>
                     <!-- article image -->
                     <div class='card-img'>
-                        <img src='../images/$image' alt=''>
+                        <img src='../images/jimage.jpeg' alt=''>
                     </div>
                     <!-- article title -->
                     <div class='a-title'>
@@ -455,7 +455,7 @@ function selectedJournalType(){
             <div class='article-card'>
                 <!-- article image -->
                 <div class='card-img'>
-                    <img src='../images/about1.png' alt=''>
+                    <img src='../images/jimage.jpeg' alt=''>
                 </div>
                 <!-- article title -->
                 <div class='a-title'>
@@ -516,7 +516,7 @@ function selectedArticleType(){
             <div class='article-card'>
                 <!-- article image -->
                 <div class='card-img'>
-                    <img src='../images/about1.png' alt=''>
+                    <img src='../images/jimage.jpeg' alt=''>
                 </div>
                 <!-- article title -->
                 <div class='a-title'>
@@ -574,7 +574,7 @@ function selectedsubject(){
             <div class='article-card'>
                 <!-- article image -->
                 <div class='card-img'>
-                    <img src='../images/about1.png' alt=''>
+                    <img src='../images/jimage.jpeg' alt=''>
                 </div>
                 <!-- article title -->
                 <div class='a-title'>
@@ -687,7 +687,7 @@ function searchBar() {
                 <div class='article-card'>
                     <!-- article image -->
                     <div class='card-img'>
-                        <img src='../images/$image' alt=''>
+                        <img src='../images/jimage.jpeg' alt=''>
                     </div>
                     <!-- article title -->
                     <div class='a-title'>
