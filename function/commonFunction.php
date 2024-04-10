@@ -52,7 +52,7 @@ function navBar()
 					<a href='../reviewPage/reviewPage.php' class='navbar-link'>Guidelines</a>
 				</li>
 				<li class='navbar-item'>
-					<a href='../reviewPage/submissionPC.php' class='navbar-link'>Contact Us</a>
+					<a href='../editorPage/editor.php' class='navbar-link'>Editorial Board</a>
 				</li>
 			</ul>
 

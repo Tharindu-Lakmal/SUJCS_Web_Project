@@ -34,7 +34,7 @@ body {
   }
   
   .two-column-list {
-    margin-left: 209.5px;
+    margin-left: 6rem;
     columns: 2; /* Divide the list into two columns */
     -webkit-columns: 2; /* For Safari/Chrome/Opera */
     -moz-columns: 2; /* For Firefox */
