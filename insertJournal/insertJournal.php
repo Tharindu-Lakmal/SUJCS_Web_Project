@@ -96,6 +96,15 @@
     <!-- <link rel="stylesheet" href="./responsiveAbout.css"> -->
     
 
+    <style>
+
+        .form {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+    </style>
 </head>
 <body>
     
