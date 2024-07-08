@@ -38,12 +38,7 @@ include '../function/userFunction.php';
 		?>
 	</header>
 
-	<section class="search">
-		<?php
-		search();
-		?>
-
-	</section>
+	<div style="margin-top: 150px;"></div>
 
 	<section class="hero-section">
 		<div class="profile-container">

@@ -89,10 +89,7 @@ include('../function/features.php');
                         <p class="p-heading">Note: </p>
 
                         <p class="note-p">
-                            Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                            Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
-                            when an unknown printer took a galley of type and scrambled it to make a type
-                            specimen book.
+                        Welcome to Sabaragamuwa university journal of Computer Science. Here you'll discover research papers by Sabaragamuwa University lecturers, with a focus on computer science. Dive into a wealth of knowledge and academic excellence. Explore now and boost your knowledge about computer science.
                         </p>
                     </div>
 

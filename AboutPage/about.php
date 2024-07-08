@@ -65,7 +65,7 @@
 
         <!-- Search Bar ------------------------------- -->
         <?php
-        search();
+        // search();
         ?>
 
     </section>

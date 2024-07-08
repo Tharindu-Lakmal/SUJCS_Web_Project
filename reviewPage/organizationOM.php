@@ -43,14 +43,7 @@ include('../function/userFunction.php');
 
         ?>
     </header>
-
-    <section class="search">
-
-        <?php
-          search();
-        ?>
-
-    </section>
+    <div style="margin-top: 150px;"></div>
 
   <!-- <link rel="stylesheet" href="organizationOM.css"> -->
   <!-- <nav class="navbar">

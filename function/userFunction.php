@@ -175,7 +175,7 @@ function signUp(){
             // No need for password_verify if using sha1 hashing
             // if (password_verify($user_password, $row_data['user_password'])) {
             echo "<script>alert('Login successful')</script>";
-            echo "<script>window.open('afterLoginIndex.php','_self')</script>";
+            echo "<script>window.open('index.php','_self')</script>";
             // } else {
             //     echo "<script>alert('Invalid Credentials')</script>";
             // }
